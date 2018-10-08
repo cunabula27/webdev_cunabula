@@ -1,0 +1,15 @@
+Use the following code to insert video from Vimeo replacing
+
+XXXXX with a column class
+
+YYYYY with either widescreen or fourBYthree depending on the format of the film.
+
+and
+
+ZZZZZ with the code of the film.
+
+ <div class="XXXXX"><div class="embed-container YYYYY"><iframe src="https://player.vimeo.com/video/ZZZZZ?title=0&amp;byline=0&amp;portrait=0&amp;color=cc0033" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>
+
+YouTube will be a variation on:
+
+<iframe width="916" height="515" src="//www.youtube.com/embed/3jBxzbVDCLw?rel=0" frameborder="0" allowfullscreen></iframe>
