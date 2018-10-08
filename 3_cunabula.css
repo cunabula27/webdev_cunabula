@@ -1,0 +1,351 @@
+/* -------------------------------------------- */
+
+/*    SHARED STYLES                    START    */
+
+/* -------------------------------------------- */
+
+* {
+	box-sizing: border-box;
+	}
+
+body {
+	color: hsla(206, 18%, 16%, 1);
+	font: normal 100% "PT Sans", sans-serif;
+	text-rendering: optimizeLegibility;
+	hyphens: auto;
+	/* background-image: url(http://cunabula.io/dev/images/baseline-columns.png); */
+	/* text-align:justify; */
+	}
+
+h1,h2,h3,h4,h5,h6,em,i,strong,b,cite {
+	font-style: normal;
+	font-weight: normal;
+	}
+
+.no_css,	nav h6 {
+	 display: none;
+	}
+
+img {
+	width:100%;
+	}
+
+/*    LINKS                                     */
+
+a,
+a:link,
+a:visited {
+	color: hsla(345, 100%, 40%, 1);
+	text-decoration: none;
+	}
+
+a:hover,
+a:active {
+	text-decoration: underline;
+	}
+
+/*    NAV AREAS (General)                       */
+
+nav .post_title, .nav_newer {
+	margin: 0.625rem 0 0.625rem 0.625rem;
+	}
+
+nav img {
+	margin: 0 0 0 0.625rem;
+	width: 2.5rem;
+	height: 2.5rem;
+	}
+
+
+
+nav {
+	font-size: 0.875rem;
+	}
+
+nav a,
+nav a:link,
+nav a:visited {
+	color: hsla(206, 18%, 16%, 1);
+	text-decoration: none;
+	}
+
+nav a:hover { color: hsla(345, 100%, 40%, 1); }
+
+
+
+
+
+
+
+nav > ul, .nav_older {
+	padding: 0.3125rem 0.625rem 0.3125rem 0;
+	border-right: 1px solid hsla(206, 18%, 70%, 1);
+	text-align: right;
+	margin-top: 0.3125rem;
+	}
+
+.head_nav {
+		margin-top: 1.25rem;
+	}
+
+.foot_nav > ul, .foot_nav form, .foot_nav .nav_older {
+	border-color: hsla(206, 18%, 70%, 1);
+	}
+
+.section_list li:last-child, .head_nav ul ul li:first-child {
+	padding-top: 0.625rem;
+	}
+
+input[type="text"] {
+	font-family: inherit;
+  line-height: 1;
+	padding: 0.21875rem;
+	width: 100%;
+	border: 1px solid hsla(206, 18%, 70%, 1);
+	color: hsla(206, 18%, 16%, 1);
+	background-color: #fff;
+	border-radius: 0.21875rem;
+	}
+
+form {
+	padding: 0.3125rem 0.625rem;
+	border-left: 1px solid hsla(206, 18%, 70%, 1);
+	border-right: 1px solid hsla(206, 18%, 70%, 1);
+	margin-top: 0.3125rem;
+	}
+
+/*    NAV HEAD                                  */
+
+nav img {
+	clip-path: circle();
+	}
+
+.head_nav img {
+	opacity: .5;
+	}
+
+/*    NAV FOOT                                  */
+
+.foot_nav {
+	background-color: hsla(206, 18%, 90%, 1);
+	align-items: start;
+	padding: 1.25rem 0 2.5rem 0;
+	}
+
+.nav_hide {	height: 0; }
+.nav_hide, .article_footer_hide, .date_posted, .article_tags {
+	opacity: 0;
+	transition: opacity .25s linear 0s, height .25s ease-out .1s;
+	}
+
+nav:hover .nav_hide, article footer:hover .article_footer_hide, .card:hover .date_posted, .card:hover .article_tags {
+	height: auto;
+	opacity: 1;
+	transition: opacity .25s linear 0s,  height .25s linear 0s;
+	}
+
+article {
+	padding: 3.2rem 0 8rem 0;
+	/* background-image: url(http://cunabula.io/dev/images/baseline-columns.png); */
+	}
+
+article img, .morgue_thumb {
+	padding: 0 .625rem 1.25rem;
+	}
+
+h1 { /* Use only for article titles */
+	font-size: 2rem;
+	line-height: 1.25;
+	font-family: "PT Serif";
+	padding: 0 0.625rem 4.6rem  /* 5rem */ 0.625rem;
+	}
+
+h2 { /* Section Titles */
+	font-family: "PT Serif";
+	font-size: 1.25rem;
+	line-height: 2;
+	padding: 0 0.625rem;
+	margin-top: -.4rem;
+	margin-bottom: .4rem;
+	}
+
+article div, section, blockquote, article:nth-last-child(2) {
+	padding-bottom: 1.25rem;
+	}
+
+article div p + p, section p + p, blockquote p + p, article > p + p { /* recheck this, it may not need to be so specific */
+	text-indent: 1.25rem;
+	}
+
+article p, figcaption {
+	padding: 0 0.625rem 0 0.625rem;
+	}
+
+footer p, figcaption {
+	font-size: 0.75rem;
+	line-height: 1.25rem;
+	color: hsla(206, 18%, 60%, 1);
+	}
+
+figcaption {
+	color: hsla(206, 18%, 32%, 1);
+	font-style: italic;
+	}
+
+footer p.tags {
+	padding-top: 1.25rem;
+	}
+
+footer img {
+	padding-top: 1.75rem;
+	}
+
+	[alt="// ENDS"] {
+		width:auto;
+		padding-left: 0.625rem;
+		}
+
+blockquote {
+	font-family: "PT Serif";
+	line-height: 1.25rem;
+	}
+
+blockquote p {
+	padding-left: 2.5rem;/*3.125rem;*/
+	padding-right: 2.5rem;
+	}
+
+blockquote p.page_ref {
+	font-size: 0.75rem;
+	line-height: 1.25rem;
+	color: hsla(206, 18%, 60%, 1);
+	font-style: italic;
+	text-indent: 0;
+	padding-left:.625rem;
+	}
+
+section div:last-child {
+	padding-bottom: 0;
+	}
+
+.c4 {
+	column-count: 4;
+	column-gap: 0;
+	}
+
+.c3 {
+	column-count: 3;
+	column-gap: 0;
+	}
+
+.c2 {
+	column-count: 2;
+	column-gap: 0;
+}
+
+cite, em, i {
+	font-style: italic;
+	}
+
+strong, b {
+	font-weight: bold;
+	}
+
+.solo {
+	text-indent:0;
+	padding: 1.25rem .625rem;
+	}
+
+.solo + p {
+	text-indent:0;
+	}
+
+P + h2, p + div, p + section, p + footer {
+	padding-top: 1.25rem;
+	}
+
+em > i, i > em, .card p > i, .card p > em {
+	font-style: normal;
+	}
+
+.card_container {
+	padding: 0 .625rem;
+	}
+
+.drawer img {
+	margin:0;
+	padding: 0 .625rem 1.25rem;
+	height: 100%;
+	object-fit: cover;
+	}
+
+.output .article_list {
+	padding: 1.25rem 0 0;
+	margin: 0 .625rem;
+	border-top: 1px solid hsla(206, 18%, 70%, 1);
+
+}
+
+.output .article_list h1 {
+	font-size: 1.5rem;
+	color: hsla(206, 18%, 16%, 1);
+	padding: 0 .625rem 1.25rem 0;
+	text-align: left;
+	hyphens: none;
+	grid-column:1/3;
+	}
+
+.output .article_list .extract {
+		grid-column:1/3;
+}
+
+.output .article_list .extract p {
+padding-left: 0;
+}
+
+.output .article_list img {
+	padding-right: 0;
+}
+
+.output .article_list > a {
+	display: contents;
+}
+
+
+/*
+.morgue_file .sticky {
+		border-bottom: 1px solid hsla(206, 18%, 70%, 1);
+		margin-bottom: 2.5rem;
+}
+
+*/
+
+/* -------------------------------------------- */
+
+/*    SHARED STYLES                      END    */
+
+/* -------------------------------------------- */
+
+/* -------------------------------------------- */
+
+/*    CUNABULA.IO                      START    */
+
+/* -------------------------------------------- */
+
+/* -------------------------------------------- */
+
+/*    CUNABULA.IO                      END      */
+
+/* -------------------------------------------- */
+
+/* -------------------------------------------- */
+
+/*    CUNABULAPRESS.COM                START    */
+
+/* -------------------------------------------- */
+
+/* -------------------------------------------- */
+
+/*    CUNABULAPRESS.COM                  END    */
+
+/* -------------------------------------------- */
