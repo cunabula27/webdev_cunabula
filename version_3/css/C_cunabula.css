@@ -1,0 +1,145 @@
+/* -------------------------------------------- */
+
+/*    SHARED STYLES                    START    */
+
+/* -------------------------------------------- */
+
+* {
+	box-sizing: border-box;
+	}
+
+body {
+	color: hsla(206, 18%, 16%, 1); /* Main Text Colour */
+	font: normal 100% "PT Sans", sans-serif;
+/*font: normal 100% PTSansRegular, sans-serif; *//* Production Line */
+	text-rendering: optimizeLegibility;
+	hyphens: auto;
+	/* background-image: url("../images/CP-GRID-baseline.png"); */
+	/* text-align:justify; */
+	}
+
+h1,h2,h3,h4,h5,h6,em,i,strong,b,cite {
+	font-style: normal;
+	font-weight: normal;
+	}
+
+.no_css, nav h6 {
+	 display: none;
+	}
+
+img {
+	width: 100%;
+	}
+
+/*    LINKS                                     */
+
+a,
+a:link,
+a:visited {
+	color: hsla(345, 100%, 40%, 1); /* CP Red */
+	text-decoration: none;
+	}
+
+a:hover,
+a:active {
+	text-decoration: underline;
+	}
+
+
+/*    NAV AREAS (General)                       */
+
+nav {
+	font-size: 0.875rem;
+	}
+
+nav img {
+	clip-path: circle();
+	width: 2.5rem;
+	height: 2.5rem;
+	}
+
+nav a,
+nav a:link,
+nav a:visited {
+	color: hsla(206, 18%, 16%, 1);
+	text-decoration: none;
+	}
+
+nav a:hover { color: hsla(345, 100%, 40%, 1); }
+
+nav > ul, .nav_older {
+	padding-right: .625rem;
+	border-right: 1px solid hsla(206, 18%, 70%, 1);
+	text-align: right;
+	margin-right: -.625rem;
+	}
+
+.section_list li:last-child, .head_nav ul ul li:first-child {
+	padding-top: 0.625rem;
+	}
+
+.nav_hide {
+	height: 0;
+	}
+
+.nav_hide, .article_footer_hide, .date_posted, .article_tags {
+	opacity: 0;
+	transition: opacity .25s linear 0s, height .25s ease-out .1s;
+	}
+
+nav:hover .nav_hide, article footer:hover .article_footer_hide, .card:hover .date_posted, .card:hover .article_tags {
+	height: auto;
+	opacity: 1;
+	transition: opacity .25s linear 0s,  height .25s linear 0s;
+	}
+
+/* Fix Form Bits Here */
+
+/*    NAV HEAD                                  */
+
+.head_nav img {
+	opacity: .5;
+	}
+
+/*    NAV FOOT                                  */
+
+.foot_nav > ul, .foot_nav form, .foot_nav .nav_older {
+	border-color: hsla(206, 18%, 70%, 1);
+	}
+
+.foot_nav {
+	background-color: hsla(206, 18%, 85%, 1);
+	}
+
+
+
+
+/* -------------------------------------------- */
+
+/*    SHARED STYLES                      END    */
+
+/* -------------------------------------------- */
+
+/* -------------------------------------------- */
+
+/*    CUNABULA.IO                      START    */
+
+/* -------------------------------------------- */
+
+/* -------------------------------------------- */
+
+/*    CUNABULA.IO                      END      */
+
+/* -------------------------------------------- */
+
+/* -------------------------------------------- */
+
+/*    CUNABULAPRESS.COM                START    */
+
+/* -------------------------------------------- */
+
+/* -------------------------------------------- */
+
+/*    CUNABULAPRESS.COM                  END    */
+
+/* -------------------------------------------- */

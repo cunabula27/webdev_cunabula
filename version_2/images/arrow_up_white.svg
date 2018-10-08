@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="40"
+   height="40"
+   id="svg4641"
+   version="1.1"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="arrow_up_white.svg">
+  <defs
+     id="defs4643" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="13.388723"
+     inkscape:cx="30.216724"
+     inkscape:cy="29.857615"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1057"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:showpageshadow="false"
+     showborder="true"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:snap-global="true"
+     objecttolerance="20"
+     guidetolerance="10000"
+     inkscape:pagecheckerboard="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid5161"
+       empspacing="5"
+       visible="true"
+       enabled="false"
+       snapvisiblegridlinesonly="true" />
+    <inkscape:grid
+       type="axonomgrid"
+       id="grid3869"
+       units="mm"
+       empspacing="1"
+       visible="true"
+       enabled="false"
+       snapvisiblegridlinesonly="true"
+       spacingy="100mm" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata4646">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-1012.3622)">
+    <path
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:44.22562027;marker:none;enable-background:accumulate"
+       d="m 19.999309,1012.3622 c -11.0456044,0 -19.999309,8.954 -19.999309,20 0,11.046 8.9537046,20 19.999309,20 11.045604,0 20.000691,-8.954 20.000691,-20 0,-11.046 -8.955087,-20 -20.000691,-20 z m 0.0097,4.7129 14.990846,18.5308 h -6.184572 l -8.810418,-10.8907 -8.810423,10.8907 H 5.0167571 Z"
+       id="path3817"
+       inkscape:export-filename="C:\Users\cunabula\Desktop\Dropbox\Cunabula Press New Logo\arrow_down_white_40.png"
+       inkscape:export-xdpi="3.5999999"
+       inkscape:export-ydpi="3.5999999"
+       inkscape:connector-curvature="0" />
+    <path
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#000000;fill-opacity:1;stroke:none;stroke-width:95.19999695;marker:none;enable-background:accumulate"
+       d="m -13582,-2937.6377 c 8866.6667,2633.33326 4433.3333,1316.6666 0,0 z"
+       id="rect3875-7"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+  </g>
+</svg>
