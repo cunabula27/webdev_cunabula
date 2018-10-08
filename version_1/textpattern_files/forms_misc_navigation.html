@@ -1,0 +1,58 @@
+<nav role="navigation">
+
+<!-- PERMANENT FOOTER NAV STARTS HERE -->
+
+<ul id="foot_nav">
+
+<li><a href="#head_nav" title="Return to top of page" class="logo"><span>Back to the top of the page</span></a></li>
+
+<ul>
+
+<li class="menuhead">Sections:</li>
+
+<txp:section_list break="" exclude="tagged-with, testbed, welcome" sort="title desc"><li<txp:if_section name='<txp:section />'> class="active_section"</txp:if_section>><txp:section title="1" link="1" /></li></txp:section_list>
+
+<li><form method="get" action="<txp:site_url />"><fieldset><input class="search_form" type="text" value="Search" name="q" size="15" /></fieldset></form></li>
+
+<li><a href="<txp:site_url />">Home Page</a></li>
+
+</ul>
+<txp:if_article_list>
+<li class="nav_older"><txp:older showalways="1">Older</txp:older></li>
+<li class="nav_newer"><txp:newer showalways="1">Newer</txp:newer></li>
+<txp:else />
+<li class="nav_older"><txp:link_to_prev showalways="1">Older</txp:link_to_prev></li>
+<li class="nav_newer"><txp:link_to_next showalways="1">Newer</txp:link_to_next></li>
+</txp:if_article_list>
+
+</ul>
+
+<!-- MOVABLE HEAD NAV STARTS HERE -->
+
+<ul  id="head_nav">
+
+<li><a href="#foot_nav" title="Link to Menu" class="logo"><span>Home Page</span></a></li>
+
+<li id="nav_section"><a href="/<txp:section />" title="Site Sections"><txp:if_section name="default">CONTENTS<txp:else /><txp:section title="1" /></txp:if_section></a>
+
+<txp:section_list wraptag="ul" break="" exclude="tagged-with, testbed, welcome" sort="title desc">
+
+<li<txp:if_section name='<txp:section />'> class="active_section"</txp:if_section>><txp:section title="1" link="1" /></li>
+
+</txp:section_list>
+
+</li>
+
+<li id="nav_post_title"><txp:if_article_list><txp:section name='<txp:section />'>Overview</txp:section><txp:else /><txp:permlink><txp:title /></txp:permlink></txp:if_article_list></li>
+
+<li id="nav_search"><form method="get" action="<txp:site_url />"><fieldset><input class="search_form" type="text" value="Search" name="q" size="15" /></fieldset></form></li>
+<txp:if_article_list>
+<li class="nav_older"><txp:older showalways="1">Older</txp:older></li>
+<li class="nav_newer"><txp:newer showalways="1">Newer</txp:newer></li>
+<txp:else />
+<li class="nav_older"><txp:link_to_prev showalways="1">Older</txp:link_to_prev></li>
+<li class="nav_newer"><txp:link_to_next showalways="1">Newer</txp:link_to_next></li>
+</txp:if_article_list>
+</ul>
+
+</nav>

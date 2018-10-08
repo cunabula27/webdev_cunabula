@@ -1,0 +1,31 @@
+<txp:if_article_list>
+
+<div class="morgue-thumb">
+
+</txp:if_article_list>
+
+<txp:if_individual_article>
+
+<article>
+
+<h1 class="col4"><txp:permlink><txp:title /></txp:permlink></h1>
+
+<txp:body /></div>
+
+<txp:output_form form="article_footer" />
+
+<txp:else />
+
+<txp:if_search>
+
+<div class="col2 suf2"><txp:search_result_excerpt /></div>
+
+<txp:else />
+
+<txp:permlink><txp:excerpt /></txp:permlink>
+
+</div>
+
+</txp:if_search>
+
+</txp:if_individual_article>

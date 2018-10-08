@@ -1,0 +1,48 @@
+<txp:if_article_list>
+
+ <article>
+
+ <div class="col1"><txp:permlink><txp:article_image class="dropshadow" /></txp:permlink></div>
+
+</txp:if_article_list>
+
+<txp:if_individual_article>
+
+ <article>
+
+ <div class="col4">
+ <div class="cycle-slideshow"
+ data-cycle-auto-height=2
+ data-cycle-timeout=0
+ data-cycle-pager-event="mouseover"
+ data-cycle-caption="#alt-caption"
+ data-cycle-caption-template="{{alt}}"
+ >
+ <div class="cycle-prev"></div>
+ <div class="cycle-next"></div>
+ <div id="alt-caption"></div>
+ <div class="cycle-pager"></div>
+
+<txp:body />
+
+ </div>
+
+ </div>
+
+<txp:output_form form="article_footer" />
+
+<txp:else />
+
+<txp:if_search>
+
+ <div class="col2"><txp:search_result_excerpt /></div>
+
+<txp:else />
+
+ <!-- <div class="col1"><txp:excerpt /></div> -->
+
+</txp:if_search>
+
+</txp:if_individual_article>
+
+ </article>
