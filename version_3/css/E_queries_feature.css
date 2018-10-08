@@ -44,7 +44,7 @@ nav a:first-child, nav > ul {
 
 .foot_nav *, nav.foot_nav a:first-child {
 	grid-row:2/3
-}
+	}
 
 nav .post_title {
 	grid-column: 3 / 5;
