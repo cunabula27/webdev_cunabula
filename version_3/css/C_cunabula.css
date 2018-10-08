@@ -93,7 +93,23 @@ nav:hover .nav_hide, article footer:hover .article_footer_hide, .card:hover .dat
 	transition: opacity .25s linear 0s,  height .25s linear 0s;
 	}
 
-/* Fix Form Bits Here */
+input[type="text"] {
+	font-family: inherit;
+  line-height: 1;
+	padding: 0.21875rem;
+	width: 100%;
+	border: 1px solid hsla(206, 18%, 70%, 1);
+	color: hsla(206, 18%, 16%, 1);
+	background-color: #fff;
+	border-radius: 0.21875rem;
+	}
+
+form {
+	padding: 0.3125rem 0.625rem;
+	border-left: 1px solid hsla(206, 18%, 70%, 1);
+	border-right: 1px solid hsla(206, 18%, 70%, 1);
+	margin-top: 0.3125rem;
+	}
 
 /*    NAV HEAD                                  */
 
