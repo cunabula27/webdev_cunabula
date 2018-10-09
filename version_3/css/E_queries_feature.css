@@ -5,28 +5,20 @@
 /*  */ @supports (display: grid) { /*---------- */
 
 
-body, nav {
 body, nav, [role="main"] {
 	display: grid;
 	grid-gap: 1.25rem;
 	}
 
 body {
-	grid-template-rows: auto 2.5rem minmax(calc(100vh - 6.25rem), auto) auto;
 	grid-template-rows: 0 2.5rem minmax(calc(100vh - 6.25rem), auto) auto;
 	}
 
-body, nav {
-	grid-template-columns: auto repeat(7, minmax(4rem /* define this properly */, 14rem)) 1fr;
 body, nav, [role="main"] {
 	grid-template-columns: 0 repeat(7, minmax(4rem /* define this properly */, 14rem)) 1fr;
 	}
 
 [role="main"] {
-	display: grid;
-	grid-row: 3 / 4;
-	grid-column: 3 / 9;
-	}
 	grid-template-rows: /*0*/ 6.375rem auto/*minmax(calc(100vh - 6.25rem), auto)*/;
 	grid-row: 1 / 4;
 	grid-column: 1 / 10;
