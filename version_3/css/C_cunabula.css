@@ -77,7 +77,7 @@ nav > ul, .nav_older {
 .section_list li:last-child, .head_nav ul ul li:first-child {
 	padding-top: 0.625rem;
 	}
-
+/*
 .nav_hide {
 	height: 0;
 	}
@@ -93,7 +93,27 @@ nav:hover .nav_hide, article footer:hover .article_footer_hide, .card:hover .dat
 	transition: opacity .25s linear 0s,  height .25s linear 0s;
 	}
 
-/* Fix Form Bits Here */
+	*/
+
+form {
+	padding: 0.2rem 0.625rem 0.1375rem;
+	border-left: 1px solid hsla(206, 18%, 70%, 1);
+	border-right: 1px solid hsla(206, 18%, 70%, 1);
+	margin-top: 0.25rem;
+	}
+
+input[type="text"] {
+	font-family: inherit;
+  line-height: 1;
+	padding: 0.2rem .4rem .35rem;
+	width: 100%;
+	border: 1px solid hsla(206, 18%, 70%, 1);
+	color: hsla(206, 18%, 16%, 1);
+	background-color: #fff;
+	border-radius: 0.21875rem;
+	}
+
+
 
 /*    NAV HEAD                                  */
 
@@ -103,7 +123,7 @@ nav:hover .nav_hide, article footer:hover .article_footer_hide, .card:hover .dat
 
 /*    NAV FOOT                                  */
 
-.foot_nav > ul, .foot_nav form, .foot_nav .nav_older {
+.foot_nav ul, .foot_nav form, .foot_nav .nav_older {
 	border-color: hsla(206, 18%, 70%, 1);
 	}
 
@@ -111,7 +131,11 @@ nav:hover .nav_hide, article footer:hover .article_footer_hide, .card:hover .dat
 	background-color: hsla(206, 18%, 85%, 1);
 	}
 
-
+nav > ul, nav .post_title, .nav_older, .nav_newer {
+	padding-top: .315rem;
+	padding-bottom: .44rem;
+	margin-top: .25rem;
+	}
 
 
 /* -------------------------------------------- */
