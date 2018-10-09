@@ -1,0 +1,25 @@
+Basically a four column layout classes:
+
+.col1
+.col2
+.col3
+.col4
+
+Additionally there are golden ratio based columns that can run inside the regular columns above. These are .gsw (golden section wide) and .gsn (golden section narrow) the first and last should also be given the .alpha and .omega class respectively (until first-child/last-child is fixed - Jan 2014)
+
+There are also classes for offsetting the position of an element.
+
+To add space before use .preXXX (XXX is the column width of space you want to add.
+
+To add space after use .sufXXX
+
+To reorder content use .pushXXX and it's opposite .pullXXX
+
+class="col4 columns" will supply two column text spanning the width of an article at larger page widths.
+
+Max widths **of content** in px:
+
+col1: 214 gsw: 122 gsn:  72
+col2: 448 gsw: 267 gsn: 161
+col3: 682 gsw: 412 gsn: 250
+col4: 916 gsw: 556 gsn: 340

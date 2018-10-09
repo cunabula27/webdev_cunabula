@@ -1,0 +1,10 @@
+<footer>
+<txp:variable name="modified" value='<txp:modified />' />
+<txp:if_variable name="modified" value='<txp:posted />'>
+<p>Posted: <txp:posted /></p>
+<txp:else />
+<p>Originally posted: <txp:posted /><br />Last updated: <txp:modified /></p>
+</txp:if_variable>
+<p class="tags"><txp:smd_tag_list label="Filed in: " wraptag="" break=" | " indent=""><txp:smd_tag_name link="1" /></txp:smd_tag_list></p>
+</footer>
+<img src="../images/red_bullet.png" alt="// ends" />

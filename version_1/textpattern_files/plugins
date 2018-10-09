@@ -1,0 +1,9 @@
+Installed plugins and whether they're enabled.
+
+cbe_swap_body_excerpt			1.0.1			Yes
+smd_tags									0.60			Yes
+smd_lib										0.36			Yes
+smd_gallery								0.62			Yes
+smd_style									0.30			Yes
+ied_hide_in_admin					0.1.6			No
+rss_unlimited_categories	0.7.4p22 	No

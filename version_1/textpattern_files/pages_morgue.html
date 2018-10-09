@@ -1,0 +1,61 @@
+<txp:output_form form="head_boilerplate" />
+
+<script src="<txp:site_url />js/jquery.min.js"></script>
+<script src="<txp:site_url />js/jquery.freetile.min.js"></script>
+<script src="<txp:site_url />js/init.js"></script>
+
+<txp:if_individual_article>
+
+  <txp:if_custom_field name="Page Width">
+    <link rel="stylesheet" href="<txp:site_url />css/wide.css">
+    <style> body { width: <txp:custom_field name="Page Width" />em; } </style>
+  </txp:if_custom_field>
+
+  <txp:if_custom_field name="Custom CSS">
+    <link rel="stylesheet" href="<txp:site_url />css/<txp:custom_field name="Custom CSS" />.css">
+  </txp:if_custom_field>
+
+  <txp:if_custom_field name="Gallery">
+    <!-- <script src="<txp:site_url />js/jquery.min.js"></script> -->
+    <script src="<txp:site_url />js/jquery.cycle2.min.js"></script>
+  </txp:if_custom_field>
+
+  <txp:if_custom_field name="Raphaël">
+    <script src="<txp:site_url />js/raphael-min.js"></script>
+  </txp:if_custom_field>
+
+</txp:if_individual_article>
+
+</head>
+
+<body>
+
+<div role="main">
+
+	<txp:if_article_list>
+
+		<txp:article status="sticky" />
+
+                <article id="container">
+
+	</txp:if_article_list>
+
+	<txp:if_search>
+
+		<h1 class="col2">Search results for &lsquo;<txp:search_term />&rsquo;</h1>
+
+	</txp:if_search>
+
+	<txp:article form="morgue" limit="50" />
+
+        </article>
+
+	<div class="nav_push cb"></div>
+
+</div>
+
+<txp:output_form form="navigation" />
+
+</body>
+
+</html>

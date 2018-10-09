@@ -1,0 +1,36 @@
+<article>
+
+<txp:if_article_list>
+
+<div class="col4">
+<h1 class="article_list"><txp:permlink><txp:title /></txp:permlink></h1>
+</div>
+</txp:if_article_list>
+
+<txp:if_individual_article>
+<div class="col4">
+<h1><txp:permlink><txp:title /></txp:permlink></h1>
+</div>
+<txp:body />
+
+<txp:output_form form="article_footer" />
+
+<!-- <txp:else /> -->
+
+<txp:output_form form="comments_display" />
+
+<txp:else />
+
+<txp:if_search>
+
+<txp:search_result_excerpt />
+
+<txp:else />
+
+<txp:excerpt />
+
+</txp:if_search>
+
+</txp:if_individual_article>
+
+</article>

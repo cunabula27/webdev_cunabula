@@ -1,0 +1,32 @@
+To use article_no_title start post body with:
+
+ <div class="XXX">
+
+/* ---------- */
+
+Use this snippet in article_no_title for book quote list articles:
+
+ <blockquote>
+
+p(pull_sq col2). 'THE QUOTE'
+
+p(col2 page_ref). Page XXX
+
+ </blockquote>
+
+/* ---------- */
+
+ <section>
+
+h#.
+
+Running Text
+
+ </section>
+
+otherwise use:
+
+ </div><div class="same as previous">
+
+
+/* ---------- */

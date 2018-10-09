@@ -1,0 +1,69 @@
+/* -------------------------------------------- */
+
+/*    FEATURE QUERIES                  START    */
+
+/*  */ @supports (display: grid) { /*---------- */
+
+
+body, nav {
+	display: grid;
+	grid-gap: 1.25rem;
+	}
+
+body {
+	grid-template-rows: auto 2.5rem minmax(calc(100vh - 6.25rem), auto)  auto;
+	}
+
+body, nav {
+	grid-template-columns: auto repeat(7, minmax(auto, 14rem))  1fr 1fr;
+	}
+
+[role="main"] {
+	display: grid;
+	grid-row: 3 / 4;
+	grid-column: 3 / 7;
+	}
+
+.head_nav {
+	grid-row: 2 / 3;
+	grid-column: 1 / 11;
+	align-items: start;
+	}
+
+.foot_nav {
+	grid-row: 4 / 5;
+	grid-column: 1 / 11;
+	align-items: start;
+	grid-template-rows: repeat(3, auto);
+	}
+
+nav a:first-child, nav > ul {
+	grid-column:2/3;
+	grid-row: 1/2;
+	}
+	.foot_nav *, nav.foot_nav a:first-child {
+		grid-row:2/3
+	}
+
+nav .post_title {
+	grid-column: 3 / 5;
+	}
+
+nav form {
+	grid-column: 5 / 6;
+	}
+
+.nav_older {
+	grid-column: 6 / 7;
+	justify-self:end;
+	}
+
+.nav_newer {
+	grid-column: 7 / 8;
+	}
+
+/* */ } /*------------------------------------- */
+
+/*    FEATURE QUERIES                    END    */
+
+/* -------------------------------------------- */

@@ -1,0 +1,17 @@
+Copy image to site to prevent link rot and permissions changes
+
+Excerpt:
+
+!IMAGE_LINK_WITH_T(ALT_TEXT)!
+
+Body:
+
+ <div class="RELATED_TO_WIDTH">
+
+!IMAGE_LINK(ALT_TEXT)!:SOURCE_PAGE_LINK
+
+ </div><div class="col2 suf2">
+
+BLURB
+
+p(solo). [ "_Source_":SOURCE_PAGE_LINK ]
