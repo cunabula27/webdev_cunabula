@@ -4,6 +4,11 @@
 
 /*  */ @supports (display: grid) { /*---------- */
 
+/*
+
+ONLY GRID-SPECIFIC CODE SHOULD GO HERE + STYLES ONLY RELEVANT WHEN GRID IS SUPPORTED
+
+*/
 
 body, nav, [role="main"], article {
 	display: grid;
@@ -19,16 +24,15 @@ body, nav, article {
 	}
 
 [role="main"] {
-	grid-area: 1 / 1 / 4 / 10;
+	grid-area: 1 / 1 / 4 / 10; /* standard 1.25rem margin at the bottom of 'main' */
 	}
 
 [role="main"] .foot_bleed { /* full height, no separation from foot_nav block */
-	grid-row: 1 / 5; /* standard 1.25 rem margin at the bottom */
+	grid-row: 1 / 5;
 	}
 
 article {
 	grid-template-rows: /*0*/ 6.375rem /*minmax(calc(100vh - 6.25rem), auto)*/;
-	grid-auto-rows: min-content;
 	}
 
 /*    ARTICLE FEATURE                           */
@@ -36,8 +40,12 @@ article {
 .feature {
 	grid-template-rows: 6.375rem repeat(3, auto));
 	}
-	
-.feature h1 + div { /*Standfirst */
+
+.feature h1 {
+	grid-area: 2 / 3 / 3 / 7;
+	}
+
+.feature h1 + div { /* Standfirst */
 	grid-area: 3 / 3 / 4 / 7;
 	}
 
@@ -49,6 +57,8 @@ article {
 
 h1 {
 	grid-area: 2 / 3 / 3 / 7;
+	align-self: end;
+	/*margin-top: 7.625rem; */
 	}
 
 .full_bleed { /* Full bleed images */
