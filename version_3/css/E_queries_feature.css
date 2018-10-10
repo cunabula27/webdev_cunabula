@@ -11,7 +11,7 @@ body, nav, [role="main"], article {
 	}
 
 body {
-	grid-template-rows: 0 2.5rem minmax(calc(100vh - 6.25rem), auto) auto;
+	grid-template-rows: 0 2.5rem minmax(calc(100vh - 6.25rem), auto) 0 auto;
 	}
 
 body, nav, article {
@@ -19,8 +19,12 @@ body, nav, article {
 	}
 
 [role="main"] {
-	grid-row: 1 / 4;
+	grid-row: 1 / 5; /* full height, no separation from foot_nav block */
 	grid-column: 1 / 10;
+}
+
+[role="main"] .foot_margin { /* maybe swap these depending on frequency of use */
+	grid-row: 1 / 4; /* standard 1.25 rem margin at the bottom */
 }
 
 article {
@@ -35,7 +39,7 @@ article {
 	}
 
 .foot_nav {
-	grid-row: 4 / 5;
+	grid-row: 4 / 6;
 	grid-column: 1 / 10;
 	align-items: start;
 	grid-template-rows: repeat(3, auto);
