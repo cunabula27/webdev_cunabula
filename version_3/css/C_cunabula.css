@@ -24,6 +24,7 @@ html {
 body {
 	color: hsla(206, 18%, 16%, 1); /* Main Text Colour */
 	font: normal 1rem "PT Sans", sans-serif;
+	line-height: 1.5;
 /*font: normal 100% PTSansRegular, sans-serif; *//* Production Line */
 	text-rendering: optimizeLegibility;
 	hyphens: auto;
@@ -74,10 +75,10 @@ a:active {
 
 h1 { /* Use only for article titles */
 	font-size: 2rem;
-	line-height: 1.25;
+	/* line-height: 1.5; */
 	font-family: "PT Serif";
 	z-index: 1;
-	margin-top: 7.5625rem;
+	margin-top: 8.8rem;
 	margin-bottom: 3.475rem;
 	}
 
@@ -98,7 +99,7 @@ article div, section, blockquote, article:nth-last-child(2) {
 */
 
 article div p + p, section p + p, blockquote p + p, article > p + p { /* recheck this, it may not need to be so specific */
-	text-indent: 1.25rem;
+	text-indent: 1.5rem;
 	}
 
 footer p, figcaption {
@@ -113,7 +114,7 @@ figcaption {
 	}
 
 footer p.tags {
-	padding-top: 1.25rem;
+	padding-top: 1.5rem;
 	}
 
 footer img {
@@ -126,17 +127,17 @@ footer img {
 
 blockquote {
 	font-family: "PT Serif";
-	line-height: 1.25;
+	/* line-height: 1.25; */
 	}
 
 blockquote p {
-	padding-left: 2.5rem;/*3.125rem;*/
-	padding-right: 2.5rem;
+	padding-left: 3rem;/*3.125rem;*/ /* check but consider padding 0 3rem; */
+	padding-right: 3rem;
 	}
 
 blockquote p.page_ref {
 	font-size: 0.75rem;
-	line-height: 1.25rem;  /* recalculate as plain number */
+	/* line-height: 1.5;  correct this */
 	color: hsla(206, 18%, 60%, 1);
 	font-style: italic;
 	text-indent: 0;
@@ -149,7 +150,7 @@ section div:last-child {
 
 	*/
 .c4, .c3, .c2 {
-	column-gap: 1.25rem;
+	column-gap: 1.5rem;
 	}
 
 .c4 {
@@ -174,7 +175,7 @@ strong, b {
 
 .solo {
 	text-indent:0;
-	padding: 1.25rem 0;
+	padding: 1.5rem 0;
 	}
 
 .solo + p {
@@ -207,14 +208,14 @@ nav a:visited {
 nav a:hover { color: hsla(345, 100%, 40%, 1); }
 
 nav > ul, .nav_older {
-	padding-right: .625rem;
+	padding-right: .75rem;
 	border-right: 1px solid hsla(206, 18%, 70%, 1);
 	text-align: right;
-	margin-right: -.625rem;
+	margin-right: -.75rem;
 	}
 
 .section_list li:last-child, .head_nav ul ul li:first-child {
-	padding-top: 0.625rem;
+	padding-top: 0.75rem; /* maybe adjust to be smaller */
 	}
 
 .nav_hide {
@@ -233,10 +234,10 @@ nav:hover .nav_hide, article footer:hover .article_footer_hide, .card:hover .dat
 	}
 
 form {
-	padding: 0.2rem 0.625rem 0.1375rem;
+	padding: 0.2rem 0.75rem 0.1375rem;
 	border-left: 1px solid hsla(206, 18%, 70%, 1);
 	border-right: 1px solid hsla(206, 18%, 70%, 1);
-	margin: 0.25rem -.625rem auto;
+	margin: 0.25rem -.75rem auto;
 	}
 
 input[type="text"] {
@@ -251,8 +252,8 @@ input[type="text"] {
 	}
 
 nav > ul, nav .post_title, .nav_older, .nav_newer {
-	padding-top: .315rem;
-	padding-bottom: .44rem;
+	padding-top: .19rem;
+	padding-bottom: .315rem;
 	margin-top: .25rem;
 	}
 
@@ -273,7 +274,7 @@ nav > ul, nav .post_title, .nav_older, .nav_newer {
 	}
 
 .foot_nav ul {
-	margin-bottom: .25rem;
+	margin-bottom: .5rem;
 	}
 
 /* -------------------------------------------- */
