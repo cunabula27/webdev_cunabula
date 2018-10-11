@@ -80,6 +80,10 @@ h1 { /* Use only for article titles */
 	margin-bottom: 3.475rem;
 	}
 
+.sticky h1 {
+	margin-bottom: 4.975rem;
+}
+
 p + h2, div + h2, section + h2, img + h2 {
 	/* copy margin rules for h2 below. Fix until Firefox recognises column-span */
 	}
@@ -186,6 +190,12 @@ strong, b {
 em > i, i > em, .card p > i, .card p > em {
 	font-style: normal;
 	}
+
+.drawer img {
+	object-fit: cover;
+	width:100%;
+	height: 100%;
+}
 
 /*    NAV AREAS - GENERAL                       */
 
