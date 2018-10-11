@@ -25,20 +25,18 @@ body {
 	color: hsla(206, 18%, 16%, 1); /* Main Text Colour */
 	font: normal 1rem "PT Sans", sans-serif;
 	line-height: 1.5;
-/*font: normal 100% PTSansRegular, sans-serif; *//* Production Line */
+/*font: normal 100% PTSansRegular, sans-serif; */ /* Production Line */
 	text-rendering: optimizeLegibility;
 	hyphens: auto;
-	/* background-image: url("../images/CP-GRID-baseline.png"); */
+/*background-image: url("../images/24.png"); */
+/*background-image: url("../images/12.png"); */
+/*background-image: url("../images/08.png"); */
+/*background-image: url("../images/06.png"); */
 	background-position-y: -7px;
-	/* text-align:justify; */
+/*text-align:justify; */
 	}
 
-h1,h2,h3,h4,h5,h6,em,i,strong,b,cite {
-	font-style: normal;
-	font-weight: normal;
-	}
-
-.no_css, nav h6 {
+.no_css, nav h6, section > h2 {
 	 display: none;
 	}
 
@@ -74,17 +72,21 @@ a:active {
 /*    ARTICLE - GENERAL                         */
 
 h1 { /* Use only for article titles */
-	font-size: 2rem;
-	/* line-height: 1.5; */
+	font-size: 2rem; /* 32px */
+/*line-height: 1.5; */
 	font-family: "PT Serif";
 	z-index: 1;
-	margin-top: 8.8rem;
+	margin-top: 8.675rem;
 	margin-bottom: 3.475rem;
+	}
+
+p + h2, div + h2, section + h2, img + h2 {
+	/* copy margin rules for h2 below. Fix until Firefox recognises column-span */
 	}
 
 h2 { /* Section Titles */
 	font-family: "PT Serif";
-	font-size: 1.25rem;
+	font-size: 1.25rem;  /* 20px */
 	line-height: 2;
 	margin-top: -.4rem;
 	margin-bottom: .4rem;
@@ -98,13 +100,13 @@ article div, section, blockquote, article:nth-last-child(2) {
 	}
 */
 
-article div p + p, section p + p, blockquote p + p, article > p + p { /* recheck this, it may not need to be so specific */
+p + p /* article div p + p, section p + p, blockquote p + p, article > p + p */ { /* recheck this, it may not need to be so specific */
 	text-indent: 1.5rem;
 	}
 
 footer p, figcaption {
-	font-size: 0.75rem;
-	line-height: 1.25rem; /* recalculate as plain number */
+	font-size: 0.75rem;  /* 12px */
+/*line-height: 1.25rem; recalculate as plain number */
 	color: hsla(206, 18%, 60%, 1);
 	}
 
@@ -127,7 +129,6 @@ footer img {
 
 blockquote {
 	font-family: "PT Serif";
-	/* line-height: 1.25; */
 	}
 
 blockquote p {
@@ -136,8 +137,8 @@ blockquote p {
 	}
 
 blockquote p.page_ref {
-	font-size: 0.75rem;
-	/* line-height: 1.5;  correct this */
+	font-size: 0.75rem;  /* 12px */
+/*line-height: 1.25rem; recalculate as plain number */
 	color: hsla(206, 18%, 60%, 1);
 	font-style: italic;
 	text-indent: 0;
@@ -166,11 +167,11 @@ section div:last-child {
 	}
 
 cite, em, i {
-	font-style: italic;
+	font-style: italic; /* Change for font on live site */
 	}
 
 strong, b {
-	font-weight: bold;
+	font-weight: bold; /* Change for font on live site */
 	}
 
 .solo {
@@ -189,7 +190,7 @@ em > i, i > em, .card p > i, .card p > em {
 /*    NAV AREAS - GENERAL                       */
 
 nav {
-	font-size: 0.875rem;
+	font-size: 0.875rem; /* 14px */
 	}
 
 nav img {
