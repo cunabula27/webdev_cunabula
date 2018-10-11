@@ -24,20 +24,19 @@ html {
 body {
 	color: hsla(206, 18%, 16%, 1); /* Main Text Colour */
 	font: normal 1rem "PT Sans", sans-serif;
-/*font: normal 100% PTSansRegular, sans-serif; *//* Production Line */
+	line-height: 1.5;
+/*font: normal 100% PTSansRegular, sans-serif; */ /* Production Line */
 	text-rendering: optimizeLegibility;
 	hyphens: auto;
-	/* background-image: url("../images/CP-GRID-baseline.png"); */
+/*background-image: url("../images/24.png"); */
+/*background-image: url("../images/12.png"); */
+/*background-image: url("../images/08.png"); */
+/*background-image: url("../images/06.png"); */
 	background-position-y: -7px;
-	/* text-align:justify; */
+/*text-align:justify; */
 	}
 
-h1,h2,h3,h4,h5,h6,em,i,strong,b,cite {
-	font-style: normal;
-	font-weight: normal;
-	}
-
-.no_css, nav h6 {
+.no_css, nav h6, section > h2 {
 	 display: none;
 	}
 
@@ -73,17 +72,25 @@ a:active {
 /*    ARTICLE - GENERAL                         */
 
 h1 { /* Use only for article titles */
-	font-size: 2rem;
-	line-height: 1.25;
+	font-size: 2rem; /* 32px */
+/*line-height: 1.5; */
 	font-family: "PT Serif";
 	z-index: 1;
-	margin-top: 7.5625rem;
+	margin-top: 8.675rem;
 	margin-bottom: 3.475rem;
+	}
+
+.sticky h1 {
+	margin-bottom: 4.975rem;
+}
+
+p + h2, div + h2, section + h2, img + h2 {
+	/* copy margin rules for h2 below. Fix until Firefox recognises column-span */
 	}
 
 h2 { /* Section Titles */
 	font-family: "PT Serif";
-	font-size: 1.25rem;
+	font-size: 1.25rem;  /* 20px */
 	line-height: 2;
 	margin-top: -.4rem;
 	margin-bottom: .4rem;
@@ -97,13 +104,13 @@ article div, section, blockquote, article:nth-last-child(2) {
 	}
 */
 
-article div p + p, section p + p, blockquote p + p, article > p + p { /* recheck this, it may not need to be so specific */
-	text-indent: 1.25rem;
+p + p /* article div p + p, section p + p, blockquote p + p, article > p + p */ { /* recheck this, it may not need to be so specific */
+	text-indent: 1.5rem;
 	}
 
 footer p, figcaption {
-	font-size: 0.75rem;
-	line-height: 1.25rem; /* recalculate as plain number */
+	font-size: 0.75rem;  /* 12px */
+/*line-height: 1.25rem; recalculate as plain number */
 	color: hsla(206, 18%, 60%, 1);
 	}
 
@@ -113,7 +120,7 @@ figcaption {
 	}
 
 footer p.tags {
-	padding-top: 1.25rem;
+	padding-top: 1.5rem;
 	}
 
 footer img {
@@ -126,17 +133,16 @@ footer img {
 
 blockquote {
 	font-family: "PT Serif";
-	line-height: 1.25;
 	}
 
 blockquote p {
-	padding-left: 2.5rem;/*3.125rem;*/
-	padding-right: 2.5rem;
+	padding-left: 3rem;/*3.125rem;*/ /* check but consider padding 0 3rem; */
+	padding-right: 3rem;
 	}
 
 blockquote p.page_ref {
-	font-size: 0.75rem;
-	line-height: 1.25rem;  /* recalculate as plain number */
+	font-size: 0.75rem;  /* 12px */
+/*line-height: 1.25rem; recalculate as plain number */
 	color: hsla(206, 18%, 60%, 1);
 	font-style: italic;
 	text-indent: 0;
@@ -149,7 +155,7 @@ section div:last-child {
 
 	*/
 .c4, .c3, .c2 {
-	column-gap: 1.25rem;
+	column-gap: 1.5rem;
 	}
 
 .c4 {
@@ -165,16 +171,16 @@ section div:last-child {
 	}
 
 cite, em, i {
-	font-style: italic;
+	font-style: italic; /* Change for font on live site */
 	}
 
 strong, b {
-	font-weight: bold;
+	font-weight: bold; /* Change for font on live site */
 	}
 
 .solo {
 	text-indent:0;
-	padding: 1.25rem 0;
+	padding: 1.5rem 0;
 	}
 
 .solo + p {
@@ -185,10 +191,16 @@ em > i, i > em, .card p > i, .card p > em {
 	font-style: normal;
 	}
 
+.drawer img {
+	object-fit: cover;
+	width:100%;
+	height: 100%;
+}
+
 /*    NAV AREAS - GENERAL                       */
 
 nav {
-	font-size: 0.875rem;
+	font-size: 0.875rem; /* 14px */
 	}
 
 nav img {
@@ -207,14 +219,14 @@ nav a:visited {
 nav a:hover { color: hsla(345, 100%, 40%, 1); }
 
 nav > ul, .nav_older {
-	padding-right: .625rem;
+	padding-right: .75rem;
 	border-right: 1px solid hsla(206, 18%, 70%, 1);
 	text-align: right;
-	margin-right: -.625rem;
+	margin-right: -.75rem;
 	}
 
 .section_list li:last-child, .head_nav ul ul li:first-child {
-	padding-top: 0.625rem;
+	padding-top: 0.75rem; /* maybe adjust to be smaller */
 	}
 
 .nav_hide {
@@ -233,10 +245,10 @@ nav:hover .nav_hide, article footer:hover .article_footer_hide, .card:hover .dat
 	}
 
 form {
-	padding: 0.2rem 0.625rem 0.1375rem;
+	padding: 0.2rem 0.75rem 0.1375rem;
 	border-left: 1px solid hsla(206, 18%, 70%, 1);
 	border-right: 1px solid hsla(206, 18%, 70%, 1);
-	margin: 0.25rem -.625rem auto;
+	margin: 0.25rem -.75rem auto;
 	}
 
 input[type="text"] {
@@ -251,8 +263,8 @@ input[type="text"] {
 	}
 
 nav > ul, nav .post_title, .nav_older, .nav_newer {
-	padding-top: .315rem;
-	padding-bottom: .44rem;
+	padding-top: .19rem;
+	padding-bottom: .315rem;
 	margin-top: .25rem;
 	}
 
@@ -273,7 +285,7 @@ nav > ul, nav .post_title, .nav_older, .nav_newer {
 	}
 
 .foot_nav ul {
-	margin-bottom: .25rem;
+	margin-bottom: .5rem;
 	}
 
 /* -------------------------------------------- */

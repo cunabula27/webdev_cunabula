@@ -12,7 +12,7 @@ I work really iteratively and CSS Grid is/was new to me so I found it really hel
 
 to use Github to wrangle the process into some form of order. I also couldn't have done any of
 
-it without Jen Simmons' videos https://youtube.com/layoutland and https://labs.jensimmons.com/ 
+it without Jen Simmons' videos https://youtube.com/layoutland and https://labs.jensimmons.com/
 
 Also https://developer.mozilla.org/en-US/docs/Web
 
@@ -89,7 +89,7 @@ a {
 	background: transparent;
 	}
 
-/* change colours to suit your needs */
+/*    Change colours to suit your needs         */
 
 ins {
 	background-color:  #ff9 /* hsla(84, 100%, 81%, 1); */
@@ -97,7 +97,7 @@ ins {
 	text-decoration: none;
 	}
 
-/* change colours to suit your needs */
+/*    Change colours to suit your needs         */
 
 mark {
 	background-color: #ff9 /* hsla(84, 100%, 81%, 1); */
@@ -120,19 +120,26 @@ table {
 	border-spacing: 0;
 	}
 
-/* change border colour to suit your needs */
+/*    Change border colour to suit your needs   */
 
 hr {
 	display: block;
 	height: 1px;
 	border: 0;
-	border-top: 1px solid #ccc /* hsla(0, 0%, 80%, 1); */
+	border-top: 1px solid #ccc; /* hsla(0, 0%, 80%, 1); */
 	margin: 1em 0;
 	padding: 0;
 	}
 
 input, select {
 	vertical-align: middle;
+	}
+
+/*    Personal addition (because of @font-face  */
+
+h1,h2,h3,h4,h5,h6,em,i,strong,b,cite {
+	font-style: normal;
+	font-weight: normal;
 	}
 
 /* -------------------------------------------- */
