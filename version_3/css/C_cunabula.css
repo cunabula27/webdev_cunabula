@@ -98,7 +98,7 @@ h2 { /* Section Titles */
 	-moz-column-span: all;
 	}
 
-p + p :not(footer p + p, .solo) {
+p + p :not(footer p + p, .solo, .solo + p) {
 	text-indent: 1.5rem;
 	}
 
@@ -177,9 +177,7 @@ strong, b {
 	padding: 1.5rem 0;
 	}
 
-.solo + p {
-	text-indent:0;
-	}
+
 
 em > i, i > em, .card p > i, .card p > em {
 	font-style: normal;
