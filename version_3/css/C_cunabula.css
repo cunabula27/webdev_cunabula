@@ -23,9 +23,8 @@ html {
 
 body {
 	color: hsla(206, 18%, 16%, 1); /* Main Text Colour */
-	font: normal 1rem "PT Sans", sans-serif;
-	line-height: 1.5;
-/*font: normal 100% PTSansRegular, sans-serif; */ /* Production Line */
+	font: normal 1rem/1.5 "PT Sans", sans-serif;
+/*font: 1rem/1.5 PTSansRegular, sans-serif; */ /* Production Line */
 	text-rendering: optimizeLegibility;
 	hyphens: auto;
 /*background-image: url("../images/24.png"); */
@@ -36,7 +35,7 @@ body {
 /*text-align:justify; */
 	}
 
-.no_css, nav h6, section > h2 {
+.no_css, nav h6, /* Fix until Firefox recognises column-span >>> */ section > h2 {
 	 display: none;
 	}
 
@@ -64,7 +63,7 @@ a:active {
 	z-index: 1;
 	}
 
-.feature h1 + div + img, .full_bleed { /* Background splash Image */
+.feature h1 + div + img, .full_bleed { /* Background splash header and full bleed images */
 	height: 100vh;
 	object-fit: cover;
 	}
@@ -72,39 +71,34 @@ a:active {
 /*    ARTICLE - GENERAL                         */
 
 h1 { /* Use only for article titles */
-	font-size: 2rem; /* 32px */
-/*line-height: 1.5; */
-	font-family: "PT Serif";
+	font: 2rem "PT Serif";
+/*font: 2rem PTSerifRegular, sans-serif; */ /* Production Line */
 	z-index: 1;
 	margin-top: 8.675rem;
 	margin-bottom: 3.475rem;
 	}
 
-.sticky h1 {
-	margin-bottom: 4.975rem;
-}
+/*    Fix until Firefox recognises column-span  */
 
 p + h2, div + h2, section + h2, img + h2 {
-	/* copy margin rules for h2 below. Fix until Firefox recognises column-span */
+	/* copy margin rules for h2 below. */
+	grid-column: 3 / 7;
+	margin-top: -.4rem;
+	margin-bottom: -1.1rem; /* h2 margin-bottom - 1.5rem */
 	}
 
+/* ^^ Fix until Firefox recognises column-span  */
+
 h2 { /* Section Titles */
-	font-family: "PT Serif";
-	font-size: 1.25rem;  /* 20px */
-	line-height: 2;
+	font: 1.25rem/2 "PT Serif";
+/*font: 1.25rem/2 PTSerifRegular, sans-serif; */ /* Production Line */
 	margin-top: -.4rem;
 	margin-bottom: .4rem;
 	column-span: all;
 	-moz-column-span: all;
 	}
 
-/*
-article div, section, blockquote, article:nth-last-child(2) {
-	padding-bottom: 1.25rem;
-	}
-*/
-
-p + p /* article div p + p, section p + p, blockquote p + p, article > p + p */ { /* recheck this, it may not need to be so specific */
+p + p :not(footer p + p, .solo) {
 	text-indent: 1.5rem;
 	}
 
@@ -133,6 +127,7 @@ footer img {
 
 blockquote {
 	font-family: "PT Serif";
+/*font-family: PTSerifRegular, sans-serif; */ /* Production Line */
 	}
 
 blockquote p {
@@ -179,7 +174,6 @@ strong, b {
 	}
 
 .solo {
-	text-indent:0;
 	padding: 1.5rem 0;
 	}
 

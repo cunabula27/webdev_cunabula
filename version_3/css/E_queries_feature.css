@@ -19,12 +19,12 @@ body {
 	grid-template-rows: 0 2.5rem minmax(calc(100vh - 6.25rem), auto) 0 auto;
 	}
 
-body, nav, article, .morgue_file {
-	grid-template-columns: 0 repeat(7, minmax(4rem /* define this properly */, 14rem)) minmax(1.5rem, 1fr);
+body, nav, article:not(.sticky), .morgue_file {
+	grid-template-columns: 0 repeat(7, minmax(4rem /* define min size properly */, 14rem)) minmax(1.5rem, 1fr);
 	}
 
 [role="main"] {
-	grid-area: 1 / 1 / 4 / 10; /* standard 1.25rem margin at the bottom of 'main' */
+	grid-area: 1 / 1 / 4 / 10; /* standard 1.5rem margin at the bottom of 'main' */
 	}
 
 [role="main"] .foot_bleed { /* full height, no separation from foot_nav block */
@@ -41,16 +41,19 @@ body, nav, article, .morgue_file {
 	grid-area: 2 / 3 / 3 / 7;
 	}
 
-.feature h1 + div + img { /* Background splash and full bleed images */
+.feature h1 + div + img { /* Background header splash image */
 	grid-area: 1 / 1 / 4 / 10;
 	}
 
 /*    ARTICLE GENERAL                           */
 
-article.sticky {
-	display: block;
+.sticky {
 	grid-column: 3 / 7;
-}
+	}
+
+.sticky h1 {
+	grid-area: auto;
+	}
 
 h1 {
 	grid-area: 1 / 3 / 2 / 7;
@@ -63,7 +66,7 @@ h1 {
 /*    MORGUE FILE                               */
 
 .drawer {
-grid-column: 3/ 9;
+	grid-column: 3/ 9;
 	grid-template-columns: repeat(auto-fit, minmax(25px, 1fr));
 	grid-auto-rows: 25px;
 	grid-auto-flow: dense;
