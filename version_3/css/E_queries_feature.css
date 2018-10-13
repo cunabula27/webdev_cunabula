@@ -10,7 +10,7 @@ ONLY GRID-SPECIFIC CODE SHOULD GO HERE + STYLES ONLY RELEVANT WHEN GRID IS SUPPO
 
 */
 
-body, nav, [role="main"], article, .morgue_file, .drawer {
+body, nav, [role="main"], article, .morgue_file, .drawer, .index {
 	display: grid;
 	grid-gap: 1.5rem;
 	}
@@ -19,7 +19,7 @@ body {
 	grid-template-rows: 0 2.5rem minmax(calc(100vh - 6.25rem), auto) 0 auto;
 	}
 
-body, nav, article:not(.sticky), .morgue_file {
+body, nav, article:not(.sticky), .morgue_file, .index {
 	grid-template-columns: 0 repeat(7, minmax(4rem /* define min size properly */, 14rem)) minmax(1.5rem, 1fr);
 	}
 
