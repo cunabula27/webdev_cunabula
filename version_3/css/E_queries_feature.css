@@ -10,7 +10,7 @@ ONLY GRID-SPECIFIC CODE SHOULD GO HERE + STYLES ONLY RELEVANT WHEN GRID IS SUPPO
 
 */
 
-body, nav, [role="main"], article, .morgue_file, .drawer, .index {
+body, nav, [role="main"], article, .morgue_file, .drawer, .index, .card_container {
 	display: grid;
 	grid-gap: 1.5rem;
 	}
@@ -72,6 +72,12 @@ h1 {
 	grid-auto-flow: dense;
 	}
 
+/*    OTHER LISTS                               */
+
+.card_container {
+	grid-column: 3 / 9;
+}
+
 /*    NAV                                       */
 
 .head_nav {
@@ -103,7 +109,6 @@ nav form {
 
 .nav_older {
 	grid-column: 6 / 7;
-	justify-self:end;
 	}
 
 .nav_newer {
