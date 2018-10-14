@@ -13,6 +13,14 @@ CP Red:						hsla(345, 100%, 40%, 1);	(Highlights, Links)
 
 */
 
+/* -------------------------------------------- */
+
+/*    COLOURS                          START    */
+
+
+
+/*    COLOURS                            END    */
+
 html {
 	font-size: 100%;
 	}
@@ -80,7 +88,10 @@ h1 { /* Use only for article titles */
 
 /*    Fix until Firefox recognises column-span  */
 
-p + h2, div + h2, section + h2, img + h2 {
+p + h2,
+div + h2,
+section + h2,
+img + h2 {
 	/* copy margin rules for h2 below. */
 	grid-column: 3 / 7;
 	margin-top: -.4rem;
@@ -207,7 +218,8 @@ nav > ul, .nav_older {
 	margin-right: -.75rem;
 	}
 
-.section_list li:last-child, .head_nav ul ul li:first-child {
+.section_list li:last-child,
+.head_nav ul ul li:first-child {
 	padding-top: 0.75rem; /* maybe adjust to be smaller */
 	}
 
@@ -215,12 +227,18 @@ nav > ul, .nav_older {
 	height: 0;
 	}
 
-.nav_hide, .article_footer_hide, .date_posted, .article_tags {
+.nav_hide,
+.article_footer_hide,
+.date_posted,
+.article_tags {
 	opacity: 0;
 	transition: opacity .25s linear 0s, height .25s ease-out .1s;
 	}
 
-nav:hover .nav_hide, article footer:hover .article_footer_hide, .card:hover .date_posted, .card:hover .article_tags {
+nav:hover .nav_hide,
+article footer:hover .article_footer_hide,
+.card:hover .date_posted,
+.card:hover .article_tags {
 	height: auto;
 	opacity: 1;
 	transition: opacity .25s linear 0s,  height .25s linear 0s;
@@ -273,148 +291,128 @@ nav > ul, nav .post_title, .nav_older, .nav_newer {
 
 
 
-	output .article_list {
-		padding: 1.25rem 0 0;
-		margin: 0 .625rem;
-		border-top: 1px solid hsla(206, 18%, 70%, 1);
-		}
-
-	.output .article_list h1 {
-		font-size: 1.5rem;
-		color: hsla(206, 18%, 16%, 1);
-		padding: 0 .625rem 1.25rem 0;
-		text-align: left;
-		hyphens: none;
-		grid-column:1/3;
-		}
-
-	.output .article_list .extract {
-		grid-column:1/3;
-		}
-
-	.output .article_list .extract p {
-		padding-left: 0;
-		}
-
-	.output .article_list img {
-		padding-right: 0;
-		}
-
-	.output .article_list > a {
-		display: contents;
-		}
 
 
 
+output .article_list {
+	padding: 1.25rem 0 0;
+	margin: 0 .625rem;
+	border-top: 1px solid hsla(206, 18%, 70%, 1);
+	}
 
+.output .article_list h1 {
+	font-size: 1.5rem;
+	color: hsla(206, 18%, 16%, 1);
+	padding: 0 .625rem 1.25rem 0;
+	text-align: left;
+	hyphens: none;
+	grid-column:1/3;
+	}
 
+.output .article_list .extract {
+	grid-column:1/3;
+	}
 
+.output .article_list .extract p {
+	padding-left: 0;
+	}
 
+.output .article_list img {
+	padding-right: 0;
+	}
 
-		.card {
-			display: grid;
-			grid-template:
-				"art_title art_title" minmax(6.875rem, auto)
-				"art_extract art_extract" max-content
-				"art_image art_image" max-content
-				". ." 1fr
-				". art_date" max-content
-				"art_tags red_dot" 1rem  / auto 1rem;
-			padding: 1rem;
-			margin-bottom: 1.25rem;
-			border: 1px solid hsla(206, 18%, 85%, 1);
-			border-radius: .5rem;
-			font-size: .875rem;
-			line-height: 1.25rem;
-			text-align: justify;
-			color: hsla(206, 18%, 32%, 1);
-			font-style: italic;
-			}
+.output .article_list > a {
+	display: contents;
+	}
 
-		.card > a { /* insert > ?? */
-			display: contents;
-			}
+.card {
+	display: grid;
+	grid-template:
+		"art_title art_title" minmax(6.875rem, auto)
+		"art_extract art_extract" max-content
+		"art_image art_image" max-content
+		". ." 1fr
+		". art_date" max-content
+		"art_tags red_dot" 1rem  / auto 1rem;
+	padding: 1rem;
+	margin-bottom: 1.25rem;
+	border: 1px solid hsla(206, 18%, 85%, 1);
+	border-radius: .5rem;
+	font-size: .875rem;
+	line-height: 1.25rem;
+	text-align: justify;
+	color: hsla(206, 18%, 32%, 1);
+	font-style: italic;
+	}
 
-		.card h1 {
-			grid-area: art_title;
-			font-size: 1.5rem;
-			color: hsla(206, 18%, 16%, 1);
-			padding-bottom: 0;
-			text-align: left;
-			hyphens: none;
-			}
+.card > a { /* insert > ?? */
+	display: contents;
+	}
 
-		.article_image {
-			grid-area: art_image;
-			width:100%;
-			margin: 0;
-			padding: 0 0 1.25rem 0;
-			}
+.card h1 {
+	grid-area: art_title;
+	font-size: 1.5rem;
+	color: hsla(206, 18%, 16%, 1);
+	padding-bottom: 0;
+	text-align: left;
+	hyphens: none;
+	}
 
-		.extract {
-			grid-area: art_extract;
-			padding-bottom: 1.25rem;
-			}
+.article_image {
+	grid-area: art_image;
+	width:100%;
+	margin: 0;
+	padding: 0 0 1.25rem 0;
+	}
 
-		.article_tags {
-			grid-area: art_tags;
-			color: hsla(206, 18%, 50%, 1);
-			text-align: right;
-			font-size: 0.75rem;
-			padding-right: .5rem;
-			align-self: center;
-			}
+.extract {
+	grid-area: art_extract;
+	padding-bottom: 1.25rem;
+	}
 
-		 .card h1, p.extract {
-			padding: 0 0 1.25rem 0;
-			}
+.article_tags {
+	grid-area: art_tags;
+	color: hsla(206, 18%, 50%, 1);
+	text-align: right;
+	font-size: 0.75rem;
+	padding-right: .5rem;
+	align-self: center;
+	}
 
-		.date_posted {
-			grid-area: art_date;
-			writing-mode: vertical-rl;
-			align-self: center;
-			justify-self: center;
-			padding: .5rem 0 0 0;
-			margin:0;
-			color: hsla(206, 18%, 50%, 1);
-			transform: rotate(180deg);
-			font-size: 0.75rem;
-			}
+.card h1, p.extract {
+	padding: 0 0 1.25rem 0;
+	}
 
-		img[alt="// ENDS"] {
-			grid-area: red_dot;
-			align-self: center;
-			justify-self: center;
-			padding: 0;
-			margin:0;
-			}
+.date_posted {
+	grid-area: art_date;
+	writing-mode: vertical-rl;
+	align-self: center;
+	justify-self: center;
+	padding: .5rem 0 0 0;
+	margin:0;
+	color: hsla(206, 18%, 50%, 1);
+	transform: rotate(180deg);
+	font-size: 0.75rem;
+	}
 
-		.card a,
-		.card a:link,
-		.card a:visited {
-			color: hsla(206, 18%, 16%, 1);
-			text-decoration: none;
-			}
+img[alt="// ENDS"] {
+	grid-area: red_dot;
+	align-self: center;
+	justify-self: center;
+	padding: 0;
+	margin:0;
+	}
 
-		.card a:hover h1, .article_tags a:hover {
-			color: hsla(345, 100%, 40%, 1);
-			}
+.card a,
+.card a:link,
+.card a:visited {
+	color: hsla(206, 18%, 16%, 1);
+	text-decoration: none;
+	}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.card a:hover h1, .article_tags a:hover {
+	color: hsla(345, 100%, 40%, 1);
+	}
 
 
 /* -------------------------------------------- */
