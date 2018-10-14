@@ -47,14 +47,6 @@ body, nav, article:not(.sticky), .morgue_file, .index {
 
 /*    ARTICLE GENERAL                           */
 
-.sticky {
-	grid-column: 3 / 7;
-	}
-
-.sticky h1 {
-	grid-area: auto;
-	}
-
 h1 {
 	grid-area: 1 / 3 / 2 / 7;
 	}
@@ -63,20 +55,29 @@ h1 {
 	grid-column: 1 / 10;
 	}
 
-/*    MORGUE FILE                               */
+/*    LIST PAGES                                */
+
+.sticky {
+	grid-column: 3 / 7;
+	}
+
+.sticky h1 {
+	grid-area: auto;
+	}
 
 .drawer {
-	grid-column: 3/ 9;
+	grid-column: 3 / 9;
+}
+
+/*    MORGUE FILE                               */
+
+.morgue_file .drawer {
 	grid-template-columns: repeat(auto-fit, minmax(25px, 1fr));
 	grid-auto-rows: 25px;
 	grid-auto-flow: dense;
 	}
 
-/*    OTHER LISTS                               */
 
-.card_container {
-	grid-column: 3 / 9;
-}
 
 /*    NAV                                       */
 
