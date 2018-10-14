@@ -95,7 +95,6 @@ h2 { /* Section Titles */
 	margin-top: -.4rem;
 	margin-bottom: .4rem;
 	column-span: all;
-	-moz-column-span: all;
 	}
 
 p + p :not(footer p + p, .solo, .solo + p, blockquote p.page_ref ) {
