@@ -10,7 +10,7 @@ ONLY GRID-SPECIFIC CODE SHOULD GO HERE + STYLES ONLY RELEVANT WHEN GRID IS SUPPO
 
 */
 
-body, nav, [role="main"], article, .drawer, .index {
+body, nav, [role="main"], article, .drawer, .index, .gr, .g4, .g3, .g2 {
 	display: grid;
 	grid-gap: 1.5rem;
 	}
@@ -55,6 +55,14 @@ h1 {
 	grid-column: 1 / 10;
 	}
 
+.gr { grid-template-columns: repeat(2, 382fr) repeat(2, 236fr) repeat(2, 382fr); }
+
+.g4 {	grid-template-columns: repeat(4, 1fr); }
+
+.g3 { grid-template-columns: repeat(3, 1fr); }
+
+.g2 { grid-template-columns: repeat(2, 1fr); }
+
 /*    LIST PAGES GENERAL                        */
 
 .sticky, .sticky + h2 {
@@ -67,29 +75,26 @@ h1 {
 
 .drawer {
 	grid-column: 3 / 9;
-	grid-template-columns: repeat(6, 1fr)
-}
+	grid-template-columns: repeat(12, 1fr)
+	}
 
 /*    LIST PAGE ABOUT                           */
 
 .index_card {
-	grid-column: span 2;
-	grid-template-columns: 1fr;
-}
+	grid-column: span 4;
+	}
 
 .index_card h1 {
 	grid-column: auto;
-}
-
-.about .index_card {
-	grid-column: auto;
-}
+	margin:0;
+	}
 
 /*    OUTPUT LIST                               */
 
 .output .index_card {
-	grid-column: span 3;
-}
+	grid-column: span 6;
+	}
+
 /*    MORGUE FILE                               */
 
 .morgue_file .drawer {
