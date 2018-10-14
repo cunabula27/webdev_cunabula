@@ -81,6 +81,10 @@ h1 {
 	grid-column: auto;
 }
 
+.about .index_card {
+	grid-column: auto;
+}
+
 /*    OUTPUT LIST                               */
 
 .output .index_card {
