@@ -65,17 +65,6 @@ a:active {
 	text-decoration: underline;
 	}
 
-/*    ARTICLE - FEATURE                         */
-
-.feature h1 + div { /*Standfirst */
-	z-index: 1;
-	}
-
-.feature h1 + div + img, .full_bleed { /* Background splash header and full bleed images */
-	height: 100vh;
-	object-fit: cover;
-	}
-
 /*    ARTICLE - GENERAL                         */
 
 h1 { /* Use only for article titles */
@@ -152,43 +141,74 @@ blockquote p.page_ref { /* Needs to be full font */
 	font-style: italic;
 	}
 
-.c4, .c3, .c2 {
-	column-gap: 1.5rem;
-	}
+cite, em, i { font-style: italic; /* Change for font on live site */ }
 
-.c4 {
-	column-count: 4;
-	}
+strong, b { font-weight: bold; /* Change for font on live site */ }
 
-.c3 {
-	column-count: 3;
-	}
+.solo {	padding: 1.5rem 0; }
 
-.c2 {
-	column-count: 2;
-	}
-
-cite, em, i {
-	font-style: italic; /* Change for font on live site */
-	}
-
-strong, b {
-	font-weight: bold; /* Change for font on live site */
-	}
-
-.solo {
-	padding: 1.5rem 0;
-	}
-
-em > i, i > em, .card p > i, .card p > em {
-	font-style: normal;
-	}
+em > i, i > em, .card p > i, .card p > em { font-style: normal; }
 
 .drawer img {
 	object-fit: cover;
 	width:100%;
 	height: 100%;
 }
+
+.morgue_file + .drawer { /* Correct this for pages 2 onward should line up with sticky body text */
+	margin-top: 200px;
+}
+
+
+/* -------------------------------------------- */
+
+/*    SHARED STYLES                      END    */
+
+/* -------------------------------------------- */
+
+/*    ARTICLE - FEATURE                         */
+
+.feature h1 + div { /*Standfirst */
+	z-index: 1;
+	}
+
+.feature h1 + div + img, .full_bleed { /* Background splash header and full bleed images */
+	height: 100vh;
+	object-fit: cover;
+	}
+
+/*    MULTICOLUMN                               */
+
+.c4, .c3, .c2 { column-gap: 1.5rem; }
+
+.c4 { column-count: 4; }
+
+.c3 { column-count: 3; }
+
+.c2 { column-count: 2; }
+
+/*    ROLLOVER HIDE / REVEAL                    */
+
+.nav_hide {
+	height: 0;
+	}
+
+.nav_hide,
+.article_footer_hide,
+.date_posted,
+.article_tags {
+	opacity: 0;
+	transition: opacity .25s linear 0s, height .25s ease-out .1s;
+	}
+
+nav:hover .nav_hide,
+article footer:hover .article_footer_hide,
+.card:hover .date_posted,
+.card:hover .article_tags {
+	height: auto;
+	opacity: 1;
+	transition: opacity .25s linear 0s,  height .25s linear 0s;
+	}
 
 /*    NAV AREAS - GENERAL                       */
 
@@ -221,27 +241,6 @@ nav > ul, .nav_older {
 .section_list li:last-child,
 .head_nav ul ul li:first-child {
 	padding-top: 0.75rem; /* maybe adjust to be smaller */
-	}
-
-.nav_hide {
-	height: 0;
-	}
-
-.nav_hide,
-.article_footer_hide,
-.date_posted,
-.article_tags {
-	opacity: 0;
-	transition: opacity .25s linear 0s, height .25s ease-out .1s;
-	}
-
-nav:hover .nav_hide,
-article footer:hover .article_footer_hide,
-.card:hover .date_posted,
-.card:hover .article_tags {
-	height: auto;
-	opacity: 1;
-	transition: opacity .25s linear 0s,  height .25s linear 0s;
 	}
 
 form {
@@ -287,17 +286,6 @@ nav > ul, nav .post_title, .nav_older, .nav_newer {
 .foot_nav ul {
 	margin-bottom: .5rem;
 	}
-
-.morgue_file + .drawer { /* COrrect this for pages 2 onward should line up with sticky body text */
-	margin-top: 200px;
-}
-
-/* -------------------------------------------- */
-
-/*    SHARED STYLES                      END    */
-
-/* -------------------------------------------- */
-
 /* -------------------------------------------- */
 
 /*    CUNABULA.IO                      START    */

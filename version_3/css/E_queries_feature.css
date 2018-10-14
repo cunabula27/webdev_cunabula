@@ -75,10 +75,17 @@ h1 {
 .index_card {
 	grid-column: span 2;
 	grid-template-columns: 1fr;
-	border: 1px solid;
-
 }
 
+.index_card h1 {
+	grid-column: auto;
+}
+
+/*    OUTPUT LIST                               */
+
+.output .index_card {
+	grid-column: span 3;
+}
 /*    MORGUE FILE                               */
 
 .morgue_file .drawer {
