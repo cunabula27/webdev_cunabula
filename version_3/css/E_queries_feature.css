@@ -10,7 +10,7 @@ ONLY GRID-SPECIFIC CODE SHOULD GO HERE + STYLES ONLY RELEVANT WHEN GRID IS SUPPO
 
 */
 
-body, nav, [role="main"], article, .morgue_file, .drawer, .index, .card_container {
+body, nav, [role="main"], article, .drawer, .index {
 	display: grid;
 	grid-gap: 1.5rem;
 	}
