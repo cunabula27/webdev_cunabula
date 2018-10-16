@@ -116,9 +116,13 @@ h2 { /* Section Titles */
 	column-span: all;
 	}
 
-p + p :not(footer p + p, .solo, .solo + p, blockquote p.page_ref ) {
+p + p {
 	text-indent: 1.5rem;
 	}
+
+footer p + p, .solo, .solo + p, blockquote p.page_ref, nav p + p {
+	text-indent: 0;
+}
 
 footer p, figcaption {
 	font-size: 0.75rem;  /* 12px */
