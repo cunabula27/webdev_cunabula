@@ -55,8 +55,11 @@ img {
 
 a,
 a:link,
-a:visited {
-	color: hsla(345, 100%, 40%, 1); /* CP Red */
+a:visited,
+.index_card footer a,
+.index_card footer a:link,
+.index_card footer a:visited {
+	color: hsla(345, 100%, 40%, 1); /*   CP Red   */
 	text-decoration: none;
 	}
 
@@ -65,9 +68,25 @@ a:active {
 	text-decoration: underline;
 	}
 
+nav a, /*             nav link-like behaviour   */
+nav a:link,
+nav a:visited,
+.index_card a,
+.index_card a:link,
+.index_card a:visited {
+	color: hsla(206, 18%, 16%, 1);
+	text-decoration: none;
+	}
+
+nav a:hover, /*       nav link-like behaviour   */
+.index_card a:hover {
+	color: hsla(345, 100%, 40%, 1);
+	}
+
+
 /*    ARTICLE - GENERAL                         */
 
-h1 { /* Use only for article titles */
+h1 { /*           Use only for article titles   */
 	font: 2rem "PT Serif";
 /*font: 2rem PTSerifRegular, sans-serif; */ /* Production Line */
 	z-index: 1;
@@ -191,9 +210,8 @@ em > i, i > em, .card p > i, .card p > em { font-style: normal; }
 	}
 
 nav:hover .nav_hide,
-article footer:hover .article_footer_hide,
-.card:hover .date_posted,
-.card:hover .article_tags {
+/*article */ footer:hover .article_footer_hide,
+.index_card:hover .article_footer_hide {
 	height: auto;
 	opacity: 1;
 	transition: opacity .25s linear 0s,  height .25s linear 0s;
@@ -210,15 +228,6 @@ nav img {
 	width: 2.5rem;
 	height: 2.5rem;
 	}
-
-nav a,
-nav a:link,
-nav a:visited {
-	color: hsla(206, 18%, 16%, 1);
-	text-decoration: none;
-	}
-
-nav a:hover { color: hsla(345, 100%, 40%, 1); }
 
 nav > ul, .nav_older {
 	padding-right: .75rem;
