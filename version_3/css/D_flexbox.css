@@ -4,7 +4,45 @@
 
 /* -------------------------------------------- */
 
+.drawer {
+	grid-column: 3 / 7;
+	grid-template-columns: repeat(12, 1fr)
+	}
 
+/*    LIST PAGE ABOUT                           */
+
+.index_card {
+	grid-column: span 12;
+	}
+
+.index_card h1 {
+	padding-top: 3.5rem;
+	grid-column: auto;
+	margin:0;
+	border-top: 1px solid hsla(206, 18%, 70%, 1);
+	}
+
+.index_card p {
+	padding: 4rem 0;
+/*border-bottom: 1px solid hsla(206, 18%, 80%, 1);*/
+	border-top: 1px solid hsla(206, 18%, 70%, 1);
+	margin-bottom: 10rem;
+	text-align: justify;
+	}
+
+/*    OUTPUT LIST                               */
+
+.output .index_card {
+	grid-column: span 6;
+	}
+
+/*    MORGUE FILE                               */
+
+.morgue_file .drawer {
+	grid-template-columns: repeat(auto-fit, minmax(25px, 1fr));
+	grid-auto-rows: 25px;
+	grid-auto-flow: dense;
+	}
 
 /* -------------------------------------------- */
 
