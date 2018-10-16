@@ -63,18 +63,9 @@ h1 {
 
 .g2 { grid-template-columns: repeat(2, 1fr); }
 
-/*    LIST PAGES GENERAL                        */
-
-.sticky, .sticky + h2 {
-	grid-column: 3 / 7;
-	}
-
-.sticky h1 {
-	grid-area: auto;
-	}
-
-
-	/* SECTION MOVED TO D_FLEXBOX FOR CLARITY */
+/*    SECTION MOVED TO D_FLEXBOX FOR CLARITY    */
+/*    SECTION MOVED TO D_FLEXBOX FOR CLARITY    */
+/*    SECTION MOVED TO D_FLEXBOX FOR CLARITY    */
 
 /*    NAV                                       */
 

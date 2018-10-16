@@ -4,12 +4,20 @@
 
 /* -------------------------------------------- */
 
-.drawer {
+/*    LIST PAGES GENERAL                        */
+
+.sticky, .sticky + h2 {
 	grid-column: 3 / 7;
-	grid-template-columns: repeat(12, 1fr)
 	}
 
-/*    LIST PAGE ABOUT                           */
+.sticky h1 {
+	grid-area: auto;
+	}
+
+.drawer {
+	grid-column: 3 / 9;
+	grid-template-columns: repeat(12, 1fr)
+	}
 
 .index_card {
 	grid-column: span 12;
@@ -30,7 +38,17 @@
 	text-align: justify;
 	}
 
-/*    OUTPUT LIST                               */
+/*    LIST PAGE : SEARCH                        */
+
+.search .drawer {
+	grid-column: 3 / 7;
+	}
+
+/*    LIST PAGE : ABOUT                         */
+
+
+
+/*   LIST PAGE : OUTPUT                         */
 
 .output .index_card {
 	grid-column: span 6;
