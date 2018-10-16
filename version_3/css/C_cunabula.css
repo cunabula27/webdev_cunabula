@@ -149,26 +149,6 @@ strong, b { font-weight: bold; /* Change for font on live site */ }
 
 em > i, i > em, .card p > i, .card p > em { font-style: normal; }
 
-.drawer img {
-	object-fit: cover;
-	width:100%;
-	height: 100%;
-	}
-
-.morgue_file + .drawer { /* Correct this for pages 2 onward should line up with sticky body text */
-	margin-top: 200px;
-	}
-
-
-.drawer [alt="// ENDS"] {
-	width:8px;
-	height: 8px;
-	}
-
-.drawer h1 {
-	font-size: 1.5rem;
-	}
-
 /* -------------------------------------------- */
 
 /*    SHARED STYLES                      END    */
