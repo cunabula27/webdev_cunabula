@@ -197,21 +197,18 @@ em > i, i > em, .card p > i, .card p > em { font-style: normal; }
 
 /*    ROLLOVER HIDE / REVEAL                    */
 
-.nav_hide {
+nav .hide {
 	height: 0;
 	}
 
-.nav_hide,
-.article_footer_hide,
-.date_posted,
-.article_tags {
+.hide {
 	opacity: 0;
 	transition: opacity .25s linear 0s, height .25s ease-out .1s;
 	}
 
-nav:hover .nav_hide,
-/*article */ footer:hover .article_footer_hide,
-.index_card:hover .article_footer_hide {
+nav:hover .hide,
+footer:hover .hide,
+.index_card:hover .hide {
 	height: auto;
 	opacity: 1;
 	transition: opacity .25s linear 0s,  height .25s linear 0s;
