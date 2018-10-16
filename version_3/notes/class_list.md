@@ -10,7 +10,7 @@
 
 .morgue_file
 
-.tags.index
+.tags
 
 ## Article
 
