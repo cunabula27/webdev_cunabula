@@ -120,9 +120,15 @@ p + p {
 	text-indent: 1.5rem;
 	}
 
+<<<<<<< HEAD
 footer p + p, .solo, .solo + p, blockquote p.page_ref, nav p + p {
 	text-indent: 0;
 }
+=======
+footer p + p, .solo, .solo + p, blockquote.page_ref p:last-child {
+	text-indent: 0;
+	}
+>>>>>>> 16db4065d0cedb309bfd80791ec589d96369af2f
 
 footer p, figcaption {
 	font-size: 0.75rem;  /* 12px */
@@ -153,15 +159,21 @@ blockquote {
 	}
 
 blockquote p {
-	padding-left: 3rem;/*3.125rem;*/ /* check but consider padding 0 3rem; */
-	padding-right: 3rem;
+		font-style: italic;
+		text-align: justify;
+	padding: 0 1rem;/*3.125rem;*/ /* check but consider padding 0 3rem; */
 	}
 
-blockquote p.page_ref { /* Needs to be full font */
+blockquote > p {
+	text-indent: -.2rem
+}
+
+blockquote.page_ref p:last-child { /* Needs to be full font */
 	font-size: 0.75rem;  /* 12px */
 /*line-height: 1.25rem; recalculate as plain number */
 	color: hsla(206, 18%, 60%, 1);
 	font-style: italic;
+	padding-left: 0;
 	}
 
 cite, em, i { font-style: italic; /* Change for font on live site */ }
