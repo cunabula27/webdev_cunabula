@@ -26,6 +26,10 @@
 
 		<h1 class="">Dhalgren</h1>
 
+		<div class="g2 standard">
+
+
+
 	<p class="">In the middle of reading <cite><a href="http://en.wikipedia.org/wiki/Dhalgren">Dhalgren</a> </cite> by Samuel R Delany. So far, strange and rather wonderful. Below is a collection of quotes that may come in handy for something in the future:</p>
 
  <blockquote>
@@ -172,6 +176,8 @@
 
  </blockquote>
 
+ </div>
+
 		<footer style="grid-column:3/6;">
 
 		<p class="date_posted hide">Originally posted: 2012-02-16 23:12<br />Last updated: 2012-03-05 21:28</p>
@@ -194,7 +200,7 @@
 	</a>
 
 	<ul>
-		<li class="current_section"><a href="http://cunabula.io/output/">Contents</a></li>
+		<li class="current_section"><a href="http://cunabula.io/output/">Process</a></li>
 		<ul class="section_list hide">
 			<li><a href="http://cunabula.io/process/">Process</a></li>
 			<li class="current_section"><a href="http://cunabula.io/output/">Output</a></li>
@@ -204,7 +210,7 @@
 		</ul>
 	</ul>
 
-	<p class="post_title"><a rel="bookmark" href="http://cunabula.io/process/dhalgren">Bleephaus at Wychwood Festival 2018</a></p>
+
 
 	<form method="get" class="hide" action="http://cunabula.io/"><fieldset><input class="search_form" type="text" value="Search" name="q" size="15" /></fieldset></form>
 
