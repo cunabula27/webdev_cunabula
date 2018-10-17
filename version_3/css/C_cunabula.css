@@ -87,7 +87,8 @@ nav a:hover, /*       nav link-like behaviour   */
 /*    ARTICLE - GENERAL                         */
 
 h1 { /*           Use only for article titles   */
-	font: 2rem "PT Serif";
+	font: 4rem "Fanwood Text";
+/*color: hsla(206, 18%, 24%, 1); */
 /*font: 2rem PTSerifRegular, sans-serif; */ /* Production Line */
 	z-index: 1;
 	margin-top: 8.675rem;
@@ -109,7 +110,8 @@ img + h2 {
 /* ^^ Fix until Firefox recognises column-span  */
 
 h2 { /* Section Titles */
-	font: 1.25rem/2 "PT Serif";
+	font: 2rem/2 "Fanwood Text";
+		font-style: italic;
 /*font: 1.25rem/2 PTSerifRegular, sans-serif; */ /* Production Line */
 	margin-top: -.4rem;
 	margin-bottom: .4rem;
@@ -120,15 +122,9 @@ p + p {
 	text-indent: 1.5rem;
 	}
 
-<<<<<<< HEAD
-footer p + p, .solo, .solo + p, blockquote p.page_ref, nav p + p {
-	text-indent: 0;
-}
-=======
 footer p + p, .solo, .solo + p, blockquote.page_ref p:last-child {
 	text-indent: 0;
 	}
->>>>>>> 16db4065d0cedb309bfd80791ec589d96369af2f
 
 footer p, figcaption {
 	font-size: 0.75rem;  /* 12px */
