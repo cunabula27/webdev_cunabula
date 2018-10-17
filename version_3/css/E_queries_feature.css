@@ -10,7 +10,7 @@ ONLY GRID-SPECIFIC CODE SHOULD GO HERE + STYLES ONLY RELEVANT WHEN GRID IS SUPPO
 
 */
 
-body, nav, [role="main"], article, .drawer, .index, .gr, .g4, .g3, .g2 {
+body, nav, [role="main"], article, .drawer, .index, .gr, .g4, .g3, .g2, blockquote.page_ref {
 	display: grid;
 	grid-gap: 1.5rem;
 	}
@@ -62,6 +62,24 @@ h1 {
 .g3 { grid-template-columns: repeat(3, 1fr); }
 
 .g2 { grid-template-columns: repeat(2, 1fr); }
+
+.c35 { grid-column: 3 / 5; } /* Main Column groupings */
+
+.c37 { grid-column: 3 / 7; }
+
+.c46 { grid-column: 4 / 6; }
+
+.c57 { grid-column: 5 / 7; }
+
+blockquote.page_ref {
+	grid-template-columns: repeat(2, 1fr);
+	grid-column: 3 / 7;
+	grid-row-gap: 0;
+	}
+
+blockquote.page_ref p:last-child {
+	grid-column-start: 2;
+	}
 
 /*    SECTION MOVED TO D_FLEXBOX FOR CLARITY    */
 /*    SECTION MOVED TO D_FLEXBOX FOR CLARITY    */
