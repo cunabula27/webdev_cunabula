@@ -31,7 +31,7 @@ html {
 
 body {
 	color: hsla(206, 18%, 16%, 1); /* Main Text Colour */
-	font: normal 1rem/1.5 "PT Sans", sans-serif;
+	font: normal normal normal 1rem/1.5 "PT Sans", sans-serif;
 /*font: 1rem/1.5 PTSansRegular, sans-serif; */ /* Production Line */
 	text-rendering: optimizeLegibility;
 	hyphens: auto;
@@ -46,6 +46,10 @@ body {
 .no_css, nav h6, /* Fix until Firefox recognises column-span >>> */ section > h2 {
 	 display: none;
 	}
+
+em, i, cite { font-style: italic; }
+
+b, strong { font-weight: bold; }
 
 img {
 	width: 100%;
@@ -88,6 +92,7 @@ nav a:hover, /*       nav link-like behaviour   */
 
 h1 { /*           Use only for article titles   */
 	font: 4rem "Fanwood Text";
+	font-weight: normal;
 /*color: hsla(206, 18%, 24%, 1); */
 /*font: 2rem PTSerifRegular, sans-serif; */ /* Production Line */
 	z-index: 1;
@@ -111,7 +116,8 @@ img + h2 {
 
 h2 { /* Section Titles */
 	font: 2rem/2 "Fanwood Text";
-		font-style: italic;
+	font-style: italic;
+	font-weight: normal;
 /*font: 1.25rem/2 PTSerifRegular, sans-serif; */ /* Production Line */
 	margin-top: -.4rem;
 	margin-bottom: .4rem;
@@ -122,7 +128,7 @@ p + p {
 	text-indent: 1.5rem;
 	}
 
-footer p + p, .solo, .solo + p, blockquote.page_ref p:last-child {
+footer p + p, .solo, .solo + p, blockquote.page_ref p:last-child, .nav_newer {
 	text-indent: 0;
 	}
 
@@ -151,6 +157,7 @@ footer img {
 
 blockquote {
 	font-family: "PT Serif";
+	font-style: italic;
 /*font-family: PTSerifRegular, sans-serif; */ /* Production Line */
 	}
 
@@ -171,10 +178,6 @@ blockquote.page_ref p:last-child { /* Needs to be full font */
 	font-style: italic;
 	padding-left: 0;
 	}
-
-cite, em, i { font-style: italic; /* Change for font on live site */ }
-
-strong, b { font-weight: bold; /* Change for font on live site */ }
 
 .solo {	padding: 1.5rem 0; }
 

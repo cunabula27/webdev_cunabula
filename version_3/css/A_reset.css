@@ -135,13 +135,6 @@ input, select {
 	vertical-align: middle;
 	}
 
-/*    Personal addition (because of @font-face  */
-
-h1,h2,h3,h4,h5,h6,em,i,strong,b,cite {
-	font-style: normal;
-	font-weight: normal;
-	}
-
 /* -------------------------------------------- */
 
 /*    RESET                              END    */

@@ -10,7 +10,7 @@
 
 @font-face {
 	font-family: 'PT Sans';
-	src: local('PT Sans Regular'),
+	src: local('PT Sans'),
          url('../typefaces/PTS55F-webfont.woff2') format('woff2'),
          url('../typefaces/PTS55F-webfont.woff') format('woff');
 	font-weight: normal;
@@ -20,6 +20,7 @@
 @font-face {
 	font-family: 'PT Sans';
 	src: local('PT Sans Italic'),
+	local(local('file:///C:/Windows/Fonts/PTS56F.ttf'),
          url('../typefaces/PTS56F-webfont.woff2') format('woff2')
          url('../typefaces/PTS56F-webfont.woff') format('woff');
 	font-weight: normal;
@@ -46,7 +47,7 @@
 
 @font-face {
 	font-family: 'PT Serif';
-	src: local('PT Serif Regular'),
+	src: local('PT Serif'),
          url('../typefaces/PTF55F-webfont.woff2') format('woff2'),
          url('../typefaces/PTF55F-webfont.woff') format('woff');
 	font-weight: normal;
@@ -56,6 +57,7 @@
 @font-face {
 	font-family: 'PT Serif';
 	src: local('PT Serif Italic'),
+				local('C:/Windows/Fonts/PTS56F.ttf'),
          url('../typefaces/PTF56F-webfont.woff2') format('woff2'),
          url('../typefaces/PTF56F-webfont.woff') format('woff');
 	font-weight: normal;
@@ -72,7 +74,7 @@
 
 @font-face {
 	font-family: 'Fanwood Text';
-	src: local('Fanwood Regular'),
+	src: local('Fanwood Text'),
          url('../typefaces/fanwood_text-webfont.woff2') format('woff2'),
          url('../typefaces/fanwood_text-webfont.woff') format('woff');
 	font-weight: normal;
@@ -81,7 +83,7 @@
 
 @font-face {
 	font-family: 'Fanwood Text';
-	src: local('Fanwood Italic'),
+	src: local('Fanwood Text Italic'),
          url('../typefaces/fanwood_text_italic-webfont.woff2') format('woff2'),
          url('../typefaces/fanwood_text_italic-webfont.woff') format('woff');
 	font-weight: normal;
@@ -98,7 +100,7 @@
 
 @font-face {
 	font-family: 'League Gothic';
-	src: local('League Gothic Regular'),
+	src: local('LeagueGothic-Regular'),
          url('../typefaces/League_Gothic-webfont.woff2') format('woff2'),
          url('../typefaces/League_Gothic-webfont.woff') format('woff');
 	font-weight: normal;
