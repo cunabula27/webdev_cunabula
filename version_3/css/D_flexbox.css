@@ -72,12 +72,14 @@
 
 /*    LIST PAGE : ABOUT                         */
 
-
+.about .index_card {
+	border-top: 1px solid hsla(206, 18%, 70%, 1);
+	}
 
 /*   LIST PAGE : OUTPUT                         */
 
 .output .index_card {
-
+	border-top: 1px solid hsla(206, 18%, 70%, 1);
 	}
 
 /*    MORGUE FILE                               */
