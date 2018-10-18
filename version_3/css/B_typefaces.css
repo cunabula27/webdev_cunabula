@@ -20,8 +20,7 @@
 @font-face {
 	font-family: 'PT Sans';
 	src: local('PT Sans Italic'),
-	local(local('file:///C:/Windows/Fonts/PTS56F.ttf'),
-         url('../typefaces/PTS56F-webfont.woff2') format('woff2')
+         url('../typefaces/PTS56F-webfont.woff2') format('woff2'),
          url('../typefaces/PTS56F-webfont.woff') format('woff');
 	font-weight: normal;
 	font-style: italic;
@@ -30,7 +29,7 @@
 @font-face {
 	font-family: 'PT Sans';
 	src: local('PT Sans Bold'),
-         url('../typefaces/PTS75F-webfont.woff2') format('woff2')
+         url('../typefaces/PTS75F-webfont.woff2') format('woff2'),
          url('../typefaces/PTS75F-webfont.woff') format('woff');
 	font-weight: bold;
 	font-style: normal;
@@ -39,7 +38,7 @@
 @font-face {
 	font-family: 'PT Sans';
 	src: local('PT Sans Bold Italic'),
-         url('../typefaces/PTS76F-webfont.woff2') format('woff2')
+         url('../typefaces/PTS76F-webfont.woff2') format('woff2'),
          url('../typefaces/PTS76F-webfont.woff') format('woff');
 	font-weight: bold;
 	font-style: italic;
