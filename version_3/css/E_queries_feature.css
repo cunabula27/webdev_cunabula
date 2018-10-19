@@ -10,7 +10,7 @@ ONLY GRID-SPECIFIC CODE SHOULD GO HERE + STYLES ONLY RELEVANT WHEN GRID IS SUPPO
 
 */
 
-body, nav, [role="main"], article, .drawer, .index, .gr, .g4, .g3, .g2, blockquote.page_ref {
+body, nav, [role="main"], article, .drawer, .index, .gr, .grout, .grin, .g4, .g3, .g2, blockquote.page_ref {
 	display: grid;
 	grid-gap: 1.5rem;
 	}
@@ -56,6 +56,10 @@ h1 {
 	}
 
 .gr { grid-template-columns: repeat(2, 382fr) repeat(2, 236fr) repeat(2, 382fr); }
+
+.grin { grid-template-columns: .618fr 1fr; }
+
+.grout { grid-template-columns: 1fr .618fr; }
 
 .g4 {	grid-template-columns: repeat(4, 1fr); }
 
