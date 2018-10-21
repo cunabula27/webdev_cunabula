@@ -38,13 +38,13 @@ body {
 /*background-image: url("../images/24.png"); */
 /*background-image: url("../images/12.png"); */
 /*background-image: url("../images/08.png"); */
-/*background-image: url("../images/06.png"); */
-	background-position-y: -7px;
+/*background-image: url("../images/06.png");
+	background-position-y: 9px;
 /*text-align:justify; */
 	}
 
-.no_css, nav h6, /* Fix until Firefox recognises column-span >>> */ section > h2 {
-	 display: none;
+.no_css, .no_title h1, nav h6, /* Fix until Firefox recognises column-span >>> */ section > h2 {
+	display: none;
 	}
 
 em, i, cite { font-style: italic; }
@@ -90,14 +90,14 @@ nav a:hover, /*       nav link-like behaviour   */
 
 /*    ARTICLE - GENERAL                         */
 
-h1 { /*           Use only for article titles   */
+h1, #blog { /*           Use only for article titles   */
 	font: 4rem "Fanwood Text";
 	font-weight: normal;
 /*color: hsla(206, 18%, 24%, 1); */
 /*font: 2rem PTSerifRegular, sans-serif; */ /* Production Line */
 	z-index: 1;
-	margin-top: 8.675rem;
-	margin-bottom: 3.475rem;
+	margin-top: 8.05rem;
+	margin-bottom: 1.95rem;
 	}
 
 /*    Fix until Firefox recognises column-span  */
@@ -106,10 +106,9 @@ p + h2,
 div + h2,
 section + h2,
 img + h2 {
-	/* copy margin rules for h2 below. */
 	grid-column: 3 / 7;
-	margin-top: -.4rem;
-	margin-bottom: -1.1rem; /* h2 margin-bottom - 1.5rem */
+	margin-top: -.25rem;
+	margin-bottom: -.75rem;
 	}
 
 /* ^^ Fix until Firefox recognises column-span  */
@@ -118,9 +117,8 @@ h2 { /* Section Titles */
 	font: 2rem/2 "Fanwood Text";
 	font-style: italic;
 	font-weight: normal;
-/*font: 1.25rem/2 PTSerifRegular, sans-serif; */ /* Production Line */
-	margin-top: -.4rem;
-	margin-bottom: .4rem;
+	margin-top: -.25rem;
+	margin-bottom: -.75rem;
 	column-span: all;
 	}
 
@@ -134,52 +132,47 @@ footer p + p, .solo, .solo + p, blockquote.page_ref p:last-child, .nav_newer, .y
 
 footer p, figcaption, .categories {
 	font-size: 0.75rem;  /* 12px */
-/*line-height: 1.25rem; recalculate as plain number */
 	}
 
 footer p, figcaption {
 	color: hsla(206, 18%, 60%, 1);
 	}
 
+.tags { margin-top: 1.9rem; }
+
+.date_posted { margin-top: .25rem; }
+
 figcaption {
 	color: hsla(206, 18%, 32%, 1);
-	font-style: italic; /* Needs to be full font */
-	}
-
-footer p.tags, .output .index_card h1, .year {
-	padding-top: 1.5rem;
-	}
-
-footer img {
-	padding-top: 1.75rem;
+	font-style: italic;
 	}
 
 [alt="// ENDS"] {
 	width:auto;
+	margin: 2.2rem 0 -.375rem;
 	}
 
 blockquote {
 	font-family: "PT Serif";
 	font-style: italic;
-/*font-family: PTSerifRegular, sans-serif; */ /* Production Line */
 	}
 
 blockquote p {
-		font-style: italic;
-		text-align: justify;
-	padding: 0 1rem;/*3.125rem;*/ /* check but consider padding 0 3rem; */
+	font-style: italic;
+	text-align: justify;
+	padding: 0 1rem;
 	}
 
 blockquote > p {
 	text-indent: -.2rem
-}
+	}
 
-blockquote.page_ref p:last-child { /* Needs to be full font */
+blockquote.page_ref p:last-child {
 	font-size: 0.75rem;  /* 12px */
-/*line-height: 1.25rem; recalculate as plain number */
 	color: hsla(206, 18%, 60%, 1);
 	font-style: italic;
 	padding-left: 0;
+	margin-top: .3rem;
 	}
 
 .solo {	padding: 1.5rem 0; }
@@ -191,6 +184,8 @@ em > i, i > em, .card p > i, .card p > em { font-style: normal; }
 /*    SHARED STYLES                      END    */
 
 /* -------------------------------------------- */
+
+.standard, .feature { margin-bottom: 9rem; }
 
 /*    ARTICLE - FEATURE                         */
 
@@ -215,9 +210,7 @@ em > i, i > em, .card p > i, .card p > em { font-style: normal; }
 
 /*    ROLLOVER HIDE / REVEAL                    */
 
-nav .hide {
-	height: 0;
-	}
+nav .hide { height: 0; }
 
 .hide {
 	opacity: 0;
@@ -234,50 +227,75 @@ footer:hover .hide,
 
 /*    LIST PAGES GENERAL                        */
 
-[role="main"] + .drawer { /* Correct this for pages 2 onward should line up with sticky body text */
-	margin-top: 200px;
+.drawer .index_card:first-child, .morgue_file .drawer  { /* Correct this for pages 2 onward should line up with sticky body text */
+	margin-top: 15.5rem;
+	}
+
+/* Decide on this later
+.morgue_file .drawer {
+	margin-bottom: 3rem;
+} */
+
+.morgue_file .sticky + .drawer {
+	margin-top: 2.75rem;
 	}
 
 .index_card {
 	font-style: italic;
 	border-top: 1px solid hsla(206, 18%, 70%, 1);
-	padding: 5rem 0 3.5rem;
+	padding: 4.5rem 0 3rem;
 	}
+
+.sticky + .drawer .index_card:first-child, #blog + .drawer .index_card:first-child {
+	margin-top: 2.6rem;
+	}
+
+.search .sticky + .drawer .index_card:first-child {margin-top: -.4rem;}
 
 .index_card h1 {
 	font-size: 2.5rem;
 	text-align: left;
 	font-style: italic;
-	padding:0;
+	padding: 1rem 0 0;
 	margin:0;
 	}
 
-.index_card .article_extract {
+.index_card .extract {
 	text-align: justify;
+	margin-top: -.39rem;
 	}
 
 /*    LIST PAGE : SEARCH                        */
 
 .search .index_card {
-	padding: 0;
-	border-top: none;
+	padding-top:0;
+	border:none;
 	}
 
 .search .index_card h1 {
-	padding: 3rem 0;
+	padding-top: 5.5rem;
 	border-top: 1px solid hsla(206, 18%, 70%, 1);
 	}
 
 .search .index_card .extract {
-	padding-top: 4rem;
+	padding-top:6.2rem;
+	margin-top:0;
 	border-top: 1px solid hsla(206, 18%, 70%, 1);
 	}
 
 .search .index_card footer {
-	margin-bottom: 6rem; /*double .index_card h1 padding-top */
+	padding-bottom:1.5rem;
 	}
 
 /*   LIST PAGE : OUTPUT                         */
+
+.output .index_card .categories {
+	margin-top: -.15rem;
+	}
+
+.output .index_card .year {
+	margin-top: 1.875rem;
+	}
 
 .output .index_card footer {
 	text-align: right;
@@ -358,6 +376,7 @@ nav > ul, nav .post_title, .nav_older, .nav_newer {
 .foot_nav ul {
 	margin-bottom: .5rem;
 	}
+
 /* -------------------------------------------- */
 
 /*    CUNABULA.IO                      START    */
