@@ -56,7 +56,6 @@
 @font-face {
 	font-family: 'PT Serif';
 	src: local('PT Serif Italic'),
-				local('C:/Windows/Fonts/PTS56F.ttf'),
          url('../typefaces/PTF56F-webfont.woff2') format('woff2'),
          url('../typefaces/PTF56F-webfont.woff') format('woff');
 	font-weight: normal;
