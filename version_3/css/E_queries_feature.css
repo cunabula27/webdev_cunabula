@@ -51,6 +51,11 @@ h1 {
 	grid-area: 1 / 3 / 2 / 7;
 	}
 
+#blog {
+	grid-area: 2 / 3 / 3 / 7;
+
+}
+
 .full_bleed { /* Full bleed images */
 	grid-column: 1 / 10;
 	}
@@ -120,7 +125,7 @@ blockquote.page_ref p:last-child {
 	grid-area: 2 / 1 / 3 / 2;
 	}
 
-.index_card .article_extract {
+.index_card .extract {
 	grid-area: 2 / 2 / 3 / 4;
 	}
 
@@ -165,7 +170,7 @@ blockquote.page_ref p:last-child {
 	grid-area: 1 / 1 / 3 / 3;
 }
 
-.output .index_card .article_extract {
+.output .index_card .extract {
 	grid-area: 2 / 5 / 3 / 7;
 }
 
