@@ -16,7 +16,7 @@
 
 <li><a href="<txp:site_url />">Home Page</a></li>
 
-</ul>
+</ul><!--
 <txp:if_article_list>
 <li class="nav_older"><txp:older showalways="1">Older</txp:older></li>
 <li class="nav_newer"><txp:newer showalways="1">Newer</txp:newer></li>
@@ -25,11 +25,11 @@
 <li class="nav_newer"><txp:link_to_next showalways="1">Newer</txp:link_to_next></li>
 </txp:if_article_list>
 
-</ul>
+</ul>-->
 
 <!-- MOVABLE HEAD NAV STARTS HERE -->
-
-<ul  id="head_nav">
+<!--
+<ul  id="head_nav"> -->
 
 <li><a href="#foot_nav" title="Link to Menu" class="logo"><span>Home Page</span></a></li>
 
@@ -44,7 +44,7 @@
 </li>
 
 <li id="nav_post_title"><txp:if_article_list><txp:section name='<txp:section />'>Overview</txp:section><txp:else /><txp:permlink><txp:title /></txp:permlink></txp:if_article_list></li>
-
+<!--
 <li id="nav_search"><form method="get" action="<txp:site_url />"><fieldset><input class="search_form" type="text" value="Search" name="q" size="15" /></fieldset></form></li>
 <txp:if_article_list>
 <li class="nav_older"><txp:older showalways="1">Older</txp:older></li>
