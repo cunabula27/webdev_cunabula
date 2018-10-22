@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+
+	<title><txp:page_title separator=" – " /></title>
+
+	<link rel="stylesheet" href="<txp:site_url />css/cp_base_2.css" />
+	<txp:if_individual_article><txp:if_custom_field name="Custom CSS"><link rel="stylesheet" href="<txp:site_url />css/<txp:custom_field name="Custom CSS" />.css" /></txp:if_custom_field></txp:if_individual_article>
+
+</head>
+
+<body>
+
+<div class="<txp:section /> <txp:if_article_list>index</txp:if_article_list>" role="main">
