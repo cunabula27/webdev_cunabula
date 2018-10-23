@@ -1,26 +1,30 @@
+
+
 </div>
 
 <nav role="navigation" class="head_nav">
 
-	<a href="http://www.cunabula.io/" title="Home Page">
+	<a href="<txp:site_url />" title="Home Page">
 		<img src="images/CP_Face_Icon_400x400.jpg" alt="Home Page" />
 		<h6>cunabula.io</h6>
 	</a>
 
 	<ul>
-		<li class="current_section"><a href="http://cunabula.io/output/">Contents</a></li>
-		<ul class="section_list hide">
-			<li><a href="http://cunabula.io/process/">Process</a></li>
-			<li class="current_section"><a href="http://cunabula.io/output/">Output</a></li>
-			<li><a href="http://cunabula.io/morgue-file/">Morgue File</a></li>
-			<li><a href="http://cunabula.io/about/">About</a></li>
-			<li><a href="http://cunabula.io/">Home Page</a></li>
-		</ul>
+		<txp:section title="1" link="1" wraptag="li" class="current_section" />
+		<txp:section_list wraptag="ul" break="" sections="process, output, morgue-file, about, default" class="section_list hide">
+		<li<txp:if_section name='<txp:section />'> class="current_section"</txp:if_section>><txp:if_section name="default"><a href="<txp:site_url />">Home Page</a><txp:else /><txp:section title="1" link="1" /></txp:if_section></li>
+		</txp:section_list>
 	</ul>
 
-	<p class="post_title"><a rel="bookmark" href="http://cunabula.io/process/dhalgren">Overview</a></p>
+	<txp:if_article_list type="pg">
+<p class="post_title"><txp:permlink>Page <txp:page_url type="pg" /></txp:permlink></p>
+<txp:else />
+<txp:if_individual_article><p class="post_title"><txp:permlink><txp:title /></txp:permlink></p></txp:if_individual_article>
+<txp:else />
+<p class="post_title"><txp:permlink>Introduction</txp:permlink></p>
+</txp:if_article_list>
 
-<!-- <form method="get" action="<txp:site_url />"><fieldset><input class="search_form" type="text" value="Search" name="q" size="15" /></fieldset></form>
+<form method="get" action="<txp:site_url />"><fieldset><input class="search_form" type="search" value="Search..." name="q" /></fieldset></form>
 
 	<txp:if_article_list>
 		<p class="nav_older"><txp:older showalways="1">Older</txp:older></p>
@@ -32,21 +36,18 @@
 
 </nav>
 
-<nav role="navigation" class="foot_nav"> -->
+<nav role="navigation" class="foot_nav">
 
 	<a href="#top" title="Return to start of the current page">
-		<img src="images/arrow_up_white.svg" alt="Return to start of the current page" />
+	<img alt="Return to start of the current page" <txp:if_individual_article><txp:if_custom_field name="Custom CSS" match="any" name="horizontal">src="images/arrow_left_white.svg"<txp:else />src="images/arrow_up_white.svg"</txp:if_custom_field></txp:if_individual_article>
+ />
 		<h6>Return to start of the current page</h6>
 	</a>
 
-	<ul class="section_list">
-		<li><a href="http://cunabula.io/process/">Process</a></li>
-		<li class="current_section"><a href="http://cunabula.io/output/">Output</a></li>
-		<li><a href="http://cunabula.io/morgue-file/">Morgue File</a></li>
-		<li><a href="http://cunabula.io/about/">About</a></li>
-		<li><a href="http://cunabula.io/">Home Page</a></li>
-	</ul>
-<!--
+<txp:section_list wraptag="ul" break="" sections="process, output, morgue-file, about, default" class="section_list">
+<li<txp:if_section name='<txp:section />'> class="current_section"</txp:if_section>><txp:if_section name="default"><a href="<txp:site_url />">Home Page</a><txp:else /><txp:section title="1" link="1" /></txp:if_section></li>
+</txp:section_list>
+
 	<form method="get" action="<txp:site_url />"><fieldset><input class="search_form" type="text" value="Search" name="q" size="15" /></fieldset></form>
 
 	<txp:if_article_list>
