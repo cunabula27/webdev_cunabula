@@ -365,6 +365,8 @@ nav > ul, nav .post_title, .nav_older, .nav_newer {
 
 /*    NAV - FOOT                                */
 
+.turn_left { transform: rotate(-90deg); }
+
 .foot_nav ul, .foot_nav form, .foot_nav .nav_older {
 	border-color: hsla(206, 18%, 70%, 1);
 	}
