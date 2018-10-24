@@ -1,5 +1,17 @@
 <txp:output_form form="boilerplate_head" />
 
+<txp:if_article_list>
 
+ <txp:article status="sticky" form="default_copy" />
+
+</txp:if_article_list>
+
+<txp:if_search>
+
+ <h1 class="">Search results for &lsquo;<txp:search_term />&rsquo;</h1>
+
+</txp:if_search>
+
+<txp:article form="default_copy" />
 
 <txp:output_form form="boilerplate_foot" />
