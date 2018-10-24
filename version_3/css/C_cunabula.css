@@ -227,16 +227,16 @@ footer:hover .hide,
 
 /*    LIST PAGES GENERAL                        */
 
-.drawer .index_card:first-child, .morgue_file .drawer  { /* Correct this for pages 2 onward should line up with sticky body text */
+.drawer .index_card:first-child, .morgue-file .drawer  { /* Correct this for pages 2 onward should line up with sticky body text */
 	margin-top: 15.5rem;
 	}
 
 /* Decide on this later
-.morgue_file .drawer {
+.morgue-file .drawer {
 	margin-bottom: 3rem;
 } */
 
-.morgue_file .sticky + .drawer {
+.morgue-file .sticky + .drawer {
 	margin-top: 2.75rem;
 	}
 
@@ -303,7 +303,7 @@ footer:hover .hide,
 
 /*    MORGUE FILE                               */
 
-.morgue_file .drawer img {
+.morgue-file .drawer img {
 	object-fit: cover;
 	width:100%;
 	height: 100%;
