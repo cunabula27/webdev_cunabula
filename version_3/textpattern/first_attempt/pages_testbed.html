@@ -1,0 +1,27 @@
+<txp:output_form form="boilerplate_head" />
+
+<txp:if_article_list>
+
+  <txp:if_variable name="list_page_number" value="1" />
+
+   <txp:article status="sticky" form="sticky_copy" />
+
+  <div class="drawer">
+
+  </txp:if_variable>
+
+</txp:if_article_list>
+
+<txp:if_search>
+
+  <article class="sticky">
+    <h1>Search results for &lsquo;<txp:search_term />&rsquo;</h1>
+  </article>
+
+  <div class="drawer">
+
+</txp:if_search>
+
+<txp:article form="default_copy" />
+
+<txp:output_form form="boilerplate_foot" />

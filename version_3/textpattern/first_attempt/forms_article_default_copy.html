@@ -1,0 +1,56 @@
+<txp:if_article_list>
+
+<article class="index_card">
+
+  <h1><txp:permlink><txp:title /></txp:permlink></h1>
+
+  <a href="<txp:permlink />">
+
+    <txp:if_article_image><txp:article_image class="article_image" width="0" height="0" /></txp:if_article_image>
+
+    <div class="extract">
+      <txp:excerpt />
+    </div>
+
+  </a>
+
+  <txp:output_form form="article_footer_copy" />
+
+</article>
+
+</txp:if_section>
+
+</txp:if_article_list>
+
+<txp:if_individual_article>
+
+<article class="<txp:custom_field name="Base Layout" default="standard" />">
+
+<h1><txp:permlink><txp:title /></txp:permlink></h1>
+
+<div class="<txp:custom_field name="Initial Width" default="c35" />">
+
+<txp:body />
+
+</div>
+
+<txp:output_form form="article_footer_copy" />
+
+</article>
+</txp:if_individual_article>
+
+<txp:if_search>
+
+<article class="index_card">
+
+<h1><txp:permlink><txp:title /></txp:permlink></h1>
+
+<div class="extract">
+<txp:search_result_excerpt />
+</div>
+
+<txp:output_form form="article_footer_copy" />
+
+</article>
+
+</txp:if_search>
