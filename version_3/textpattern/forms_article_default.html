@@ -1,0 +1,21 @@
+<txp:if_article_list>
+
+<article class="index_card">
+
+<txp:else />
+
+<article class="<txp:custom_field name="Base Layout" default="standard" />">
+
+</txp:if_article_list>
+
+<h1><txp:permlink><txp:title /></txp:permlink></h1>
+
+<div class="<txp:custom_field name="Initial Width" default="c35" />">
+
+<txp:body />
+
+</div>
+
+<txp:output_form form="article_footer_copy" />
+
+</article>
