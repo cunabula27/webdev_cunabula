@@ -363,6 +363,10 @@ nav > ul, nav .post_title, .nav_older, .nav_newer {
 	opacity: .5;
 	}
 
+.head_nav .nav_older, .head_nav .nav_newer {
+	color: #FFF; /* Hack to hide element without link */
+}
+
 /*    NAV - FOOT                                */
 
 .turn_left { transform: rotate(-90deg); }
@@ -374,6 +378,10 @@ nav > ul, nav .post_title, .nav_older, .nav_newer {
 .foot_nav {
 	background-color: hsla(206, 18%, 85%, 1);
 	}
+
+.foot_nav .nav_older, .foot_nav .nav_newer {
+	color: hsla(206, 18%, 85%, 1); /* Hack to hide element without link */
+}
 
 .foot_nav ul {
 	margin-bottom: .5rem;
