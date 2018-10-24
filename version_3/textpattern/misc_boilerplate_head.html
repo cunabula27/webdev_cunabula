@@ -4,16 +4,37 @@
 
 <head>
 
-	<meta charset="utf-8" />
-	<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 
-	<title><txp:page_title separator=" – " /></title>
+  <title><txp:page_title separator=" – " /></title>
 
-	<link rel="stylesheet" href="<txp:site_url />css/cp_base_2.css" />
-	<txp:if_individual_article><txp:if_custom_field name="Custom CSS"><link rel="stylesheet" href="<txp:site_url />css/<txp:custom_field name="Custom CSS" />.css" /></txp:if_custom_field></txp:if_individual_article>
+  <link rel="shortcut icon" href="<txp:site_url />favicon.ico" type="image/ico" />
+
+  <txp:css format="link" name="A_reset" />
+  <txp:css format="link" name="B_typefaces" />
+  <txp:css format="link" name="C_cunabula" />
+  <txp:css format="link" name="D_flexbox" />
+  <txp:css format="link" name="E_queries_feature" />
+  <txp:css format="link" name="F_queries_media" />
+
+  <!--
+  <link rel="stylesheet" href="../css/A_reset.css">
+  <link rel="stylesheet" href="../css/B_typefaces.css">
+  <link rel="stylesheet" href="../css/C_cunabula.css">
+  <link rel="stylesheet" href="../css/D_flexbox.css">
+  <link rel="stylesheet" href="../css/E_queries_feature.css">
+  <link rel="stylesheet" href="../css/F_queries_media.css">
+
+  <link rel="stylesheet" href="../css/cp_base_2.css" />
+  -->
+
+  <txp:if_individual_article><txp:if_custom_field name="Custom CSS"><link rel="stylesheet" href="../css/<txp:custom_field name="Custom CSS" />.css" /></txp:if_custom_field></txp:if_individual_article>
+
+  <txp:variable name="list_page_number" value='<txp:page_url type="pg" />' />
 
 </head>
 
 <body>
 
-<div class="<txp:section /> <txp:if_article_list>index</txp:if_article_list>" role="main">
+<div class="<txp:if_search>search </txp:if_search><txp:section /><txp:if_article_list> index</txp:if_article_list>" role="main">
