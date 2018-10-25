@@ -43,7 +43,7 @@ body {
 /*text-align:justify; */
 	}
 
-.no_css, .no_title h1, nav h6, /* Fix until Firefox recognises column-span >>> */ section > h2 {
+.no_css, .no_title > h1, nav h6, /* Fix until Firefox recognises column-span >>> */ section > h2 {
 	display: none;
 	}
 
@@ -183,6 +183,19 @@ blockquote.page_ref p:last-child {
 .solo {	padding: 1.5rem 0; }
 
 em > i, i > em, .index_card i, .index_card em { font-style: normal; }
+
+.oui_embed {
+	position: relative;
+	width: 100%;
+	}
+
+iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	}
 
 /* -------------------------------------------- */
 
