@@ -1,0 +1,23 @@
+<txp:output_form form="boilerplate_head" />
+
+<txp:output_form form="constants" />
+
+<txp:if_article_list type="pg">
+
+  <div class="drawer">
+
+<txp:else />
+
+  <txp:if_article_list>
+
+    <txp:article status="sticky" form="sticky" limit="1" />
+
+    <div class="drawer">
+
+  </txp:if_article_list>
+
+<txp:article />
+
+</txp:if_article_list>
+
+<txp:output_form form="boilerplate_foot" />

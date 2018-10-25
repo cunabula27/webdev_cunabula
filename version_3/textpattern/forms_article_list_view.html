@@ -1,0 +1,25 @@
+<article class="index_card">
+
+<h1><txp:permlink><txp:title /></txp:permlink></h1>
+
+<txp:if_section name="output">
+<div class="categories">
+<p><txp:category1 link="1" title="1" /> | <txp:category2 link="1" title="1" /></p>
+<txp:posted wraptag="p" class="year" format="%Y" />
+</div>
+</txp:if_section>
+
+<a href="<txp:permlink />">
+<txp:article_image class="article_image" />
+<div class="extract">
+<txp:excerpt />
+</div>
+</a>
+
+<txp:if_section name="output">
+<txp:output_form form="article_footer_output_list" />
+<txp:else />
+<txp:output_form form="article_footer" />
+</txp:if_section>
+
+</article>
