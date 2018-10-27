@@ -13,6 +13,7 @@ ONLY GRID-SPECIFIC CODE SHOULD GO HERE + STYLES ONLY RELEVANT WHEN GRID IS SUPPO
 body, nav, [role="main"], article, .drawer, .index, .gr, .grout, .grin, .g4, .g3, .g2, blockquote.page_ref {
 	display: grid;
 	grid-gap: 1.5rem;
+	position:relative;
 	}
 
 body {
@@ -79,6 +80,8 @@ h1 {
 .c46 { grid-column: 4 / 6; }
 
 .c57 { grid-column: 5 / 7; }
+
+.c67 { grid-column: 6 / 7; }
 
 blockquote.page_ref {
 	grid-template-columns: repeat(2, 1fr);
