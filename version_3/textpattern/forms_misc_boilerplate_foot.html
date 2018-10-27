@@ -18,10 +18,10 @@
       <txp:section title="1" link="1" wraptag="li" class="current_section" />
     </txp:if_section>
     <ul class="section_list hide">
-      <txp:section_list break="" sections="process, output, morgue-file, about">
+      <txp:section_list break="" sections="process, output, morgue-file, miscellany, about">
         <li<txp:if_section name='<txp:section />'> class="current_section"</txp:if_section>><txp:section title="1" link="1" /></li>
       </txp:section_list>
-      <li><a href="<txp:site_url />">Home Page</a></li>
+        <li><a href="<txp:site_url />">Home Page</a></li>
     </ul>
   </ul>
 
@@ -29,7 +29,7 @@
 
   <txp:if_individual_article><p class="post_title"><txp:permlink><txp:title /></txp:permlink></p></txp:if_individual_article>
 
-  <form method="get" action="<txp:site_url />" class="hide"><fieldset><input class="search_form" type="search" value="Search&hellip;" name="q" /></fieldset></form>
+  <form method="get" action="<txp:site_url />" class="hide"><fieldset><input class="search_form" type="search" placeholder="Search&hellip;" name="q" /></fieldset></form>
 
   <txp:if_article_list>
     <p class="nav_older hide"><txp:older showalways="1" rel="prev">Older</txp:older></p>
@@ -49,13 +49,13 @@
   </a>
 
   <ul class="section_list">
-    <txp:section_list break="" sections="process, output, morgue-file, about" class="section_list">
+    <txp:section_list break="" sections="process, output, morgue-file, ,miscellany, about" class="section_list">
       <li<txp:if_section name='<txp:section />'> class="current_section"</txp:if_section>><txp:section title="1" link="1" /></li>
     </txp:section_list>
       <li><a href="<txp:site_url />">Home Page</a></li>
   </ul>
 
-  <form method="get" action="<txp:site_url />"><fieldset><input class="search_form" type="text" value="Search&hellip;" name="q" size="15" /></fieldset></form>
+  <form method="get" action="<txp:site_url />"><fieldset><input class="search_form" type="search" placeholder="Search&hellip;" name="q" size="15" /></fieldset></form>
 
   <txp:if_article_list>
     <p class="nav_older"><txp:older showalways="1" rel="prev">Older</txp:older></p>
