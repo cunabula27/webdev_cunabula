@@ -160,7 +160,10 @@ figcaption {
 blockquote {
 	font-family: "PT Serif";
 	font-style: italic;
+	margin: 1.5rem 0;
 	}
+
+div blockquote:first-child { margin-top: 0; }
 
 blockquote p {
 	font-style: italic;
@@ -170,6 +173,10 @@ blockquote p {
 
 blockquote > p {
 	text-indent: -.2rem
+	}
+
+blockquote.page_ref {
+	margin: 0;
 	}
 
 blockquote.page_ref p:last-child {
