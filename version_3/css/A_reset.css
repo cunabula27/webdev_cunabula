@@ -67,7 +67,7 @@ footer,header,hgroup,menu,nav,section {
 	display: block;
 	}
 
-nav ul {
+nav ul, .cv ul {
 	list-style: none;
 	}
 
@@ -111,7 +111,10 @@ del {
 	}
 
 abbr[title], dfn[title] {
-	border-bottom: 1px dotted;
+	font-variant: none;
+	font-style:italic;
+	text-decoration:none;
+	border-bottom: 1px dashed hsla(345, 100%, 40%, 1);
 	cursor: help;
 	}
 
