@@ -43,7 +43,7 @@ body {
 /*text-align:justify; */
 	}
 
-.no_css, .no_title > h1, nav h6, /* Fix until Firefox recognises column-span >>> */ section > h2 {
+.no_css, nav h6, /* Fix until Firefox recognises column-span >>> */ section > h2 {
 	display: none;
 	}
 
