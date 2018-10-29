@@ -113,8 +113,7 @@ del {
 abbr[title], dfn[title] {
 	font-variant: none;
 	font-style:italic;
-	text-decoration:none;
-	border-bottom: 1px dashed hsla(345, 100%, 40%, 1);
+	text-decoration: underline dotted hsla(345, 100%, 40%, 1);
 	cursor: help;
 	}
 
