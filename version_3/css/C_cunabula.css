@@ -35,10 +35,10 @@ body {
 /*font: 1rem/1.5 PTSansRegular, sans-serif; */ /* Production Line */
 	text-rendering: optimizeLegibility;
 	hyphens: auto;
-	/*background-image: url("http://cunabula.io/images/24.png"); */
-	/*background-image: url("http://cunabula.io/images/12.png"); */
-	/*background-image: url("http://cunabula.io/images/08.png"); */
-	/*background-image: url("http://cunabula.io/images/06.png");
+/*background-image: url("http://cunabula.io/images/24.png"); */
+/*background-image: url("http://cunabula.io/images/12.png"); */
+/*background-image: url("http://cunabula.io/images/08.png"); */
+/*background-image: url("http://cunabula.io/images/06.png");
 	background-position-y: 9px;
 /*text-align:justify; */
 	}
@@ -187,8 +187,8 @@ blockquote.page_ref p:last-child {
 	margin-top: .3rem;
 	}
 
-	p + .solo, dl + .solo, ul + .solo, ol + .solo,
-	.solo + p, .solo + dl, .solo + ul, .solo + ol { padding-top: 1.5rem; }
+p + .solo, dl + .solo, ul + .solo, ol + .solo,
+.solo + p, .solo + dl, .solo + ul, .solo + ol { padding-top: 1.5rem; }
 
 em > i, i > em, .index_card i, .index_card em { font-style: normal; }
 
@@ -335,6 +335,13 @@ footer:hover .hide,
 	height: 100%;
 	}
 
+/*    CV                                        */
+
+.cv dt {
+	font: 1.5rem/2 "Fanwood Text";
+	font-style: italic;
+	}
+
 /*    NAV AREAS - GENERAL                       */
 
 nav {
@@ -391,7 +398,7 @@ nav > ul, nav .post_title, .nav_older, .nav_newer {
 
 .head_nav .nav_older, .head_nav .nav_newer {
 	color: #FFF; /* Hack to hide element without link */
-}
+	}
 
 /*    NAV - FOOT                                */
 
@@ -407,7 +414,7 @@ nav > ul, nav .post_title, .nav_older, .nav_newer {
 
 .foot_nav .nav_older, .foot_nav .nav_newer {
 	color: hsla(206, 18%, 85%, 1); /* Hack to hide element without link */
-}
+	}
 
 .foot_nav ul {
 	margin-bottom: .5rem;

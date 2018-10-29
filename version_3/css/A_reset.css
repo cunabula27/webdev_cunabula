@@ -67,7 +67,7 @@ footer,header,hgroup,menu,nav,section {
 	display: block;
 	}
 
-nav ul, .cv ul {
+nav ul, .cv li {
 	list-style: none;
 	}
 

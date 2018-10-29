@@ -10,7 +10,7 @@ ONLY GRID-SPECIFIC CODE SHOULD GO HERE + STYLES ONLY RELEVANT WHEN GRID IS SUPPO
 
 */
 
-body, nav, [role="main"], article, .drawer, .index, .gr, .grout, .grin, .g4, .g3, .g2, blockquote.page_ref {
+body, nav, [role="main"], article, .drawer, .index, .gr, .grout, .grin, .g4, .g3, .g2, blockquote.page_ref, .cv {
 	display: grid;
 	grid-gap: 1.5rem;
 	position:relative;
@@ -22,6 +22,10 @@ body {
 
 body, nav, .feature, .standard, .index {
 	grid-template-columns: 0 repeat(7, minmax(4rem /* define min size properly */, 14rem)) minmax(1.5rem, 1fr);
+	}
+
+.no_title > div:first-of-type {
+	margin-top: 18.6875rem;
 	}
 
 .centred {
@@ -36,9 +40,6 @@ body, nav, .feature, .standard, .index {
 	grid-template-columns: 0 repeat(auto, 14rem);
 	}
 
-.no_title > div:first-of-type {
-	margin-top: 18.6875rem;
-	}
 
 [role="main"] {
 	grid-area: 1 / 1 / 4 / 10; /* standard 1.5rem margin at the bottom of 'main' */
@@ -169,24 +170,24 @@ blockquote.page_ref p:last-child {
 
 .output .index_card h1 {
 	grid-area: 1 / 3 / 2 / 7;
-}
+	}
 
 .output .index_card .categories {
 	grid-area: 2 / 4 / 3 / 5;
-}
+	}
 
 .output .index_card footer {
 	grid-area: 2 / 4 / 3 / 5;
 	align-self: end;
-}
+	}
 
 .output .index_card img {
 	grid-area: 1 / 1 / 3 / 3;
-}
+	}
 
 .output .index_card .extract {
 	grid-area: 2 / 5 / 3 / 7;
-}
+	}
 
 /*    MORGUE FILE                               */
 
@@ -195,6 +196,30 @@ blockquote.page_ref p:last-child {
 	grid-auto-rows: 25px;
 	grid-auto-flow: dense;
 	}
+
+/*    CV                                        */
+
+.cv {
+	grid-template-columns: auto 1fr;
+	}
+
+.cv h2 {
+	grid-column: span 2;
+	}
+
+.cv dt {
+	grid-column-start: 1;
+	margin-top: -.7rem;
+	}
+
+.cv dd {
+	grid-column-start: 2;
+	}
+
+.cv ul {
+	display: auto;
+	}
+
 
 /*    NAV                                       */
 
