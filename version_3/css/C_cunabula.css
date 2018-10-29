@@ -118,7 +118,7 @@ img + h2 {
 
 /* ^^ Fix until Firefox recognises column-span  */
 
-h2 { /* Section Titles */
+h2, .livelist dt { /* Section Titles */
 	font: 2rem/2 "Fanwood Text";
 	font-style: italic;
 	font-weight: normal;
