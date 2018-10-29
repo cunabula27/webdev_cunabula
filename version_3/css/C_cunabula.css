@@ -338,8 +338,11 @@ footer:hover .hide,
 /*    CV                                        */
 
 .cv dt {
-	font: 1.5rem/2 "Fanwood Text";
+	font: 1.5rem/1.5rem "Fanwood Text";
 	font-style: italic;
+	padding: 0;
+	margin: .05rem 0 0;
+	color: hsla(206, 18%, 35%, 1);
 	}
 
 /*    NAV AREAS - GENERAL                       */
