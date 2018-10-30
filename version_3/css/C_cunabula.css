@@ -236,7 +236,7 @@ iframe {
 
 /*    ROLLOVER HIDE / REVEAL                    */
 
-nav .hide { height: 0; }
+nav .hide, .waffle.hide { height: 0; }
 
 .hide {
 	opacity: 0;
@@ -396,7 +396,9 @@ nav > ul, nav .post_title, .nav_older, .nav_newer {
 /*    NAV - HEAD                                */
 
 .head_nav img {
-	opacity: .5;
+	opacity: .7;
+	filter:hue-rotate(200deg);
+	filter:saturate(.9);
 	}
 
 .head_nav .nav_older, .head_nav .nav_newer {
