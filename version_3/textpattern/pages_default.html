@@ -6,32 +6,48 @@
 
 	<txp:output_form form="site_intro" />
 
-</txp:if_article_list>
-
-<txp:if_search_results>
-
-	<txp:output_form form="search_intro" />
-
-</txp:if_search_results>
-
-<txp:if_category>
-
-	<txp:output_form form="category_intro" />
-
-</txp:if_category>
-
-<txp:if_category>
-
-	<div class="drawer output" id="drawer">
-
-	<txp:article form="list_view_category" />
-
 <txp:else />
 
-	<div class="drawer" id="drawer">
+	<txp:if_search>
 
-	<txp:article />
+		<txp:article pgonly="1" />
 
-</txp:if_category>
+		<txp:if_search_results>
+
+			<article class="sticky">
+
+				<h1>Search results for &lsquo;<txp:search_term />&rsquo;</h1>
+
+			</article>
+
+			<div class="drawer" id="drawer">
+
+			<txp:article />
+
+		<txp:else />
+
+			<article class="sticky">
+
+				<h1>Sorry,<br /> &nbsp; there&rsquo;s nothing for &lsquo;<txp:search_term />&rsquo;.</h1>
+
+				<h2>But here&rsquo;s a handy link to the <a href="http://www.cunabula.io/">home page</a>.</h2>
+
+			</article>
+
+		</txp:if_search_results>
+
+	</txp:if_search>
+
+	<txp:if_category>
+
+		<txp:output_form form="category_intro" />
+
+		<div class="drawer output" id="drawer">
+
+		<txp:article form="list_view_category" />
+
+	</txp:if_category>
+
+</txp:if_article_list>
 
 <txp:output_form form="boilerplate_foot" />
