@@ -6,7 +6,15 @@
 
 	<txp:else />
 
-		<h1>Projects with <txp:category title="1" /></h1>
+		<txp:if_category name="self-initiated">
+
+			<h1><txp:category title="1" /> Work</h1>
+
+		<txp:else />
+
+			<h1>Projects with <txp:category title="1" /></h1>
+
+		</txp:if_category>
 
 	</txp:if_category>
 
