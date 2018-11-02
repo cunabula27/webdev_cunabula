@@ -1,12 +1,21 @@
 <article class="index_card">
 
-<h1><txp:search_result_title /></h1>
+	<h1><txp:search_result_title /></h1>
 
-<div class="extract">
-<txp:variable name="are_words" value='<txp:search_result_excerpt />' />
-<txp:if_variable name="are_words" value=""><txp:article_image width="0" height="0" /></txp:if_variable>
-<p><txp:search_result_excerpt /></p>
-</div>
-<txp:output_form form="article_footer" />
+	<div class="extract">
+
+		<txp:variable name="are_words" value='<txp:search_result_excerpt />' />
+
+		<txp:if_variable name="are_words" value="">
+
+			<txp:article_image width="0" height="0" />
+
+		</txp:if_variable>
+
+		<p><txp:search_result_excerpt /></p>
+
+	</div>
+
+	<txp:output_form form="article_footer" />
 
 </article>

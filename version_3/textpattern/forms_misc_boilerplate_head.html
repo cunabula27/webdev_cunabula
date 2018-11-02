@@ -4,32 +4,41 @@
 
 <head>
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+	<meta charset="utf-8" />
 
-  <title><txp:page_title separator=" – " /></title>
+	<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 
-  <link rel="shortcut icon" href="<txp:site_url />favicon.ico" type="image/ico" />
+	<title><txp:page_title separator=" – " /></title>
 
-  <txp:css format="link" name="A_reset" />
-  <txp:css format="link" name="B_typefaces" />
-  <txp:css format="link" name="C_cunabula" />
-  <txp:css format="link" name="D_flexbox" />
-  <txp:css format="link" name="E_queries_feature" />
-  <txp:css format="link" name="F_queries_media" />
+	<link rel="shortcut icon" href="<txp:site_url />favicon.ico" type="image/ico" />
 
-  <!--
-  <link rel="stylesheet" href="../css/A_reset.css">
-  <link rel="stylesheet" href="../css/B_typefaces.css">
-  <link rel="stylesheet" href="../css/C_cunabula.css">
-  <link rel="stylesheet" href="../css/D_flexbox.css">
-  <link rel="stylesheet" href="../css/E_queries_feature.css">
-  <link rel="stylesheet" href="../css/F_queries_media.css">
+	<txp:css format="link" name="A_reset" />
+	<txp:css format="link" name="B_typefaces" />
+	<txp:css format="link" name="C_cunabula" />
+	<txp:css format="link" name="D_flexbox" />
+	<txp:css format="link" name="E_queries_feature" />
+	<txp:css format="link" name="F_queries_media" />
 
-  <link rel="stylesheet" href="../css/cp_base_2.css" />
-  -->
+	<!--
+	<link rel="stylesheet" href="<txp:site_url />/css/A_reset.css">
+	<link rel="stylesheet" href="<txp:site_url />/css/B_typefaces.css">
+	<link rel="stylesheet" href="<txp:site_url />/css/C_cunabula.css">
+	<link rel="stylesheet" href="<txp:site_url />/css/D_flexbox.css">
+	<link rel="stylesheet" href="<txp:site_url />/css/E_queries_feature.css">
+	<link rel="stylesheet" href="<txp:site_url />/css/F_queries_media.css">
 
-  <txp:if_individual_article><txp:if_custom_field name="Custom CSS"><link rel="stylesheet" href="../css/<txp:custom_field name="Custom CSS" />.css" /></txp:if_custom_field></txp:if_individual_article>
+	<link rel="stylesheet" href="<txp:site_url />/css/cp_base_2.css" />
+	-->
+
+	<txp:if_individual_article>
+
+		<txp:if_custom_field name="Custom_CSS">
+
+			<link rel="stylesheet" href="../css/<txp:custom_field name="Custom_CSS" />.css" />
+
+		</txp:if_custom_field>
+
+	</txp:if_individual_article>
 
 </head>
 

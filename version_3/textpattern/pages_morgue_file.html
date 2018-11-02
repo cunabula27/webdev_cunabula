@@ -4,20 +4,31 @@
 
 <txp:if_article_list type="pg">
 
-  <div class="drawer">
+	<div class="drawer" id="drawer">
 
 <txp:else />
 
-  <txp:if_article_list>
+	<txp:if_article_list>
 
-    <txp:article status="sticky" form="sticky" />
+		<txp:article status="sticky" form="sticky" />
 
-    <div class="drawer">
+		<div class="drawer" id="drawer">
 
-  </txp:if_article_list>
+	</txp:if_article_list>
 
 </txp:if_article_list>
 
-<txp:article form="morgue_file" limit="30" />
+
+<txp:if_individual_article>
+
+	<txp:article form="morgue_file" limit="40" />
+
+	<txp:article status="sticky" />
+
+<txp:else />
+
+	<txp:article form="morgue_file" limit="40" />
+
+</txp:if_individual_article>
 
 <txp:output_form form="boilerplate_foot" />

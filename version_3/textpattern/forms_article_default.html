@@ -1,21 +1,27 @@
 <txp:if_article_list>
 
-<txp:output_form form="list_view" />
+	<txp:output_form form="list_view" />
 
 <txp:else />
 
-<article class="<txp:custom_field name="Base Layout" default="standard" />">
+	<article class="<txp:custom_field name="Base_Layout" default="standard" />">
 
-<h1><txp:permlink><txp:title /></txp:permlink></h1>
+		<txp:if_custom_field match="any" name="Base_Layout" value="alt_title, no_title">
 
-<div class="<txp:custom_field name="Initial Width" default="c35" />">
+		<txp:else />
 
-<txp:body />
+			<h1><txp:permlink><txp:title /></txp:permlink></h1>
 
-</div>
+			<div class="<txp:custom_field name="Initial_Width" default="c35" />">
 
-<txp:output_form form="article_footer" />
+		</txp:if_custom_field>
 
-</article>
+		<txp:body />
+
+		</div>
+
+		<txp:output_form form="article_footer" />
+
+	</article>
 
 </txp:if_article_list>

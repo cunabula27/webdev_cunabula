@@ -1,69 +1,148 @@
 <txp:if_article_list>
-  </div>
+
+	</div>
+
 </txp:if_article_list>
 
 </div>
 
 <nav role="navigation" class="head_nav">
 
-  <a href="<txp:site_url />" title="Home Page">
-    <img src="../images/CP_Face_Icon_400x400.jpg" alt="Home Page" />
-    <h6>cunabula.io</h6>
-  </a>
+	<a href="<txp:site_url />" title="Home Page">
 
-  <ul>
-    <txp:if_section name="default, welcome">
-      <li>CUNABULA &middot; IO</li>
-    <txp:else />
-      <txp:section title="1" link="1" wraptag="li" class="current_section" />
-    </txp:if_section>
-    <ul class="section_list hide">
-      <txp:section_list break="" sections="process, output, morgue-file, miscellany, about">
-        <li<txp:if_section name='<txp:section />'> class="current_section"</txp:if_section>><txp:section title="1" link="1" /></li>
-      </txp:section_list>
-        <li><a href="<txp:site_url />">Home Page</a></li>
-    </ul>
-  </ul>
+		<img src="<txp:site_url />/images/CP_Face_Icon_400x400.jpg" alt="Home Page" />
 
-  <txp:if_article_list><p class="post_title"><txp:if_variable name="list_page_number" value="1">Introduction<txp:else />Page <txp:page_url type="pg" /></txp:if_variable></p></txp:if_article_list>
+		<h6>cunabula.io</h6>
 
-  <txp:if_individual_article><p class="post_title"><txp:permlink><txp:title /></txp:permlink></p></txp:if_individual_article>
+	</a>
 
-  <form method="get" action="<txp:site_url />" class="hide"><fieldset><input class="search_form" type="search" placeholder="Search&hellip;" name="q" /></fieldset></form>
+	<ul>
 
-  <txp:if_article_list>
-    <p class="nav_older hide"><txp:older showalways="1" rel="prev">Older</txp:older></p>
-    <p class="nav_newer hide"><txp:newer showalways="1" rel="next">Newer</txp:newer></p>
-  <txp:else />
-    <p class="nav_older hide"><txp:link_to_prev showalways="1" rel="prev">Previous</txp:link_to_prev></p>
-    <p class="nav_newer hide"><txp:link_to_next showalways="1" rel="next">Next</txp:link_to_next></p>
-  </txp:if_article_list>
+		<txp:if_search>
+
+			<li>Search results for</li>
+
+		<txp:else />
+
+			<txp:if_section name="default, welcome">
+
+				<li>Contents</li>
+
+			<txp:else />
+
+				<txp:section title="1" link="1" wraptag="li" class="current_section" />
+
+			</txp:if_section>
+
+		</txp:if_search>
+
+		<ul class="section_list hide">
+
+			<txp:section_list break="" sections="output, process, morgue-file, miscellany, about">
+
+			<li<txp:if_section name='<txp:section />'> class="current_section"</txp:if_section>>
+
+				<txp:section title="1" link="1" />
+
+			</li>
+
+			</txp:section_list>
+
+			<li><a href="<txp:site_url />">Home Page</a></li>
+
+		</ul>
+
+	</ul>
+
+	<txp:if_individual_article>
+
+		<p class="post_title"><txp:permlink><txp:title /></txp:permlink></p>
+
+	<txp:else/>
+
+		<p class="post_title">
+
+			<txp:if_search>
+
+				<txp:search_term />
+
+			<txp:else />
+
+				<txp:if_article_list>
+
+					<txp:if_variable name="list_page_number" value="1">
+
+						Introduction
+
+					<txp:else />
+
+						Page <txp:page_url type="pg" />
+
+					</txp:if_variable>
+
+				</txp:if_article_list>
+
+			</txp:if_search>
+
+		</p>
+
+	</txp:if_individual_article>
+
+	<form method="get" action="<txp:site_url />" class="hide"><fieldset><input class="search_form" type="search" placeholder="Search&hellip;" name="q" /></fieldset></form>
+
+	<txp:if_article_list>
+
+		<p class="nav_older hide"><txp:older showalways="1" rel="prev">Older</txp:older></p>
+
+		<p class="nav_newer hide"><txp:newer showalways="1" rel="next">Newer</txp:newer></p>
+
+	<txp:else />
+
+		<p class="nav_older hide"><txp:link_to_prev showalways="1" rel="prev">Previous</txp:link_to_prev></p>
+
+		<p class="nav_newer hide"><txp:link_to_next showalways="1" rel="next">Next</txp:link_to_next></p>
+
+	</txp:if_article_list>
 
 </nav>
 
 <nav role="navigation" class="foot_nav">
 
-  <a href="#top" title="Return to start of the current page">
-    <img src="../images/arrow_up_white.svg" alt="Return to start of the current page" <txp:if_custom_field name="Base Layout" match="any" value="horizontal">class="turn_left"</txp:if_custom_field> />
-    <h6>Return to start of the current page</h6>
-  </a>
+	<a href="#top" title="Return to start of the current page">
 
-  <ul class="section_list">
-    <txp:section_list break="" sections="process, output, morgue-file, ,miscellany, about" class="section_list">
-      <li<txp:if_section name='<txp:section />'> class="current_section"</txp:if_section>><txp:section title="1" link="1" /></li>
-    </txp:section_list>
-      <li><a href="<txp:site_url />">Home Page</a></li>
-  </ul>
+		<img src="<txp:site_url />/images/arrow_up_white.svg" alt="Return to start of the current page" <txp:if_custom_field name="Base_Layout" match="any" value="horizontal">class="turn_left"</txp:if_custom_field> />
 
-  <form method="get" action="<txp:site_url />"><fieldset><input class="search_form" type="search" placeholder="Search&hellip;" name="q" size="15" /></fieldset></form>
+		<h6>Return to start of the current page</h6>
 
-  <txp:if_article_list>
-    <p class="nav_older"><txp:older showalways="1" rel="prev">Older</txp:older></p>
-    <p class="nav_newer"><txp:newer showalways="1" rel="next">Newer</txp:newer></p>
-  <txp:else />
-    <p class="nav_older"><txp:link_to_prev showalways="1" rel="prev">Previous</txp:link_to_prev></p>
-    <p class="nav_newer"><txp:link_to_next showalways="1" rel="next">Next</txp:link_to_next></p>
-  </txp:if_article_list>
+	</a>
+
+	<ul class="section_list">
+
+		<txp:section_list break="" sections="output, process, morgue-file, miscellany, about" class="section_list">
+
+			<li<txp:if_section name='<txp:section />'> class="current_section"</txp:if_section>><txp:section title="1" link="1" /></li>
+
+		</txp:section_list>
+
+		<li><a href="<txp:site_url />">Home Page</a></li>
+
+	</ul>
+
+	<form method="get" action="<txp:site_url />"><fieldset><input class="search_form" type="search" placeholder="Search&hellip;" name="q" size="15" /></fieldset></form>
+
+	<txp:if_article_list>
+
+		<p class="nav_older"><txp:older showalways="1" rel="prev">Older</txp:older></p>
+
+		<p class="nav_newer"><txp:newer showalways="1" rel="next">Newer</txp:newer></p>
+
+	<txp:else />
+
+		<p class="nav_older"><txp:link_to_prev showalways="1" rel="prev">Previous</txp:link_to_prev></p>
+
+		<p class="nav_newer"><txp:link_to_next showalways="1" rel="next">Next</txp:link_to_next></p>
+
+	</txp:if_article_list>
 
 </nav>
 

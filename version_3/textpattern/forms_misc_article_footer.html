@@ -1,15 +1,17 @@
-<footer class="<txp:custom_field name="Footer Position" default="c35" />">
+<footer class="<txp:custom_field name="Footer_Position" default="c35" />">
 
-  <!-- <txp:variable name="modified" value='<txp:modified />' /> Will this work in contstants? If not reinstate -->
+	<txp:if_variable name="modified" value='<txp:posted />'>
 
-  <txp:if_variable name="modified" value='<txp:posted />'>
-    <p class="date_posted hide">Posted: <txp:posted /></p>
-  <txp:else />
-    <p class="date_posted hide">Originally posted: <txp:posted /><br />Last updated: <txp:modified /></p>
-  </txp:if_variable>
+		<p class="date_posted hide">Posted: <txp:posted /></p>
 
-  <p class="tags hide"><txp:smd_tag_list label="Filed in: " wraptag="" break=" | " indent=""><txp:smd_tag_name link="1" /></txp:smd_tag_list></p>
+	<txp:else />
 
-  <img src="../images/red_dot.svg" alt="// ENDS">
+		<p class="date_posted hide">Originally posted: <txp:posted /><br />Last updated: <txp:modified /></p>
+
+	</txp:if_variable>
+
+	<p class="tags hide"><txp:smd_tag_list label="Filed in: " wraptag="" break=" | " indent=""><txp:smd_tag_name link="1" /></txp:smd_tag_list></p>
+
+	<img src="<txp:site_url />/images/red_dot.svg" alt="// ENDS">
 
 </footer>

@@ -2,48 +2,36 @@
 
 <txp:output_form form="constants" />
 
-<txp:if_article_list not type="pg, q">
+<txp:if_article_list not type="pg, q, c">
 
-<article class="sticky">
-
-<h1><a href="http://cunabula.io/">Hello. Here be dragons...</a></h1>
-
-<div class="c2">
-
-<p>It&#8217;s October 2018. I&#8217;m just in the middle of updating the design of the site so while you can read this everything is going to be a bit broken. It&#8217;s easier for me that mirroring the site locally with all the attendant Apache server stuff and then seamlessly switching over when I&#8217;ve finished beating myself over the head squashing bugs.</p>
-
-<p class="solo">Sorry. Shouldn&#8217;t take too long though, and all the old content will be in exactly the same places when I&#8217;m back up and running.</p>
-
-<p>Update, later in the evening: The backend code was a bit all over the place and adding to it wasn&#8217;t helping, so I deleted the lot, after copying it to <a href="https://github.com/cunabula27/webdev_cunabula/">Github</a>, which I&#8217;m using to manage / document the redesign. It&#8217;s looking like it&#8217;ll be quicker to start again, especially as I don&#8217;t have to wade through old code.</p>
-
-<p class="solo">Which is nice.</p>
-
-</div>
-
-</article>
+	<txp:output_form form="site_intro" />
 
 </txp:if_article_list>
 
 <txp:if_search_results>
-<article class="sticky">
 
-<h1>Search results for &lsquo;<txp:search_term />&rsquo;</h1>
+	<txp:output_form form="search_intro" />
 
-</article>
+</txp:if_search_results>
+
+<txp:if_category>
+
+	<txp:output_form form="category_intro" />
+
+</txp:if_category>
+
+<txp:if_category>
+
+	<div class="drawer output" id="drawer">
+
+	<txp:article form="list_view_category" />
 
 <txp:else />
 
-<article class="sticky">
+	<div class="drawer" id="drawer">
 
-<h1>Sorry,<br /> &nbsp; there&rsquo;s nothing for &lsquo;<txp:search_term />&rsquo;.</h1>
+	<txp:article Base_Layout="front_page" />
 
-<h2>But here&rsquo;s a handy link to the <a href="http://www.cunabula.io/">home page</a>.</h2>
-
-</article>
-</txp:if_search_results>
-
-<div class="drawer">
-
-<txp:article />
+</txp:if_category>
 
 <txp:output_form form="boilerplate_foot" />

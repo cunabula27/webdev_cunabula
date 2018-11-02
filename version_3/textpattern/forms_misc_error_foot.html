@@ -1,0 +1,79 @@
+</div>
+
+<nav role="navigation" class="head_nav">
+
+	<a href="<txp:site_url />" title="Home Page">
+
+		<img src="<txp:site_url />/images/CP_Face_Icon_400x400.jpg" alt="Home Page" />
+
+		<h6>cunabula.io</h6>
+
+	</a>
+
+	<ul>
+
+		<li>Don&rsquo;t</li>
+
+		<ul class="section_list hide">
+
+			<txp:section_list break="" sections="output, process, morgue-file, miscellany, about">
+
+			<li<txp:if_section name='<txp:section />'> class="current_section"</txp:if_section>><txp:section title="1" link="1" /></li>
+
+			</txp:section_list>
+
+			<li><a href="<txp:site_url />">Home Page</a></li>
+
+		</ul>
+
+	</ul>
+
+	<p class="post_title">Panic</p>
+
+	<txp:if_individual_article>
+
+		<p class="post_title"><txp:permlink><txp:title /></txp:permlink></p>
+
+	</txp:if_individual_article>
+
+	<form method="get" action="<txp:site_url />" class="hide"><fieldset><input class="search_form" type="search" placeholder="Everything" name="q" data-tooltip aria-haspopup="true" title="Search here&hellip;" size="15" /></fieldset></form>
+
+	<p class="nav_older hide"><a href="https://www.bbc.co.uk/programmes/b00lvdrj">will be all right</a></p>
+
+	<p class="nav_newer hide"><a href="https://twitter.com/wittertainment">in the end.</a></p>
+
+</nav
+
+<nav role="navigation" class="foot_nav">
+
+	<a href="#top" title="Return to start of the current page">
+
+	<img src="<txp:site_url />/images/arrow_up_white.svg" alt="Return to start of the current page" <txp:if_custom_field name="Base_Layout" match="any" value="horizontal">class="turn_left"</txp:if_custom_field> />
+
+	<h6>Return to start of the current page</h6>
+
+	</a>
+
+	<ul class="section_list">
+
+		<txp:section_list break="" sections="output, process, morgue-file, miscellany, about" class="section_list">
+
+			<li<txp:if_section name='<txp:section />'> class="current_section"</txp:if_section>><txp:section title="1" link="1" /></li>
+
+		</txp:section_list>
+
+		<li><a href="<txp:site_url />">Home Page</a></li>
+
+	</ul>
+
+	<form method="get" action="<txp:site_url />"><fieldset><input class="search_form" type="search" placeholder="Hello to Jason Isaacs" name="q" data-tooltip aria-haspopup="true" title="Search here&hellip;" size="15" /></fieldset></form>
+
+	<p class="nav_older"><a href="https://www.bbc.co.uk/programmes/b00lvdrj">If it&rsquo;s not all right</a></p>
+
+	<p class="nav_newer"><a href="https://twitter.com/wittertainment">it&rsquo;s not the end.</a></p>
+
+</nav>
+
+</body>
+
+</html>
