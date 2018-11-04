@@ -1,0 +1,25 @@
+<txp:output_form form="boilerplate_head" />
+
+<txp:output_form form="constants" />
+
+<txp:smd_if_tag_list>
+
+	<article class="sticky">
+
+		<h1>Articles tagged with &lsquo;<txp:smd_tag_list wraptag="" break=""><txp:smd_tag_name /></txp:smd_tag_list>&rsquo;</h1>
+
+	</article>
+
+	<div class="drawer">
+
+		<txp:smd_related_tags section="output" form="list_view" />
+
+		<txp:smd_related_tags section="process" form="list_view" />
+
+		<txp:smd_related_tags section="morgue_file" form="list_view" />
+
+		<txp:smd_related_tags section="miscellany" form="list_view" />
+
+</txp:smd_if_tag_list>
+
+<txp:output_form form="boilerplate_foot" />
