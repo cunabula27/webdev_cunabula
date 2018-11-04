@@ -4,7 +4,94 @@
 
 /* -------------------------------------------- */
 
+.card {
+	display: grid;
+	grid-template:
+		"art_title art_title" minmax(6.875rem, auto)
+		"art_extract art_extract" max-content
+		"art_image art_image" max-content
+		". ." 1fr
+		". art_date" max-content
+		"art_tags red_dot" 1rem  / auto 1rem;
+	padding: 1rem;
+	margin-bottom: 1.25rem;
+	border: 1px solid hsla(206, 18%, 85%, 1);
+	border-radius: .5rem;
+	font-size: .875rem;
+	line-height: 1.25rem;
+	text-align: justify;
+	color: hsla(206, 18%, 32%, 1);
+	font-style: italic;
+	}
 
+.card > a { /* insert > ?? */
+	display: contents;
+	}
+
+.card h1 {
+	grid-area: art_title;
+	font-size: 1.5rem;
+	color: hsla(206, 18%, 16%, 1);
+	padding-bottom: 0;
+	text-align: left;
+	hyphens: none;
+	}
+
+.article_image {
+	grid-area: art_image;
+	width:100%;
+	margin: 0;
+	padding: 0 0 1.25rem 0;
+	}
+
+.extract {
+	grid-area: art_extract;
+	padding-bottom: 1.25rem;
+	}
+
+.article_tags {
+	grid-area: art_tags;
+	color: hsla(206, 18%, 50%, 1);
+	text-align: right;
+	font-size: 0.75rem;
+	padding-right: .5rem;
+	align-self: center;
+	}
+
+ .card h1, p.extract {
+	padding: 0 0 1.25rem 0;
+	}
+
+.card .date_posted {
+	grid-area: art_date;
+	writing-mode: vertical-rl;
+	align-self: center;
+	justify-self: center;
+	padding: .5rem 0 0 0;
+	margin:0;
+	color: hsla(206, 18%, 50%, 1);
+	transform: rotate(180deg);
+	font-size: 0.75rem;
+	}
+
+.card img[alt="// ENDS"] {
+	grid-area: red_dot;
+	align-self: center;
+	justify-self: center;
+	padding: 0;
+	margin:0;
+	}
+
+.card a,
+.card a:link,
+.card a:visited {
+	color: hsla(206, 18%, 16%, 1);
+	text-decoration: none;
+	}
+
+.card a:hover h1, .card .article_tags a:hover {
+	color: hsla(345, 100%, 40%, 1);
+	}
 
 /* -------------------------------------------- */
 
