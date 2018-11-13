@@ -14,7 +14,6 @@
 		". art_date" max-content
 		"art_tags red_dot" 1rem  / auto 1rem;
 	padding: 1rem;
-	margin-bottom: 1.25rem;
 	border: 1px solid hsla(206, 18%, 85%, 1);
 	border-radius: .5rem;
 	font-size: .875rem;
@@ -22,10 +21,6 @@
 	text-align: justify;
 	color: hsla(206, 18%, 32%, 1);
 	font-style: italic;
-	}
-
-.card > a { /* insert > ?? */
-	display: contents;
 	}
 
 .card h1 {
@@ -37,19 +32,24 @@
 	hyphens: none;
 	}
 
-.article_image {
-	grid-area: art_image;
-	width:100%;
-	margin: 0;
+.card .article_image {
+	grid-area: 2/1/4/3;
+	height: 20rem;
+	object-fit: cover;
+	margin: 0 auto;
 	padding: 0 0 1.25rem 0;
+	opacity:.15;
 	}
 
-.extract {
-	grid-area: art_extract;
+.card .extract {
+	grid-area: 2/1/4/3;
 	padding-bottom: 1.25rem;
+	align-self:center;
+	margin: 0 1.5rem;
+color: hsla(206, 18%, 0%, 1);
 	}
 
-.article_tags {
+.card .article_tags {
 	grid-area: art_tags;
 	color: hsla(206, 18%, 50%, 1);
 	text-align: right;
@@ -58,8 +58,8 @@
 	align-self: center;
 	}
 
- .card h1, p.extract {
-	padding: 0 0 1.25rem 0;
+ .card h1 {
+	margin:1.25rem 0;
 	}
 
 .card .date_posted {
@@ -92,6 +92,10 @@
 .card a:hover h1, .card .article_tags a:hover {
 	color: hsla(345, 100%, 40%, 1);
 	}
+
+.tagged-with .drawer > br {
+display:none;
+}
 
 /* -------------------------------------------- */
 

@@ -237,6 +237,7 @@ iframe {
 /*    ROLLOVER HIDE / REVEAL                    */
 
 nav .hide, .waffle.hide { height: 0; }
+nav .hide { height: 0; }
 
 .hide {
 	opacity: 0;
@@ -256,6 +257,7 @@ footer:hover .hide,
 .drawer .index_card:first-child, .morgue-file .drawer  { /* Correct this for pages 2 onward should line up with sticky body text */
 	margin-top: 15.5rem;
 	}
+
 
 .morgue-file .drawer {
 	border-top: 1px solid hsla(206, 18%, 70%, 1);
@@ -397,9 +399,6 @@ nav > ul, nav .post_title, .nav_older, .nav_newer {
 /*    NAV - HEAD                                */
 
 .head_nav img {
-	opacity: .7;
-	filter:hue-rotate(200deg);
-	filter:saturate(.9);
 	}
 
 .head_nav .nav_older, .head_nav .nav_newer {
