@@ -76,6 +76,14 @@
 		grid-column: 2 / 6;
 		}
 
+	h1 {
+		grid-column-start: 2;
+		}
+
+	p + h2, div + h2, section + h2, img + h2 {
+		grid-column-start: 2;
+		}
+
 	nav a:first-child {
 		justify-self: start;
 		}
