@@ -38,7 +38,7 @@
 		border-right: none;
 		}
 
-	h1:first-of-type{
+	.sticky h1 {
 		margin-top:13.5rem;
 		}
 
@@ -64,7 +64,7 @@
 
 	.c35 { grid-column: 2 / 4; } /* Main Column groupings */
 
-	.c37 { grid-column: 2 / 6; }
+	.c37, blockquote.page_ref { grid-column: 2 / 6; }
 
 	.c46 { grid-column: 3 / 5; }
 
