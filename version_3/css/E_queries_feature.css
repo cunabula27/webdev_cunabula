@@ -21,7 +21,8 @@ body {
 	}
 
 body, nav, .feature, .standard, .index {
-	grid-template-columns: 0 repeat(7, minmax(4rem /* define min size properly */, 14rem)) minmax(1.5rem, 1fr);
+/*grid-template-columns: 0 repeat(7, minmax(4rem /* define min size properly */, 14rem)) minmax(1.5rem, 1fr); */
+	grid-template-columns: 0 repeat(7, 14rem) 1fr;
 	}
 
 .no_title > div:first-of-type {
