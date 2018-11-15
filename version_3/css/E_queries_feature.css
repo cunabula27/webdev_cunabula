@@ -21,7 +21,7 @@ body {
 	}
 
 body, nav, .feature, .standard, .index {
-/*grid-template-columns: 0 repeat(7, minmax(4rem /* define min size properly */, 14rem)) minmax(1.5rem, 1fr); */
+/*grid-template-columns: 0 repeat(7, minmax(4rem /* define min size properly *//*, 14rem)) minmax(1.5rem, 1fr); */
 	grid-template-columns: 0 repeat(7, 14rem) 1fr;
 	}
 
@@ -40,7 +40,6 @@ body, nav, .feature, .standard, .index {
 .horizontal {
 	grid-template-columns: 0 repeat(auto, 14rem);
 	}
-
 
 [role="main"] {
 	grid-area: 1 / 1 / 4 / 10; /* standard 1.5rem margin at the bottom of 'main' */
@@ -219,7 +218,6 @@ blockquote.page_ref p:last-child {
 .cv ul {
 	display: auto;
 	}
-
 
 /*    NAV                                       */
 
