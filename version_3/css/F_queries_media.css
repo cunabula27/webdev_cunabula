@@ -22,6 +22,9 @@
 		grid-column-end: 9;
 		}
 
+	.drawer {
+		grid-column: 3 / 8;
+		}
 }
 
 @media screen and (max-width: 83.5rem) {
@@ -47,10 +50,6 @@
 		display: none;
 		}
 
-	.drawer {
-		grid-column: 3 / 6;
-		}
-
 }
 
 @media screen and (max-width: 71.5rem) {
@@ -73,11 +72,7 @@
 
 	.c67 { grid-column: 5 / 6; }
 
-	.sticky, .sticky + h2 {
-		grid-column: 2 / 6;
-		}
-
-	.drawer {
+	.sticky, .sticky + h2, .drawer {
 		grid-column: 2 / 6;
 		}
 
