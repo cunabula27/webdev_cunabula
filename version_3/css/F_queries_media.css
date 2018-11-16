@@ -25,6 +25,7 @@
 	.drawer {
 		grid-column: 3 / 8;
 		}
+
 }
 
 @media screen and (max-width: 83.5rem) {
@@ -38,7 +39,7 @@
 		border-right: none;
 		}
 
-	.sticky h1 {
+	.sticky h1, .standard h1{
 		margin-top:13.5rem;
 		}
 
@@ -55,7 +56,7 @@
 @media screen and (max-width: 71.5rem) {
 
 	body, nav, .feature, .standard, .index {
-		grid-template-columns: auto repeat(4, 14fr) auto;
+		grid-template-columns: 1fr repeat(4, 14rem) 1fr;
 		}
 
 	.head_nav, .foot_nav, [role="main"] {
@@ -64,7 +65,7 @@
 
 	.c35 { grid-column: 2 / 4; } /* Main Column groupings */
 
-	.c37, blockquote.page_ref { grid-column: 2 / 6; }
+	.c37, blockquote.page_ref  { grid-column: 2 / 6; }
 
 	.c46 { grid-column: 3 / 5; }
 
@@ -85,13 +86,73 @@
 		}
 
 	nav a:first-child {
+		grid-area: 1 / 1 / 2 / 3;
+		margin-left: 1.5rem;
+		padding:0;
 		justify-self: start;
 		}
 
 	nav > ul {
-		grid-area: 1 / 2 / 2 / 4;
-		margin-left: 3.25rem;
+		grid-area: 1 / 1 / 2 / 3;
+		margin-left: 4.75rem;
 		}
+
+	nav ul a:first-child{
+		margin-left: auto;
+		}
+
+	nav form {
+		grid-column: 4 / 5;
+		}
+
+	.nav_older {
+		grid-column: 5 / 6;
+		text-align: left;
+		padding-left: .75rem;
+		border-right: none;
+		margin-left: -.75rem;
+		padding-right: auto;
+		margin-right: auto;
+		}
+
+	.nav_newer {
+		grid-column: 5 / 6;
+		padding-right: .75rem;
+		border-right: 1px solid hsla(206, 18%, 70%, 1);
+		text-align: right;
+		margin-right: -.75rem;
+		padding-left: auto;
+		margin-left: auto;
+		}
+
+}
+
+@media screen and (max-width: 63.5rem) {
+
+	body, nav, .feature, .standard, .index {
+		grid-template-columns: 0 repeat(4, 1fr) 0;
+		}
+
+}
+
+@media screen and (max-width: 60rem) {
+
+	.c3 { column-count: 2; }
+
+}
+
+@media screen and (max-width: 40rem) {
+
+	.c3, .c2 { column-count: auto; }
+	.head_nav form { display: none; }
+	nav ul { grid-column: 1 / 4; }
+	.nav_newer, .nav_older, .head_nav .nav_older, .foot_nav form { grid-column: 4 / 6; }
+	.foot_nav form { grid-row: 3/4; }
+	.foot_nav ul { grid-row: 2 /4; }
+	.nav_older { border-left: 1px solid hsla(206, 18%, 70%, 1); }
+	h1 { font-size: 3rem; }
+	.index_card h1 { font-size: 1.5rem; }
+	.c35,	.c46, .c57, .c67 { grid-column: 2 / 6; }
 
 }
 
