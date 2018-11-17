@@ -162,6 +162,7 @@ blockquote.page_ref p:last-child {
 
 .search .index_card h1 {
 	grid-area: 1 / 1 / 2 / 3;
+	hyphens: auto;
 	}
 
 .search .index_card .extract {
