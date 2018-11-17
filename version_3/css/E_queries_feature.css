@@ -105,6 +105,12 @@ blockquote.page_ref p:last-child {
 	grid-column-start: 2;
 	}
 
+.quoted_work {
+	grid-column: 6 / 7;
+	grid-row-start:2;
+	position: absolute;
+	}
+
 /*    LIST PAGE : GENERAL                       */
 
 .sticky, .sticky + h2 {
