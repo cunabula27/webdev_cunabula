@@ -118,7 +118,8 @@ img + h2 {
 
 /* ^^ Fix until Firefox recognises column-span  */
 
-h2, .livelist dt { /* Section Titles */
+h2,
+.livelist dt { /* Section Titles */
 	font: 2rem/2 "Fanwood Text";
 	font-style: italic;
 	font-weight: normal;
@@ -131,15 +132,23 @@ p + p {
 	text-indent: 1.5rem;
 	}
 
-footer p + p, .solo, .solo + p, blockquote.page_ref p:last-child, .nav_newer, .year {
+footer p + p,
+.solo,
+.solo + p,
+blockquote.page_ref p:last-child,
+.nav_newer,
+.year {
 	text-indent: 0;
 	}
 
-footer p, figcaption, .categories {
+footer p,
+figcaption,
+.categories {
 	font-size: 0.75rem;  /* 12px */
 	}
 
-footer p, figcaption {
+footer p,
+figcaption {
 	color: hsla(206, 18%, 60%, 1);
 	}
 
@@ -187,10 +196,23 @@ blockquote.page_ref p:last-child {
 	margin-top: .3rem;
 	}
 
-p + .solo, dl + .solo, ul + .solo, ol + .solo,
-.solo + p, .solo + dl, .solo + ul, .solo + ol { padding-top: 1.5rem; }
+p + .solo,
+dl + .solo,
+ul + .solo,
+ol + .solo,
+.solo + p,
+.solo + dl,
+.solo + ul,
+.solo + ol {
+	padding-top: 1.5rem;
+	}
 
-em > i, i > em, .index_card i, .index_card em { font-style: normal; }
+em > i,
+i > em,
+.index_card i,
+.index_card em {
+	font-style: normal;
+	}
 
 .oui_embed {
 	position: relative;
@@ -211,7 +233,10 @@ iframe {
 
 /* -------------------------------------------- */
 
-.standard, .feature { margin-bottom: 9rem; }
+.standard,
+.feature {
+	margin-bottom: 9rem;
+	}
 
 /*    ARTICLE - FEATURE                         */
 
@@ -219,7 +244,8 @@ iframe {
 	z-index: 1;
 	}
 
-.feature h1 + div + img, .full_bleed { /* Background splash header and full bleed images */
+.feature h1 + div + img,
+.full_bleed { /* Background splash header and full bleed images */
 	height: 100vh;
 	object-fit: cover;
 	}
@@ -236,7 +262,6 @@ iframe {
 
 /*    ROLLOVER HIDE / REVEAL                    */
 
-nav .hide, .waffle.hide { height: 0; }
 nav .hide { height: 0; }
 
 .hide {
@@ -254,10 +279,10 @@ footer:hover .hide,
 
 /*    LIST PAGES GENERAL                        */
 
-.drawer .index_card:first-child, .morgue-file .drawer  { /* Correct this for pages 2 onward should line up with sticky body text */
+.drawer .index_card:first-child,
+.morgue-file .drawer  { /* Correct this for pages 2 onward should line up with sticky body text */
 	margin-top: 15.5rem;
 	}
-
 
 .morgue-file .drawer {
 	border-top: 1px solid hsla(206, 18%, 70%, 1);
@@ -275,11 +300,15 @@ footer:hover .hide,
 	padding: 4.5rem 0 3rem;
 	}
 
-.sticky + .drawer .index_card:first-child, #blog + .drawer .index_card:first-child {
+.sticky + .drawer .index_card:first-child {
 	margin-top: 2.6rem;
 	}
 
 .search .sticky + .drawer .index_card:first-child {margin-top: -.4rem;}
+
+.search_title::before { content:"Search r"}
+
+.search_title::after { content:" for";}
 
 .index_card h1 {
 	font-size: 2.5rem;
@@ -360,7 +389,8 @@ nav img {
 	height: 2.5rem;
 	}
 
-nav > ul, .nav_older {
+nav > ul,
+.nav_older {
 	padding-right: .75rem;
 	border-right: 1px solid hsla(206, 18%, 70%, 1);
 	text-align: right;
@@ -390,7 +420,10 @@ input[type="search"] {
 	border-radius: 0.21875rem;
 	}
 
-nav > ul, nav .post_title, .nav_older, .nav_newer {
+nav > ul,
+nav .post_title,
+.nav_older,
+.nav_newer {
 	padding-top: .19rem;
 	padding-bottom: .315rem;
 	margin-top: .25rem;
@@ -399,9 +432,11 @@ nav > ul, nav .post_title, .nav_older, .nav_newer {
 /*    NAV - HEAD                                */
 
 .head_nav img {
+	opacity: .5;
 	}
 
-.head_nav .nav_older, .head_nav .nav_newer {
+.head_nav .nav_older,
+.head_nav .nav_newer {
 	color: #FFF; /* Hack to hide element without link */
 	}
 
@@ -409,7 +444,9 @@ nav > ul, nav .post_title, .nav_older, .nav_newer {
 
 .turn_left { transform: rotate(-90deg); }
 
-.foot_nav ul, .foot_nav form, .foot_nav .nav_older {
+.foot_nav ul,
+.foot_nav form,
+.foot_nav .nav_older {
 	border-color: hsla(206, 18%, 70%, 1);
 	}
 
@@ -417,7 +454,8 @@ nav > ul, nav .post_title, .nav_older, .nav_newer {
 	background-color: hsla(206, 18%, 85%, 1);
 	}
 
-.foot_nav .nav_older, .foot_nav .nav_newer {
+.foot_nav .nav_older,
+.foot_nav .nav_newer {
 	color: hsla(206, 18%, 85%, 1); /* Hack to hide element without link */
 	}
 
