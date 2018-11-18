@@ -198,8 +198,8 @@ blockquote.page_ref p:last-child {
 /*    MORGUE FILE                               */
 
 .morgue-file .drawer {
-	grid-template-columns: repeat(auto-fit, minmax(25px, 1fr));
-	grid-auto-rows: 25px;
+	grid-template-columns: repeat(auto-fit, 1.8vw);
+	grid-auto-rows: 1.8vw;
 	grid-auto-flow: dense;
 	}
 
