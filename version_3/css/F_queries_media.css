@@ -141,6 +141,7 @@
 
 	.index_card h1 {
 		grid-area: 1 / 1 / 2 / 7;
+		padding-top: 0;
 		}
 
 	.index_card .extract {
