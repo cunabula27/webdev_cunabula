@@ -2,11 +2,11 @@
 
 	<txp:if_variable name="modified" value='<txp:posted />'>
 
-		<p class="date_posted hide">Posted: <txp:posted /></p>
+		<p class="date_posted hide">Posted: <txp:posted format="%Y&middot;%m&middot;%d" /></p>
 
 	<txp:else />
 
-		<p class="date_posted hide">Originally posted: <txp:posted /><br />Last updated: <txp:modified /></p>
+		<p class="date_posted hide">Originally posted: <txp:posted format="%Y&middot;%m&middot;%d" /><br />Last updated: <txp:modified format="%Y&middot;%m&middot;%d" /></p>
 
 	</txp:if_variable>
 
