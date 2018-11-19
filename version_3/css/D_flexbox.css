@@ -6,60 +6,59 @@
 
 .card {
 	display: grid;
+	width: 14rem;
+	grid-gap: 1rem;
 	grid-template:
-		"art_title art_title" minmax(6.875rem, auto)
-		"art_extract art_extract" max-content
-		"art_image art_image" max-content
-		". ." 1fr
-		". art_date" max-content
-		"art_tags red_dot" 1rem  / auto 1rem;
-	padding: 1rem;
+		". . . ." 0
+		". art_title art_title ." 6rem
+		". art_extract art_extract ." 10rem
+		". art_tags art_date ." 5rem
+		". art_tags red_dot ." 1rem
+		". . . ." 0 / 0 10rem 1rem 0;
 	border: 1px solid hsla(206, 18%, 85%, 1);
 	border-radius: .5rem;
 	font-size: .875rem;
-	line-height: 1.25rem;
+	line-height: 1.25;
 	text-align: justify;
 	color: hsla(206, 18%, 32%, 1);
 	font-style: italic;
+	margin:-1px;
 	}
 
 .card h1 {
 	grid-area: art_title;
 	font-size: 1.5rem;
 	color: hsla(206, 18%, 16%, 1);
-	padding-bottom: 0;
 	text-align: left;
 	hyphens: none;
+	margin:0;
 	}
 
 .card .article_image {
-	grid-area: 2 / 1 / 4 / 3;
-	height: 20rem;
-	object-fit: cover;
-	margin: 0 auto;
-	padding: 0 0 1.25rem 0;
+	grid-area: art_extract;
 	opacity: .15;
+
+	}
+
+.card .article_image img {
+	height:100%;
+	object-fit: contain;
 	}
 
 .card .extract {
-	grid-area: 2 / 1 / 4 / 3;
-	padding-bottom: 1.25rem;
-	align-self: center;
-	margin: 0 1.5rem;
+	grid-area: art_extract;
 	color: hsla(206, 18%, 0%, 1);
+	overflow: hidden;
+	align-self:center;
 	}
 
 .card .article_tags {
 	grid-area: art_tags;
 	color: hsla(206, 18%, 50%, 1);
 	text-align: right;
+	align-self:end;
 	font-size: 0.75rem;
-	padding-right: .5rem;
-	align-self: center;
-	}
-
- .card h1 {
-	margin: 1.25rem 0;
+	margin-bottom: 2px;
 	}
 
 .card .date_posted {
@@ -67,8 +66,7 @@
 	writing-mode: vertical-rl;
 	align-self: center;
 	justify-self: center;
-	padding: .5rem 0 0;
-	margin: 0;
+	line-height: 1;
 	color: hsla(206, 18%, 50%, 1);
 	transform: rotate(180deg);
 	font-size: 0.75rem;
@@ -89,7 +87,7 @@
 	text-decoration: none;
 	}
 
-.card a:hover h1,
+.card h1 a:hover ,
 .card .article_tags a:hover {
 	color: hsla(345, 100%, 40%, 1);
 	}
