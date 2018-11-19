@@ -6,21 +6,21 @@
 
 	<article class="<txp:custom_field name="Base_Layout" default="standard" />">
 
-		<txp:if_custom_field match="any" name="Base_Layout" value="alt_title, no_title">
+	<txp:if_custom_field match="any" name="Base_Layout" value="alt_title, no_title">
 
-		<txp:else />
+	<txp:else />
 
-			<h1><txp:permlink><txp:title /></txp:permlink></h1>
+		<h1><txp:permlink><txp:title /></txp:permlink></h1>
 
-			<div class="<txp:custom_field name="Initial_Width" default="c35" />">
+		<div class="<txp:custom_field name="Initial_Width" default="c35" />">
 
-		</txp:if_custom_field>
+	</txp:if_custom_field>
 
 		<txp:body />
 
 		</div>
 
-		<txp:output_form form="article_footer" />
+	<txp:output_form form="article_footer" />
 
 	</article>
 
