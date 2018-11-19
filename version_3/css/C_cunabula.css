@@ -238,6 +238,9 @@ iframe {
 	margin-bottom: 9rem;
 	}
 
+.index .standard {
+margin-bottom: 0;}
+
 /*    ARTICLE - FEATURE                         */
 
 .feature h1 + div { /*Standfirst */
@@ -290,7 +293,7 @@ footer:hover .hide,
 /*margin-bottom: 3rem; Decide on this later */
 }
 
-.morgue-file .sticky + .drawer {
+.morgue-file .standard + .drawer {
 	margin-top: 2.75rem;
 	}
 
@@ -300,11 +303,11 @@ footer:hover .hide,
 	padding: 4.5rem 0 3rem;
 	}
 
-.sticky + .drawer .index_card:first-child {
+.standard + .drawer .index_card:first-child {
 	margin-top: 2.6rem;
 	}
 
-.search .sticky + .drawer .index_card:first-child {margin-top: -.4rem;}
+.search .standard + .drawer .index_card:first-child {margin-top: -.4rem;}
 
 .search_title::before { content:"Search r"}
 
