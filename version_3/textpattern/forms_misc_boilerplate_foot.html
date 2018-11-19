@@ -1,6 +1,6 @@
 <txp:if_article_list>
 
-	</div>
+</div>
 
 </txp:if_article_list>
 
@@ -16,11 +16,17 @@
 
 	</a>
 
-	<ul>
+<ul>
 
-		<txp:if_search>
+	<txp:if_search>
 
-			<li>Search results for</li>
+		<li class="search_title">esults</li>
+
+	<txp:else />
+
+		<txp:if_category>
+
+			<li>Output</li>
 
 		<txp:else />
 
@@ -30,29 +36,27 @@
 
 			<txp:else />
 
-				<txp:section title="1" link="1" wraptag="li" class="current_section" />
+				<txp:section title="1" link="0" wraptag="li" class="current_section" />
 
 			</txp:if_section>
 
-		</txp:if_search>
+		</txp:if_category>
 
-		<ul class="section_list hide">
+	</txp:if_search>
 
-			<txp:section_list break="" sections="output, process, morgue-file, miscellany, about">
+	<ul class="section_list hide">
 
-			<li<txp:if_section name='<txp:section />'> class="current_section"</txp:if_section>>
+		<txp:section_list break="" sections="output, process, morgue-file, miscellany, about">
 
-				<txp:section title="1" link="1" />
+		<li<txp:if_section name='<txp:section />'> class="current_section"</txp:if_section>><txp:section title="1" link="1" /></li>
 
-			</li>
+		</txp:section_list>
 
-			</txp:section_list>
-
-			<li><a href="<txp:site_url />">Home Page</a></li>
-
-		</ul>
+		<li><a href="<txp:site_url />">Home Page</a></li>
 
 	</ul>
+
+</ul>
 
 	<txp:if_individual_article>
 
@@ -64,23 +68,39 @@
 
 			<txp:if_search>
 
-				<txp:search_term />
+				&lsquo;<txp:search_term />&rsquo;
 
 			<txp:else />
 
-				<txp:if_article_list>
+				<txp:if_category>
 
-					<txp:if_variable name="list_page_number" value="1">
+					<txp:category title="1" />
 
-						Introduction
+				<txp:else />
+
+					<txp:smd_if_tag_list>
+
+						<!-- <txp:smd_tag_list wraptag="" break=""><txp:smd_tag_name /></txp:smd_tag_list> -->
 
 					<txp:else />
 
-						Page <txp:page_url type="pg" />
+						<txp:if_article_list>
 
-					</txp:if_variable>
+							<txp:if_variable name="list_page_number" value="1">
 
-				</txp:if_article_list>
+								Introduction
+
+							<txp:else />
+
+								Page <txp:page_url type="pg" />
+
+							</txp:if_variable>
+
+						</txp:if_article_list>
+
+					</txp:smd_if_tag_list>
+
+				</txp:if_category>
 
 			</txp:if_search>
 
@@ -92,15 +112,15 @@
 
 	<txp:if_article_list>
 
-		<p class="nav_older hide"><txp:older showalways="1" rel="prev">Older</txp:older></p>
+	<p class="nav_older hide"><txp:older showalways="1" rel="prev">Older</txp:older></p>
 
-		<p class="nav_newer hide"><txp:newer showalways="1" rel="next">Newer</txp:newer></p>
+	<p class="nav_newer hide"><txp:newer showalways="1" rel="next">Newer</txp:newer></p>
 
 	<txp:else />
 
-		<p class="nav_older hide"><txp:link_to_prev showalways="1" rel="prev">Previous</txp:link_to_prev></p>
+	<p class="nav_older hide"><txp:link_to_prev showalways="1" rel="prev">Previous</txp:link_to_prev></p>
 
-		<p class="nav_newer hide"><txp:link_to_next showalways="1" rel="next">Next</txp:link_to_next></p>
+	<p class="nav_newer hide"><txp:link_to_next showalways="1" rel="next">Next</txp:link_to_next></p>
 
 	</txp:if_article_list>
 
