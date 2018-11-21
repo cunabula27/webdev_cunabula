@@ -150,8 +150,8 @@ input, select {
 @font-face {
 	font-family: 'PT Sans';
 	src: local('PT Sans'),
-         url('../typefaces/PTS55F-webfont.woff2') format('woff2'),
-         url('../typefaces/PTS55F-webfont.woff') format('woff');
+         url('http://www.cunabula.io/typefaces/PTS55F-webfont.woff2') format('woff2'),
+         url('http://www.cunabula.io/typefaces/PTS55F-webfont.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 	}
@@ -159,8 +159,8 @@ input, select {
 @font-face {
 	font-family: 'PT Sans';
 	src: local('PT Sans Italic'),
-         url('../typefaces/PTS56F-webfont.woff2') format('woff2'),
-         url('../typefaces/PTS56F-webfont.woff') format('woff');
+         url('http://www.cunabula.io/typefaces/PTS56F-webfont.woff2') format('woff2'),
+         url('http://www.cunabula.io/typefaces/PTS56F-webfont.woff') format('woff');
 	font-weight: normal;
 	font-style: italic;
 	}
@@ -168,8 +168,8 @@ input, select {
 @font-face {
 	font-family: 'PT Sans';
 	src: local('PT Sans Bold'),
-         url('../typefaces/PTS75F-webfont.woff2') format('woff2'),
-         url('../typefaces/PTS75F-webfont.woff') format('woff');
+         url('http://www.cunabula.io/typefaces/PTS75F-webfont.woff2') format('woff2'),
+         url('http://www.cunabula.io/typefaces/PTS75F-webfont.woff') format('woff');
 	font-weight: bold;
 	font-style: normal;
 	}
@@ -177,8 +177,8 @@ input, select {
 @font-face {
 	font-family: 'PT Sans';
 	src: local('PT Sans Bold Italic'),
-         url('../typefaces/PTS76F-webfont.woff2') format('woff2'),
-         url('../typefaces/PTS76F-webfont.woff') format('woff');
+         url('http://www.cunabula.io/typefaces/PTS76F-webfont.woff2') format('woff2'),
+         url('http://www.cunabula.io/typefaces/PTS76F-webfont.woff') format('woff');
 	font-weight: bold;
 	font-style: italic;
 	}
@@ -186,8 +186,8 @@ input, select {
 @font-face {
 	font-family: 'PT Serif';
 	src: local('PT Serif'),
-         url('../typefaces/PTF55F-webfont.woff2') format('woff2'),
-         url('../typefaces/PTF55F-webfont.woff') format('woff');
+         url('http://www.cunabula.io/typefaces/PTF55F-webfont.woff2') format('woff2'),
+         url('http://www.cunabula.io/typefaces/PTF55F-webfont.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 	}
@@ -195,25 +195,25 @@ input, select {
 @font-face {
 	font-family: 'PT Serif';
 	src: local('PT Serif Italic'),
-         url('../typefaces/PTF56F-webfont.woff2') format('woff2'),
-         url('../typefaces/PTF56F-webfont.woff') format('woff');
+         url('http://www.cunabula.io/typefaces/PTF56F-webfont.woff2') format('woff2'),
+         url('http://www.cunabula.io/typefaces/PTF56F-webfont.woff') format('woff');
 	font-weight: normal;
 	font-style: italic;
 	}
 
-	/* ----------------------------- FANWOOD TEXT */
+/* ----------------------------- FANWOOD TEXT */
 
-	/*
-	* Fanwood Text is © Barry Schwartz <site-chieftain@crudfactory.com>
-	* http://www.theleagueofmoveabletype.com/
-	* Licence: ../typefaces/SIL-Open-Font-License-1.1.txt
-	*/
+/*
+* Fanwood Text is © Barry Schwartz <site-chieftain@crudfactory.com>
+* http://www.theleagueofmoveabletype.com/
+* Licence: ../typefaces/SIL-Open-Font-License-1.1.txt
+*/
 
 @font-face {
 	font-family: 'Fanwood Text';
 	src: local('Fanwood Text'),
-         url('../typefaces/fanwood_text-webfont.woff2') format('woff2'),
-         url('../typefaces/fanwood_text-webfont.woff') format('woff');
+         url('http://www.cunabula.io/typefaces/fanwood_text-webfont.woff2') format('woff2'),
+         url('http://www.cunabula.io/typefaces/fanwood_text-webfont.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 	}
@@ -221,8 +221,8 @@ input, select {
 @font-face {
 	font-family: 'Fanwood Text';
 	src: local('Fanwood Text Italic'),
-         url('../typefaces/fanwood_text_italic-webfont.woff2') format('woff2'),
-         url('../typefaces/fanwood_text_italic-webfont.woff') format('woff');
+         url('http://www.cunabula.io/typefaces/fanwood_text_italic-webfont.woff2') format('woff2'),
+         url('http://www.cunabula.io/typefaces/fanwood_text_italic-webfont.woff') format('woff');
 	font-weight: normal;
 	font-style: italic;
 	}
@@ -238,8 +238,8 @@ input, select {
 @font-face {
 	font-family: 'League Gothic';
 	src: local('LeagueGothic-Regular'),
-         url('../typefaces/League_Gothic-webfont.woff2') format('woff2'),
-         url('../typefaces/League_Gothic-webfont.woff') format('woff');
+         url('http://www.cunabula.io/typefaces/League_Gothic-webfont.woff2') format('woff2'),
+         url('http://www.cunabula.io/typefaces/League_Gothic-webfont.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 	}
@@ -252,9 +252,7 @@ input, select {
 /*    SHARED STYLES                    START    */
 /* -------------------------------------------- */
 
-/*
-
-NB:
+/* NB:
 
 CP Payne's Grey:	hsla(206, 18%, 16%, 1);		(Main text colour, use variation in luminance for other text and borders)
 CP Red:						hsla(345, 100%, 40%, 1);	(Highlights, Links)
@@ -432,7 +430,7 @@ blockquote > p {
 	text-indent: -.2rem
 	}
 
-blockquote.page_ref {
+blockquote.page_ref { /* is this doing anything? */
 	margin: 0;
 	}
 
@@ -485,7 +483,8 @@ iframe {
 	}
 
 .index .standard {
-margin-bottom: 0;}
+	margin-bottom: 0;
+	}
 
 /*    ARTICLE - FEATURE                         */
 
@@ -553,11 +552,11 @@ footer:hover .hide,
 	margin-top: 2.6rem;
 	}
 
-.search .standard + .drawer .index_card:first-child {margin-top: -.4rem;}
+.search .standard + .drawer .index_card:first-child {margin-top: -.4rem; }
 
 .search_title::before { content:"Search r"}
 
-.search_title::after { content:" for";}
+.search_title::after { content:" for"; }
 
 .index_card h1 {
 	font-size: 2.5rem;
@@ -1153,7 +1152,7 @@ nav form {
 		grid-area: 2 / 3 / 3 / 5;
 		}
 
-	.search_title::after { content:"...";}
+	.search_title::after { content:"..."; }
 
 }
 
@@ -1296,7 +1295,7 @@ nav form {
 		grid-column: 4 / 6;
 		}
 
-	.foot_nav form { grid-row: 2 / 3;}
+	.foot_nav form { grid-row: 2 / 3; }
 
 	.foot_nav .nav_older,
 	.foot_nav .nav_newer {
@@ -1398,10 +1397,15 @@ nav form {
 		}
 
 	.tag.drawer { grid-template-columns: auto; }
+
 	.card h1 { margin-top: 3rem; }
+
 	.card .article_tags { text-align: left; text-indent: 0; }
+
 	.card .article_tags::before { content: "Tags : "; }
+
 	.card .date_posted::before { content: "Posted : "; }
+
 	.card img[alt="// ENDS"] { margin-bottom: 2rem; }
 
 }
