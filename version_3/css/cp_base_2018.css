@@ -1,0 +1,1411 @@
+/*
+
+Hello.
+
+If you're wondering about the design of the site you're in the right place, read on...
+
+If it's all a bit opaque, or you're me and it's years later and you're a bit lost, have a look at:
+
+https://github.com/cunabula27/webdev_cunabula which I used to document the development.
+
+I work really iteratively and CSS Grid is/was new to me so I found it really helpful
+
+to use Github to wrangle the process into some form of order. I also couldn't have done any of
+
+it without Jen Simmons' videos https://youtube.com/layoutland and https://labs.jensimmons.com/
+
+Also https://developer.mozilla.org/en-US/docs/Web
+
+All the best,
+
+Adrian
+
+*/
+
+/* -------------------------------------------- */
+/*    RESET                            START    */
+/* -------------------------------------------- */
+
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+https://github.com/richclark/HTML5resetCSS
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+	}
+
+body {
+	line-height: 1.25;
+	}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+	display: block;
+	}
+
+nav ul, .cv li {
+	list-style: none;
+	}
+
+blockquote, q {
+	quotes: none;
+	}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+	}
+
+a {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+	}
+
+/*    Change colours to suit your needs         */
+
+ins {
+	background-color:  #ff9 /* hsla(84, 100%, 81%, 1); */
+	color: #000 /* hsla(0, 0%, 0%, 1); */
+	text-decoration: none;
+	}
+
+/*    Change colours to suit your needs         */
+
+mark {
+	background-color: #ff9 /* hsla(84, 100%, 81%, 1); */
+	color: #000 /* hsla(0, 0%, 0%, 1); */
+	font-style: italic;
+	font-weight: bold;
+	}
+
+del {
+	text-decoration: line-through;
+	}
+
+abbr[title], dfn[title] {
+	font-variant: none;
+	font-style:italic;
+	text-decoration: underline dotted hsla(345, 100%, 40%, 1);
+	cursor: help;
+	}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	}
+
+/*    Change border colour to suit your needs   */
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc; /* hsla(0, 0%, 80%, 1); */
+	margin: 1em 0;
+	padding: 0;
+	}
+
+input, select {
+	vertical-align: middle;
+	}
+
+/* -------------------------------------------- */
+/*    RESET                              END    */
+/* -------------------------------------------- */
+
+/* -------------------------------------------- */
+/*    TYPEFACES                        START    */
+/* -------------------------------------------- */
+
+/* All the typefaces used on the site were downloaded from either http://www.fontsquirrel.com/ using their excellent @font-face kit service or from the League of Moveable Type http://www.theleagueofmoveabletype.com/ except PT Mono that came directly from ParaType */
+
+/* PT Sans, PT Serif and PT Mono are © ParaType * http://www.paratype.ru/ * Licence: typefaces/PT-Free-Font-License-1.3.txt */
+
+@font-face {
+	font-family: 'PT Sans';
+	src: local('PT Sans'),
+         url('../typefaces/PTS55F-webfont.woff2') format('woff2'),
+         url('../typefaces/PTS55F-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	}
+
+@font-face {
+	font-family: 'PT Sans';
+	src: local('PT Sans Italic'),
+         url('../typefaces/PTS56F-webfont.woff2') format('woff2'),
+         url('../typefaces/PTS56F-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
+	}
+
+@font-face {
+	font-family: 'PT Sans';
+	src: local('PT Sans Bold'),
+         url('../typefaces/PTS75F-webfont.woff2') format('woff2'),
+         url('../typefaces/PTS75F-webfont.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	}
+
+@font-face {
+	font-family: 'PT Sans';
+	src: local('PT Sans Bold Italic'),
+         url('../typefaces/PTS76F-webfont.woff2') format('woff2'),
+         url('../typefaces/PTS76F-webfont.woff') format('woff');
+	font-weight: bold;
+	font-style: italic;
+	}
+
+@font-face {
+	font-family: 'PT Serif';
+	src: local('PT Serif'),
+         url('../typefaces/PTF55F-webfont.woff2') format('woff2'),
+         url('../typefaces/PTF55F-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	}
+
+@font-face {
+	font-family: 'PT Serif';
+	src: local('PT Serif Italic'),
+         url('../typefaces/PTF56F-webfont.woff2') format('woff2'),
+         url('../typefaces/PTF56F-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
+	}
+
+	/* ----------------------------- FANWOOD TEXT */
+
+	/*
+	* Fanwood Text is © Barry Schwartz <site-chieftain@crudfactory.com>
+	* http://www.theleagueofmoveabletype.com/
+	* Licence: ../typefaces/SIL-Open-Font-License-1.1.txt
+	*/
+
+@font-face {
+	font-family: 'Fanwood Text';
+	src: local('Fanwood Text'),
+         url('../typefaces/fanwood_text-webfont.woff2') format('woff2'),
+         url('../typefaces/fanwood_text-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	}
+
+@font-face {
+	font-family: 'Fanwood Text';
+	src: local('Fanwood Text Italic'),
+         url('../typefaces/fanwood_text_italic-webfont.woff2') format('woff2'),
+         url('../typefaces/fanwood_text_italic-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
+	}
+
+/* ------------------------------ LEAGUE GOTHIC */
+
+/*
+* League Gothic is © The League of Moveable Type
+* http://www.theleagueofmoveabletype.com/
+* Licence: ../typefaces/SIL-Open-Font-License-1.1.txt
+*/
+
+@font-face {
+	font-family: 'League Gothic';
+	src: local('LeagueGothic-Regular'),
+         url('../typefaces/League_Gothic-webfont.woff2') format('woff2'),
+         url('../typefaces/League_Gothic-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	}
+
+/* -------------------------------------------- */
+/*    TYPEFACES                          END    */
+/* -------------------------------------------- */
+
+/* -------------------------------------------- */
+/*    SHARED STYLES                    START    */
+/* -------------------------------------------- */
+
+/*
+
+NB:
+
+CP Payne's Grey:	hsla(206, 18%, 16%, 1);		(Main text colour, use variation in luminance for other text and borders)
+CP Red:						hsla(345, 100%, 40%, 1);	(Highlights, Links)
+
+*/
+
+/* -------------------------------------------- */
+/*    COLOURS                          START    */
+/* -------------------------------------------- */
+
+/* -------------------------------------------- */
+/*    COLOURS                            END    */
+/* -------------------------------------------- */
+
+html {
+	font-size: 100%;
+	}
+
+* {
+	box-sizing: border-box;
+	}
+
+body {
+	color: hsla(206, 18%, 16%, 1); /* Main Text Colour */
+	font: normal normal normal 1rem/1.5 "PT Sans", sans-serif;
+/*font: 1rem/1.5 PTSansRegular, sans-serif; */ /* Production Line */
+	text-rendering: optimizeLegibility;
+	hyphens: auto;
+/*background-image: url("http://cunabula.io/images/24.png"); */
+/*background-image: url("http://cunabula.io/images/12.png"); */
+/*background-image: url("http://cunabula.io/images/08.png"); */
+/*background-image: url("http://cunabula.io/images/06.png");
+	background-position-y: 9px;
+/*text-align:justify; */
+	}
+
+.no_css, nav h6, /* Fix until Firefox recognises column-span >>> */ section > h2 {
+	display: none;
+	}
+
+em, i, cite { font-style: italic; }
+
+b, strong { font-weight: bold; }
+
+img {
+	width: 100%;
+	}
+
+/*    LINKS                                     */
+
+a,
+a:link,
+a:visited,
+.index_card footer a,
+.index_card footer a:link,
+.index_card footer a:visited {
+	color: hsla(345, 100%, 40%, 1); /*   CP Red   */
+	text-decoration: none;
+	}
+
+a:hover,
+a:active {
+	text-decoration: underline;
+	}
+
+nav a, /*             nav link-like behaviour   */
+nav a:link,
+nav a:visited,
+.index_card a,
+.index_card a:link,
+.index_card a:visited,
+h1 a,
+h1 a:link,
+h1 a:visited  {
+	color: hsla(206, 18%, 16%, 1);
+	text-decoration: none;
+	}
+
+nav a:hover, /*       nav link-like behaviour   */
+.index_card a:hover,
+h1 a:hover {
+	color: hsla(345, 100%, 40%, 1);
+	}
+
+
+/*    ARTICLE - GENERAL                         */
+
+h1 { /*           Use only for article titles   */
+	font: 4rem "Fanwood Text";
+	font-weight: normal;
+/*color: hsla(206, 18%, 24%, 1); */
+/*font: 2rem PTSerifRegular, sans-serif; */ /* Production Line */
+	z-index: 1;
+	margin-top: 9.3625rem; /* was 8.05rem; */
+	margin-bottom: 3.45rem; /* was 1.95rem; */
+	hyphens: none;
+	}
+
+/*    Fix until Firefox recognises column-span  */
+
+p + h2,
+div + h2,
+section + h2,
+img + h2 {
+	grid-column: 3 / 7;
+	margin-top: 1.25rem;
+	margin-bottom: .75rem;
+	}
+
+/* ^^ Fix until Firefox recognises column-span  */
+
+h2,
+.livelist dt { /* Section Titles */
+	font: 2rem/2 "Fanwood Text";
+	font-style: italic;
+	font-weight: normal;
+	margin-top: 1.25rem;
+	margin-bottom: .75rem;
+	column-span: all;
+	}
+
+p + p {
+	text-indent: 1.5rem;
+	}
+
+footer p + p,
+.solo,
+.solo + p,
+blockquote.page_ref p:last-child,
+.nav_newer,
+.year {
+	text-indent: 0;
+	}
+
+footer p,
+figcaption,
+.categories {
+	font-size: 0.75rem;  /* 12px */
+	}
+
+footer p,
+figcaption {
+	color: hsla(206, 18%, 60%, 1);
+	}
+
+.tags { margin-top: 1.9rem; }
+
+.date_posted { margin-top: .25rem; }
+
+figcaption {
+	color: hsla(206, 18%, 32%, 1);
+	font-style: italic;
+	}
+
+[alt="// ENDS"] {
+	width:auto;
+	margin: 2.2rem 0 -.375rem;
+	}
+
+blockquote {
+	font-family: "PT Serif";
+	font-style: italic;
+	margin: 1.5rem 0;
+	}
+
+div blockquote:first-child { margin-top: 0; }
+
+blockquote p {
+	font-style: italic;
+	text-align: justify;
+	padding: 0 1rem;
+	}
+
+blockquote > p {
+	text-indent: -.2rem
+	}
+
+blockquote.page_ref {
+	margin: 0;
+	}
+
+blockquote.page_ref p:last-child {
+	font-size: 0.75rem;  /* 12px */
+	color: hsla(206, 18%, 60%, 1);
+	font-style: italic;
+	padding-left: 0;
+	margin-top: .3rem;
+	}
+
+p + .solo,
+dl + .solo,
+ul + .solo,
+ol + .solo,
+.solo + p,
+.solo + dl,
+.solo + ul,
+.solo + ol {
+	padding-top: 1.5rem;
+	}
+
+em > i,
+i > em,
+.index_card i,
+.index_card em {
+	font-style: normal;
+	}
+
+.oui_embed {
+	position: relative;
+	width: 100%;
+	}
+
+iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	}
+
+/* -------------------------------------------- */
+/*    SHARED STYLES                      END    */
+/* -------------------------------------------- */
+
+.standard,
+.feature {
+	margin-bottom: 9rem;
+	}
+
+.index .standard {
+margin-bottom: 0;}
+
+/*    ARTICLE - FEATURE                         */
+
+.feature h1 + div { /*Standfirst */
+	z-index: 1;
+	}
+
+.feature h1 + div + img,
+.full_bleed { /* Background splash header and full bleed images */
+	height: 100vh;
+	object-fit: cover;
+	}
+
+/*    MULTICOLUMN                               */
+
+.c4, .c3, .c2 { column-gap: 1.5rem; }
+
+.c4 { column-count: 4; }
+
+.c3 { column-count: 3; }
+
+.c2 { column-count: 2; }
+
+/*    ROLLOVER HIDE / REVEAL                    */
+
+nav .hide { height: 0; }
+
+.hide {
+	opacity: 0;
+	transition: opacity .25s linear 0s, height .25s ease-out .1s;
+	}
+
+nav:hover .hide,
+footer:hover .hide,
+.index_card:hover .hide {
+	height: auto;
+	opacity: 1;
+	transition: opacity .25s linear 0s,  height .25s linear 0s;
+	}
+
+/*    LIST PAGES GENERAL                        */
+
+.drawer .index_card:first-child,
+.morgue-file .drawer  { /* Correct this for pages 2 onward should line up with sticky body text */
+	margin-top: 15.5rem;
+	}
+
+.morgue-file .drawer {
+	border-top: 1px solid hsla(206, 18%, 70%, 1);
+	padding-top: 1.5rem;
+/*margin-bottom: 3rem; Decide on this later */
+}
+
+.morgue-file .standard + .drawer {
+	margin-top: 2.75rem;
+	}
+
+.index_card {
+	font-style: italic;
+	border-top: 1px solid hsla(206, 18%, 70%, 1);
+	padding: 4.5rem 0 3rem;
+	}
+
+.standard + .drawer .index_card:first-child {
+	margin-top: 2.6rem;
+	}
+
+.search .standard + .drawer .index_card:first-child {margin-top: -.4rem;}
+
+.search_title::before { content:"Search r"}
+
+.search_title::after { content:" for";}
+
+.index_card h1 {
+	font-size: 2.5rem;
+	text-align: left;
+	font-style: italic;
+	padding: 1rem 0 0;
+	margin:0;
+	}
+
+.index_card .extract {
+	text-align: justify;
+	margin-top: -.39rem;
+	}
+
+/*    LIST PAGE : SEARCH                        */
+
+.search .index_card {
+	padding-top:0;
+	border:none;
+	}
+
+.search .index_card h1 {
+	padding-top: 5.5rem;
+	border-top: 1px solid hsla(206, 18%, 70%, 1);
+	}
+
+.search .index_card .extract {
+	padding-top:6.2rem;
+	margin-top:0;
+	border-top: 1px solid hsla(206, 18%, 70%, 1);
+	}
+
+.search .index_card footer {
+	padding-bottom:1.5rem;
+	}
+
+/*   LIST PAGE : OUTPUT                         */
+
+.output .index_card .categories {
+	margin-top: -.15rem;
+	}
+
+.output .index_card .year {
+	margin-top: 1.875rem;
+	}
+
+.output .index_card footer {
+	text-align: right;
+	}
+
+/*    MORGUE FILE                               */
+
+.morgue-file .drawer img {
+	object-fit: cover;
+	width:100%;
+	height: 100%;
+	}
+
+/*    CV                                        */
+
+.cv dt {
+	font: 1.5rem/1.5rem "Fanwood Text";
+	font-style: italic;
+	padding: 0;
+	margin: .05rem 0 0;
+	color: hsla(206, 18%, 35%, 1);
+	}
+
+/*    NAV AREAS - GENERAL                       */
+
+nav {
+	font-size: 0.875rem; /* 14px */
+	}
+
+nav img {
+	clip-path: circle();
+	width: 2.5rem;
+	height: 2.5rem;
+	}
+
+nav > ul,
+.nav_older {
+	padding-right: .75rem;
+	border-right: 1px solid hsla(206, 18%, 70%, 1);
+	text-align: right;
+	margin-right: -.75rem;
+	}
+
+.section_list li:last-child,
+.head_nav ul ul li:first-child {
+	padding-top: 0.75rem; /* maybe adjust to be smaller */
+	}
+
+form {
+	padding: 0.2rem 0.75rem 0.1375rem;
+	border-left: 1px solid hsla(206, 18%, 70%, 1);
+	border-right: 1px solid hsla(206, 18%, 70%, 1);
+	margin: 0.25rem -.75rem auto;
+	}
+
+input[type="search"] {
+	font-family: inherit;
+  line-height: 1;
+	padding: 0.2rem .4rem .35rem;
+	width: 100%;
+	border: 1px solid hsla(206, 18%, 70%, 1);
+	color: hsla(206, 18%, 16%, 1);
+	background-color: #fff;
+	border-radius: 0.21875rem;
+	}
+
+nav > ul,
+nav .post_title,
+.nav_older,
+.nav_newer {
+	padding-top: .19rem;
+	padding-bottom: .315rem;
+	margin-top: .25rem;
+	}
+
+/*    NAV - HEAD                                */
+
+.head_nav img {
+	opacity: .5;
+	}
+
+.head_nav .nav_older,
+.head_nav .nav_newer {
+	color: #FFF; /* Hack to hide element without link */
+	}
+
+/*    NAV - FOOT                                */
+
+.turn_left { transform: rotate(-90deg); }
+
+.foot_nav ul,
+.foot_nav form,
+.foot_nav .nav_older {
+	border-color: hsla(206, 18%, 70%, 1);
+	}
+
+.foot_nav {
+	background-color: hsla(206, 18%, 85%, 1);
+	}
+
+.foot_nav .nav_older,
+.foot_nav .nav_newer {
+	color: hsla(206, 18%, 85%, 1); /* Hack to hide element without link */
+	}
+
+.foot_nav ul {
+	margin-bottom: .5rem;
+	}
+
+/* -------------------------------------------- */
+/*    CUNABULA.IO                      START    */
+/* -------------------------------------------- */
+
+/* -------------------------------------------- */
+/*    CUNABULA.IO                      END      */
+/* -------------------------------------------- */
+
+/* -------------------------------------------- */
+/*    CUNABULAPRESS.COM                START    */
+/* -------------------------------------------- */
+
+/* -------------------------------------------- */
+/*    CUNABULAPRESS.COM                  END    */
+/* -------------------------------------------- */
+
+/* -------------------------------------------- */
+/*    TAGS CARDS                       START    */
+/* -------------------------------------------- */
+
+.card {
+	display: grid;
+	width: 14rem;
+	grid-gap: 1rem;
+	grid-template:
+		". . . ." 0
+		". art_title art_title ." 6rem
+		". art_extract art_extract ." 10rem
+		". art_tags art_date ." 5rem
+		". art_tags red_dot ." 1rem
+		". . . ." 0 / 0 10rem 1rem 0;
+	border: 1px solid hsla(206, 18%, 85%, 1);
+	border-radius: .5rem;
+	font-size: .875rem;
+	line-height: 1.25;
+	text-align: justify;
+	color: hsla(206, 18%, 32%, 1);
+	font-style: italic;
+	margin:-1px;
+	}
+
+.card h1 {
+	grid-area: art_title;
+	font-size: 1.5rem;
+	color: hsla(206, 18%, 16%, 1);
+	text-align: left;
+	hyphens: none;
+	margin:0;
+	}
+
+.card .article_image {
+	grid-area: art_extract;
+	opacity: .15;
+
+	}
+
+.card .article_image img {
+	height:100%;
+	object-fit: contain;
+	}
+
+.card .extract {
+	grid-area: art_extract;
+	color: hsla(206, 18%, 0%, 1);
+	overflow: hidden;
+	align-self:center;
+	}
+
+.card .article_tags {
+	grid-area: art_tags;
+	color: hsla(206, 18%, 50%, 1);
+	text-align: right;
+	align-self:end;
+	font-size: 0.75rem;
+	margin-bottom: 2px;
+	}
+
+.card .date_posted {
+	grid-area: art_date;
+	writing-mode: vertical-rl;
+	align-self: center;
+	justify-self: center;
+	line-height: 1;
+	color: hsla(206, 18%, 50%, 1);
+	transform: rotate(180deg);
+	font-size: 0.75rem;
+	}
+
+.card img[alt="// ENDS"] {
+	grid-area: red_dot;
+	align-self: center;
+	justify-self: center;
+	padding: 0;
+	margin: 0;
+	}
+
+.card a,
+.card a:link,
+.card a:visited {
+	color: hsla(206, 18%, 16%, 1);
+	text-decoration: none;
+	}
+
+.card h1 a:hover ,
+.card .article_tags a:hover {
+	color: hsla(345, 100%, 40%, 1);
+	}
+
+.tagged-with .drawer > br {
+	display: none;
+	}
+
+/* -------------------------------------------- */
+/*    TAGS CARDS                         END    */
+/* -------------------------------------------- */
+
+/* -------------------------------------------- */
+/*    FEATURE QUERIES                  START    */
+/*                                              */
+/*  */ @supports (display: grid) { /*---------- */
+
+/*
+
+ONLY GRID-SPECIFIC CODE SHOULD GO HERE + STYLES ONLY RELEVANT WHEN GRID IS SUPPORTED
+
+*/
+
+body, nav, [role="main"], article, .drawer, .index, .gr, .grout, .grin, .g4, .g3, .g2, blockquote.page_ref, .cv {
+	display: grid;
+	grid-gap: 1.5rem;
+	position:relative;
+	grid-auto-rows: min-content;
+	}
+
+body {
+	grid-template-rows: 0 2.5rem minmax(calc(100vh - 6.25rem), auto) 0 auto;
+	}
+
+body, nav, .feature, .standard, .index {
+/*grid-template-columns: 0 repeat(7, minmax(4rem /* define min size properly *//*, 14rem)) minmax(1.5rem, 1fr); */
+	grid-template-columns: 0 repeat(7, 14rem) 1fr;
+	}
+
+.no_title > div:first-of-type {
+	margin-top: 18.6875rem;
+	}
+
+.index > .standard { grid-column: 1 / -1; }
+
+.centred {
+	grid-template-columns: 0 1fr auto 1fr 0;
+	}
+
+.horizontal, .centred {
+	grid-template-rows: 4rem 1fr auto 1fr 4rem;
+	}
+
+.horizontal {
+	grid-template-columns: 0 repeat(auto, 14rem);
+	}
+
+[role="main"] {
+	grid-area: 1 / 1 / 4 / 10; /* standard 1.5rem margin at the bottom of 'main' */
+	}
+
+[role="main"] .foot_bleed { /* full height, no separation from foot_nav block */
+	grid-row: 1 / 5;
+	}
+
+/*    ARTICLE FEATURE                           */
+
+.feature {
+	grid-template-rows: repeat(3, auto);
+	}
+
+.feature h1 + div { /* Standfirst */
+	grid-area: 2 / 3 / 3 / 7;
+	}
+
+.feature h1 + div + img { /* Background header splash image */
+	grid-area: 1 / 1 / 4 / 10;
+	}
+
+/*    ARTICLE GENERAL                           */
+
+h1 {
+	grid-area: 1 / 3 / 2 / 7;
+	}
+
+.full_bleed { /* Full bleed images */
+	grid-column: 1 / 10;
+	}
+
+.gr, .index_card { grid-template-columns: repeat(2, 382fr) repeat(2, 236fr) repeat(2, 382fr); }
+
+.grin { grid-template-columns: .618fr 1fr; }
+
+.grout { grid-template-columns: 1fr .618fr; }
+
+.g4 {	grid-template-columns: repeat(4, 1fr); }
+
+.g3 { grid-template-columns: repeat(3, 1fr); }
+
+.g2 { grid-template-columns: repeat(2, 1fr); }
+
+.c35 { grid-column: 3 / 5; } /* Main Column groupings */
+
+.c37 { grid-column: 3 / 7; }
+
+.c46 { grid-column: 4 / 6; }
+
+.c57 { grid-column: 5 / 7; }
+
+.c67 { grid-column: 6 / 7; }
+
+blockquote.page_ref {
+	grid-template-columns: repeat(2, 1fr);
+	grid-column: 3 / 7;
+	grid-row-gap: 0;
+	}
+
+blockquote.page_ref p:last-child {
+	grid-column-start: 2;
+	}
+
+.quoted_work {
+	grid-column: 6 / 7;
+	grid-row-start:2;
+	position: absolute;
+	}
+
+/*    LIST PAGE : GENERAL                       */
+
+.drawer {
+	grid-column: 3 / 9;
+	}
+
+.index_card {
+	grid-template-rows: min-content 1fr;
+	}
+
+.index_card > a {
+	display: contents;
+	}
+
+.index_card h1 {
+	grid-area: 1 / 1 / 2 / 4;
+	}
+
+.index_card footer {
+	grid-area: 2 / 1 / 3 / 2;
+	align-self: end;
+	}
+
+.index_card .categories {
+	grid-area: 2 / 1 / 3 / 2;
+	}
+
+.index_card .extract {
+	grid-area: 2 / 2 / 3 / 4;
+	}
+
+.index_card img {
+	grid-area: 1 / 4 / 3 / 6;
+	}
+
+/*    LIST PAGE : TAGS                          */
+
+.tag.drawer { grid-template-columns: repeat(auto-fit, 14rem); }
+
+/*    LIST PAGE : SEARCH                        */
+
+.search .drawer {
+	grid-column: 3 / 7;
+	}
+
+.search .index_card h1 {
+	grid-area: 1 / 1 / 2 / 3;
+	hyphens: auto;
+	}
+
+.search .index_card .extract {
+	grid-area: 1 / 3 / 3 / 7;
+	}
+
+.search .index_card footer {
+	grid-area: 2 / 1 / 3 / 3;
+	}
+
+/*   LIST PAGE : OUTPUT                         */
+
+.output .index_card h1 {
+	grid-area: 1 / 3 / 2 / 7;
+	}
+
+.output .index_card .categories {
+	grid-area: 2 / 4 / 3 / 5;
+	}
+
+.output .index_card footer {
+	grid-area: 2 / 4 / 3 / 5;
+	}
+
+.output .index_card img {
+	grid-area: 1 / 1 / 3 / 3;
+	}
+
+.output .index_card .extract {
+	grid-area: 2 / 5 / 3 / 7;
+	}
+
+/*    MORGUE FILE                               */
+
+.morgue-file .drawer {
+	grid-template-columns: repeat(auto-fit, 1.8vw);
+	grid-auto-rows: 1.8vw;
+	grid-auto-flow: dense;
+	}
+
+/*    CV                                        */
+
+.cv {
+	grid-template-columns: auto 1fr;
+	}
+
+.cv h2 {
+	grid-column: span 2;
+	}
+
+.cv dt {
+	grid-column-start: 1;
+	}
+
+.cv dd {
+	grid-column-start: 2;
+	}
+
+.cv ul {
+	display: auto;
+	}
+
+/*    NAV                                       */
+
+.head_nav {
+	grid-area: 2 / 1 / 3 / 10;
+	align-items: start; /* Stops overflow of borders when menu unhidden */
+	}
+
+.foot_nav {
+	grid-area: 4 / 1 / 6 / 10;
+	align-items: start;
+	grid-template-rows: repeat(3, auto);
+	}
+
+nav a:first-child, nav > ul {
+	grid-area: 1 / 2 / 2 / 3;
+	}
+
+.foot_nav *, nav.foot_nav a:first-child {
+	grid-row: 2 / 3;
+	}
+
+nav .post_title {
+	grid-column: 3 / 5;
+	}
+
+nav form {
+	grid-column: 5 / 6;
+	}
+
+.nav_older {
+	grid-column: 6 / 7;
+	}
+
+.nav_newer {
+	grid-column: 7 / 8;
+	}
+
+/* */ } /*------------------------------------- */
+/*                                              */
+/*    FEATURE QUERIES                    END    */
+/* -------------------------------------------- */
+
+/* -------------------------------------------- */
+/*    MEDIA QUERIES                    START    */
+/* -------------------------------------------- */
+
+@media screen and (max-width: 110rem) {
+
+	body, nav, .feature, .standard, .index {
+		grid-template-columns: 0 repeat(5, 14rem) repeat(2, 1fr) 0;
+		}
+
+}
+
+@media screen and (max-width: 94.5rem) {
+
+	body, nav, .feature, .standard, .index {
+		grid-template-columns: 0 1fr repeat(4, 14rem) 1fr 0;
+		}
+
+	.head_nav, .foot_nav, [role="main"] {
+		grid-column-end: 9;
+		}
+
+	.drawer {
+		grid-column: 3 / 8;
+		}
+
+	.search_title::before { content:"R" }
+
+}
+
+@media screen and (max-width: 83.5rem) {
+
+	nav > ul {
+		grid-area: 1 / 3 / 2 / 4;
+		padding-left: .75rem;
+		border-left: 1px solid hsla(206, 18%, 70%, 1);
+		text-align: left;
+		margin-left: -.75rem;
+		border-right: none;
+		}
+
+	.standard h1{
+		margin-top: 13.5rem;
+		}
+
+	nav a:first-child {
+		justify-self: end;
+		}
+
+	nav .post_title {
+		display: none;
+		}
+
+	.output .index_card .categories,
+	.output .index_card footer {
+		grid-area: 2 / 3 / 3 / 5;
+		}
+
+	.search_title::after { content:"...";}
+
+}
+
+@media screen and (max-width: 71.5rem) {
+
+	body, nav, .feature, .standard, .index {
+		grid-template-columns: 1fr repeat(4, 14rem) 1fr;
+		}
+
+	.head_nav, .foot_nav, [role="main"] {
+		grid-column-end: 7;
+		}
+
+	.c35 { grid-column: 2 / 4; } /* Main Column groupings */
+
+	.c37, blockquote.page_ref  { grid-column: 2 / 6; }
+
+	.c46 { grid-column: 3 / 5; }
+
+	.c57 { grid-column: 4 / 6; }
+
+	.c67 { grid-column: 5 / 6; }
+
+	.drawer, .search .drawer {
+		grid-column: 2 / 6;
+		}
+
+	h1 { grid-column-start: 2; }
+
+	p + h2, div + h2, section + h2, img + h2 { grid-column-start: 2; }
+
+	nav a:first-child {
+		grid-area: 1 / 1 / 2 / 3;
+		margin-left: 1.5rem;
+		padding: 0;
+		justify-self: start;
+		}
+
+	nav > ul {
+		grid-area: 1 / 1 / 2 / 3;
+		margin-left: 4.75rem;
+		}
+
+	nav ul a:first-child{
+		margin-left: auto;
+		}
+
+	nav form {
+		grid-column: 4 / 5;
+		}
+
+	.nav_older {
+		grid-column: 5 / 6;
+		text-align: left;
+		padding-left: .75rem;
+		border-right: none;
+		margin-left: -.75rem;
+		padding-right: auto;
+		margin-right: auto;
+		}
+
+	.nav_newer {
+		grid-column: 5 / 6;
+		padding-right: .75rem;
+		border-right: 1px solid hsla(206, 18%, 70%, 1);
+		text-align: right;
+		margin-right: -.75rem;
+		padding-left: auto;
+		margin-left: auto;
+		}
+
+	nav p a:first-child { margin-left:auto; }
+
+	.head_nav .nav_older,
+	.head_nav .nav_newer {
+		grid-area: 1 / 5 / 2 / 6;
+		}
+
+	.quoted_work { grid-column: 5 / 6; }
+
+	.index_card h1 {
+		grid-area: 1 / 1 / 2 / 7;
+		padding-top: 0;
+		}
+
+	.index_card .extract {
+		grid-area: 2 / 2 / 3 / 5;
+		}
+
+	.index_card img {
+		grid-area: 2 / 5 / 3 / 7;
+		}
+
+}
+
+@media screen and (max-width: 63.5rem) {
+
+	body, nav, .feature, .standard, .index {
+		grid-template-columns: 0 repeat(4, 1fr) 0;
+		}
+
+	.output .index_card h1 {	grid-area: 1 / 1 / 2 / 7; }
+
+	.output .index_card .categories {
+		grid-area: 3 / 4 / 4 / 6;
+		align-self: start;
+		}
+
+	.output .index_card footer { grid-area: 3 / 4 / 4 / 6; }
+
+	.output .index_card img { grid-area: 2 / 1 / 4 / 4; }
+
+	.output .index_card .extract { grid-area: 2 / 4 / 3 / 7; }
+
+}
+
+@media screen and (max-width: 60rem) {
+
+.c3 { column-count: 2; }
+
+.output .index_card .categories,
+.output .index_card footer {
+	grid-area: 3 / 4 / 4 / 7;
+	}
+
+}
+
+@media screen and (max-width: 40rem) {
+
+	.c3, .c2 { column-count: auto; }
+
+	.head_nav form { display: none; }
+
+	nav ul { grid-column: 1 / 4; }
+
+	.nav_newer,
+	.nav_older,
+	.head_nav .nav_older,
+	.foot_nav form {
+		grid-column: 4 / 6;
+		}
+
+	.foot_nav form { grid-row: 2 / 3;}
+
+	.foot_nav .nav_older,
+	.foot_nav .nav_newer {
+		align-self: end;
+		margin-bottom:.5rem;
+		}
+
+	.foot_nav ul {
+		grid-row: 2 / 3;
+		}
+
+	.nav_older { border-left: 1px solid hsla(206, 18%, 70%, 1); }
+
+	h1 { font-size: 3rem; }
+
+	.index_card h1 {
+		font-size: 1.5rem;
+		grid-area: 1 / 1 / 2 / 7;
+		}
+
+	.index_card footer {
+		grid-area: 4 / 1 / 5 / 7;
+		}
+
+	.index_card .extract {
+		grid-area: 2 / 1 / 3 / 7;
+		}
+
+	.index_card img {
+		grid-area: 3 / 1 / 4 / 7;
+		}
+
+	.c35, .c46, .c57, .c67 { grid-column: 2 / 6; }
+
+	.quoted_work {
+		grid-column: 2 / 6;
+		position: inherit;
+		grid-row: auto;
+		}
+
+	blockquote.page_ref { grid-template-columns: 5fr 1fr; }
+
+	.grin, .grout, .g4, .g3, .g2 { grid-template-columns: 1fr; }
+
+	.output .index_card h1 { grid-area: 1 / 1 / 2 / 7; }
+
+	.output .index_card img { grid-area: 2 / 1 / 3 / 7; }
+
+	.output .index_card .extract { grid-area: 3 / 1 / 4 / 7; }
+
+	.output .index_card .categories,
+	.output .index_card footer {
+		grid-area: 4 / 1 / 5 / 7;
+		}
+
+	.search .index_card h1 {
+		grid-area: 1 / 1 / 2 / 7;
+		padding-top: 3rem;
+		}
+
+	.search .index_card .extract {
+		grid-area: 2 / 1 / 3 / 7;
+		border-top: none;
+		padding-top: 1.5rem;
+		}
+
+	.search .index_card footer {
+		grid-area: 3 / 1 / 4 / 7;
+		padding-bottom: 0;
+		}
+
+	.card {
+		width:100%;
+		grid-gap: 1rem;
+		grid-template:
+			"art_title" min-content
+			"art_extract" 10rem
+			"art_tags" min-content
+			"art_date" min-content
+			"red_dot" min-content / 1fr;
+		border-top: 1px solid hsla(206, 18%, 85%, 1);
+		border-bottom: none;
+		border-left: none;
+		border-right: none;
+		border-radius: 0;
+		font-size: .875rem;
+		line-height: 1.25;
+		text-align: justify;
+		color: hsla(206, 18%, 32%, 1);
+		font-style: italic;
+		margin:0;
+		}
+
+	.card .date_posted {
+		writing-mode: horizontal-tb;
+		transform: none;
+		align-self: start;
+		justify-self: start;
+		}
+
+	.tag.drawer { grid-template-columns: auto; }
+	.card h1 { margin-top: 3rem; }
+	.card .article_tags { text-align: left; text-indent: 0; }
+	.card .article_tags::before { content: "Tags : "; }
+	.card .date_posted::before { content: "Posted : "; }
+	.card img[alt="// ENDS"] { margin-bottom: 2rem; }
+
+}
+
+/* -------------------------------------------- */
+/*    MEDIA QUERIES                      END    */
+/* -------------------------------------------- */
