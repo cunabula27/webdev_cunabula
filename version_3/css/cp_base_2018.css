@@ -56,8 +56,8 @@ time, mark, audio, video {
 	background: transparent;
 	}
 
-article,aside,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section {
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
 	display: block;
 	}
 
@@ -122,7 +122,7 @@ hr {
 	display: block;
 	height: 1px;
 	border: 0;
-	border-top: 1px solid hsla(206, 18%, 16%, 1);
+	border-top: 1px solid;
 	margin: 1em 0;
 	padding: 0;
 	}
@@ -259,6 +259,77 @@ CP Red:						hsla(345, 100%, 40%, 1);	(Highlights, Links)
 /*    COLOURS                          START    */
 /* -------------------------------------------- */
 
+body,
+nav a,
+nav a:link,
+nav a:visited,
+.index_card a,
+.index_card a:link,
+.index_card a:visited,
+h1 a,
+h1 a:link,
+h1 a:visited,
+input[type="search"],
+.card h1,          /* check this one is necessary */
+.card a,
+.card a:link,
+.card a:visited
+	{
+	color: hsla(206, 18%, 16%, 1);
+	}
+
+footer p,
+figcaption,
+blockquote.page_ref p:last-child {
+	color: hsla(206, 18%, 60%, 1);
+	}
+
+.card,
+.cv dt {
+	color: hsla(206, 18%, 32%, 1);
+	}
+
+a,
+a:link,
+a:visited,
+.index_card footer a,
+.index_card footer a:link,
+.index_card footer a:visited,
+nav a:hover,
+.index_card a:hover,
+h1 a:hover,
+.card .article_tags a:hover /* check this one needs to be so specific */
+  {
+	color: hsla(345, 100%, 40%, 1);
+	}
+
+.foot_nav {
+	background-color: hsla(206, 18%, 85%, 1);
+	}
+
+.foot_nav .nav_older,
+.foot_nav .nav_newer {
+	color: hsla(206, 18%, 85%, 1); /* Hack to hide element without link */
+	}
+
+body,
+input[type="search"] {
+	background-color: hsla(0, 0%, 100%, 1);
+	}
+
+.head_nav .nav_older,
+.head_nav .nav_newer {
+	color: hsla(0, 0%, 100%, 1); /* Hack to hide element without link */
+	}
+
+hr,
+nav,
+.drawer,
+.index_card,
+.card {
+	border-color: hsla(206, 18%, 70%, 1);
+}
+
 /* -------------------------------------------- */
 /*    COLOURS                            END    */
 /* -------------------------------------------- */
@@ -272,7 +343,6 @@ html {
 	}
 
 body {
-	color: hsla(206, 18%, 16%, 1); /* Main Text Colour */
 	font: normal normal normal 1rem/1.5 "PT Sans", sans-serif;
 /*font: 1rem/1.5 PTSansRegular, sans-serif; */ /* Production Line */
 	text-rendering: optimizeLegibility;
@@ -305,7 +375,6 @@ a:visited,
 .index_card footer a,
 .index_card footer a:link,
 .index_card footer a:visited {
-	color: hsla(345, 100%, 40%, 1); /*   CP Red   */
 	text-decoration: none;
 	}
 
@@ -314,36 +383,14 @@ a:active {
 	text-decoration: underline;
 	}
 
-nav a, /*             nav link-like behaviour   */
-nav a:link,
-nav a:visited,
-.index_card a,
-.index_card a:link,
-.index_card a:visited,
-h1 a,
-h1 a:link,
-h1 a:visited  {
-	color: hsla(206, 18%, 16%, 1);
-	text-decoration: none;
-	}
-
-nav a:hover, /*       nav link-like behaviour   */
-.index_card a:hover,
-h1 a:hover {
-	color: hsla(345, 100%, 40%, 1);
-	}
-
-
 /*    ARTICLE - GENERAL                         */
 
-h1 { /*           Use only for article titles   */
+h1 { /*            Use only for article titles  */
 	font: 4rem "Fanwood Text";
 	font-weight: normal;
-/*color: hsla(206, 18%, 24%, 1); */
-/*font: 2rem PTSerifRegular, sans-serif; */ /* Production Line */
 	z-index: 1;
-	margin-top: 9.3625rem; /* was 8.05rem; */
-	margin-bottom: 3.45rem; /* was 1.95rem; */
+	margin-top: 9.3625rem;
+	margin-bottom: 3.45rem;
 	hyphens: none;
 	}
 
@@ -361,7 +408,7 @@ img + h2 {
 /* ^^ Fix until Firefox recognises column-span  */
 
 h2,
-.livelist dt { /* Section Titles */
+.livelist dt { /*               Section Titles  */
 	font: 2rem/2 "Fanwood Text";
 	font-style: italic;
 	font-weight: normal;
@@ -389,19 +436,9 @@ figcaption,
 	font-size: 0.75rem;  /* 12px */
 	}
 
-footer p,
-figcaption {
-	color: hsla(206, 18%, 60%, 1);
-	}
-
 .tags { margin-top: 1.9rem; }
 
 .date_posted { margin-top: .25rem; }
-
-figcaption {
-	color: hsla(206, 18%, 32%, 1);
-	font-style: italic;
-	}
 
 [alt="// ENDS"] {
 	width:auto;
@@ -432,7 +469,6 @@ blockquote.page_ref { /* is this doing anything? */
 
 blockquote.page_ref p:last-child {
 	font-size: 0.75rem;  /* 12px */
-	color: hsla(206, 18%, 60%, 1);
 	font-style: italic;
 	padding-left: 0;
 	margin-top: .3rem;
@@ -529,7 +565,7 @@ footer:hover .hide,
 	}
 
 .morgue-file .drawer {
-	border-top: 1px solid hsla(206, 18%, 70%, 1);
+	border-top: 1px solid;
 	padding-top: 1.5rem;
 /*margin-bottom: 3rem; Decide on this later */
 }
@@ -540,7 +576,7 @@ footer:hover .hide,
 
 .index_card {
 	font-style: italic;
-	border-top: 1px solid hsla(206, 18%, 70%, 1);
+	border-top: 1px solid;
 	padding: 4.5rem 0 3rem;
 	}
 
@@ -576,13 +612,13 @@ footer:hover .hide,
 
 .search .index_card h1 {
 	padding-top: 5.5rem;
-	border-top: 1px solid hsla(206, 18%, 70%, 1);
+	border-top: 1px solid;
 	}
 
 .search .index_card .extract {
 	padding-top:6.2rem;
 	margin-top:0;
-	border-top: 1px solid hsla(206, 18%, 70%, 1);
+	border-top: 1px solid;
 	}
 
 .search .index_card footer {
@@ -618,7 +654,6 @@ footer:hover .hide,
 	font-style: italic;
 	padding: 0;
 	margin: .05rem 0 0;
-	color: hsla(206, 18%, 35%, 1);
 	}
 
 /*    NAV AREAS - GENERAL                       */
@@ -636,7 +671,7 @@ nav img {
 nav > ul,
 .nav_older {
 	padding-right: .75rem;
-	border-right: 1px solid hsla(206, 18%, 70%, 1);
+	border-right: 1px solid;
 	text-align: right;
 	margin-right: -.75rem;
 	}
@@ -648,8 +683,8 @@ nav > ul,
 
 form {
 	padding: 0.2rem 0.75rem 0.1375rem;
-	border-left: 1px solid hsla(206, 18%, 70%, 1);
-	border-right: 1px solid hsla(206, 18%, 70%, 1);
+	border-left: 1px solid;
+	border-right: 1px solid;
 	margin: 0.25rem -.75rem auto;
 	}
 
@@ -658,9 +693,7 @@ input[type="search"] {
   line-height: 1;
 	padding: 0.2rem .4rem .35rem;
 	width: 100%;
-	border: 1px solid hsla(206, 18%, 70%, 1);
-	color: hsla(206, 18%, 16%, 1);
-	background-color: #fff;
+	border: 1px solid;
 	border-radius: 0.21875rem;
 	}
 
@@ -679,29 +712,9 @@ nav .post_title,
 	opacity: .5;
 	}
 
-.head_nav .nav_older,
-.head_nav .nav_newer {
-	color: #FFF; /* Hack to hide element without link */
-	}
-
 /*    NAV - FOOT                                */
 
 .turn_left { transform: rotate(-90deg); }
-
-.foot_nav ul,
-.foot_nav form,
-.foot_nav .nav_older {
-	border-color: hsla(206, 18%, 70%, 1);
-	}
-
-.foot_nav {
-	background-color: hsla(206, 18%, 85%, 1);
-	}
-
-.foot_nav .nav_older,
-.foot_nav .nav_newer {
-	color: hsla(206, 18%, 85%, 1); /* Hack to hide element without link */
-	}
 
 .foot_nav ul {
 	margin-bottom: .5rem;
@@ -738,12 +751,11 @@ nav .post_title,
 		". art_tags art_date ." 5rem
 		". art_tags red_dot ." 1rem
 		". . . ." 0 / 0 10rem 1rem 0;
-	border: 1px solid hsla(206, 18%, 85%, 1);
+	border: 1px solid;
 	border-radius: .5rem;
 	font-size: .875rem;
 	line-height: 1.25;
 	text-align: justify;
-	color: hsla(206, 18%, 32%, 1);
 	font-style: italic;
 	margin:-1px;
 	}
@@ -751,7 +763,6 @@ nav .post_title,
 .card h1 {
 	grid-area: art_title;
 	font-size: 1.5rem;
-	color: hsla(206, 18%, 16%, 1);
 	text-align: left;
 	hyphens: none;
 	margin:0;
@@ -770,14 +781,12 @@ nav .post_title,
 
 .card .extract {
 	grid-area: art_extract;
-	color: hsla(206, 18%, 0%, 1);
 	overflow: hidden;
 	align-self:center;
 	}
 
 .card .article_tags {
 	grid-area: art_tags;
-	color: hsla(206, 18%, 50%, 1);
 	text-align: right;
 	align-self:end;
 	font-size: 0.75rem;
@@ -790,7 +799,6 @@ nav .post_title,
 	align-self: center;
 	justify-self: center;
 	line-height: 1;
-	color: hsla(206, 18%, 50%, 1);
 	transform: rotate(180deg);
 	font-size: 0.75rem;
 	}
@@ -801,18 +809,6 @@ nav .post_title,
 	justify-self: center;
 	padding: 0;
 	margin: 0;
-	}
-
-.card a,
-.card a:link,
-.card a:visited {
-	color: hsla(206, 18%, 16%, 1);
-	text-decoration: none;
-	}
-
-.card h1 a:hover ,
-.card .article_tags a:hover {
-	color: hsla(345, 100%, 40%, 1);
 	}
 
 .tagged-with .drawer > br {
@@ -1125,7 +1121,7 @@ nav form {
 	nav > ul {
 		grid-area: 1 / 3 / 2 / 4;
 		padding-left: .75rem;
-		border-left: 1px solid hsla(206, 18%, 70%, 1);
+		border-left: 1px solid;
 		text-align: left;
 		margin-left: -.75rem;
 		border-right: none;
@@ -1213,7 +1209,7 @@ nav form {
 	.nav_newer {
 		grid-column: 5 / 6;
 		padding-right: .75rem;
-		border-right: 1px solid hsla(206, 18%, 70%, 1);
+		border-right: 1px solid;
 		text-align: right;
 		margin-right: -.75rem;
 		padding-left: auto;
@@ -1303,7 +1299,7 @@ nav form {
 		grid-row: 2 / 3;
 		}
 
-	.nav_older { border-left: 1px solid hsla(206, 18%, 70%, 1); }
+	.nav_older { border-left: 1px solid; }
 
 	h1 { font-size: 3rem; }
 
@@ -1372,7 +1368,7 @@ nav form {
 			"art_tags" min-content
 			"art_date" min-content
 			"red_dot" min-content / 1fr;
-		border-top: 1px solid hsla(206, 18%, 85%, 1);
+		border-top: 1px solid;
 		border-bottom: none;
 		border-left: none;
 		border-right: none;
@@ -1380,7 +1376,6 @@ nav form {
 		font-size: .875rem;
 		line-height: 1.25;
 		text-align: justify;
-		color: hsla(206, 18%, 32%, 1);
 		font-style: italic;
 		margin:0;
 		}
