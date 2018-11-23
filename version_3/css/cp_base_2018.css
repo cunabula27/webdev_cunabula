@@ -90,16 +90,16 @@ a {
 /*    Change colours to suit your needs         */
 
 ins {
-	background-color:  #ff9 /* hsla(84, 100%, 81%, 1); */
-	color: #000 /* hsla(0, 0%, 0%, 1); */
+	background-color: hsla(84, 100%, 81%, 1);
+	color: hsla(0, 0%, 0%, 1);
 	text-decoration: none;
 	}
 
 /*    Change colours to suit your needs         */
 
 mark {
-	background-color: #ff9 /* hsla(84, 100%, 81%, 1); */
-	color: #000 /* hsla(0, 0%, 0%, 1); */
+	background-color: hsla(84, 100%, 81%, 1);
+	color: hsla(0, 0%, 0%, 1);
 	font-style: italic;
 	font-weight: bold;
 	}
@@ -126,7 +126,7 @@ hr {
 	display: block;
 	height: 1px;
 	border: 0;
-	border-top: 1px solid #ccc; /* hsla(0, 0%, 80%, 1); */
+	border-top: 1px solid hsla(206, 18%, 16%, 1);
 	margin: 1em 0;
 	padding: 0;
 	}
