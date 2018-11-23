@@ -257,6 +257,11 @@ CP Red:						hsla(345, 100%, 40%, 1);	(Highlights, Links)
 
 /* -------------------------------------------- */
 /*    COLOURS                          START    */
+/*                                              */
+/*    This section can be copied to a separate  */
+/*    stylesheet to create different colour     */
+/*    schemes.                                  */
+/*                                              */
 /* -------------------------------------------- */
 
 body,
@@ -344,14 +349,13 @@ html {
 
 body {
 	font: normal normal normal 1rem/1.5 "PT Sans", sans-serif;
-/*font: 1rem/1.5 PTSansRegular, sans-serif; */ /* Production Line */
 	text-rendering: optimizeLegibility;
 	hyphens: auto;
 /*background-image: url("http://cunabula.io/images/24.png"); */
 /*background-image: url("http://cunabula.io/images/12.png"); */
 /*background-image: url("http://cunabula.io/images/08.png"); */
-/*background-image: url("http://cunabula.io/images/06.png");
-	background-position-y: 9px;
+/*background-image: url("http://cunabula.io/images/06.png"); */
+/*background-position-y: 9px; */
 /*text-align:justify; */
 	}
 
@@ -433,7 +437,7 @@ blockquote.page_ref p:last-child,
 footer p,
 figcaption,
 .categories {
-	font-size: 0.75rem;  /* 12px */
+	font-size: 0.75rem;
 	}
 
 .tags { margin-top: 1.9rem; }
@@ -468,7 +472,7 @@ blockquote.page_ref { /* is this doing anything? */
 	}
 
 blockquote.page_ref p:last-child {
-	font-size: 0.75rem;  /* 12px */
+	font-size: 0.75rem;
 	font-style: italic;
 	padding-left: 0;
 	margin-top: .3rem;
@@ -584,9 +588,9 @@ footer:hover .hide,
 	margin-top: 2.6rem;
 	}
 
-.search .standard + .drawer .index_card:first-child {margin-top: -.4rem; }
+.search .standard + .drawer .index_card:first-child { margin-top: -.4rem; }
 
-.search_title::before { content:"Search r"}
+.search_title::before { content:"Search r"; }
 
 .search_title::after { content:" for"; }
 
@@ -606,8 +610,8 @@ footer:hover .hide,
 /*    LIST PAGE : SEARCH                        */
 
 .search .index_card {
-	padding-top:0;
-	border:none;
+	padding-top: 0;
+	border: none;
 	}
 
 .search .index_card h1 {
@@ -616,13 +620,13 @@ footer:hover .hide,
 	}
 
 .search .index_card .extract {
-	padding-top:6.2rem;
-	margin-top:0;
+	padding-top: 6.2rem;
+	margin-top: 0;
 	border-top: 1px solid;
 	}
 
 .search .index_card footer {
-	padding-bottom:1.5rem;
+	padding-bottom: 1.5rem;
 	}
 
 /*   LIST PAGE : OUTPUT                         */
@@ -643,15 +647,14 @@ footer:hover .hide,
 
 .morgue-file .drawer img {
 	object-fit: cover;
-	width:100%;
+	width: 100%;
 	height: 100%;
 	}
 
 /*    CV                                        */
 
 .cv dt {
-	font: 1.5rem/1.5rem "Fanwood Text";
-	font-style: italic;
+	font: italic 1.5rem/1.5rem "Fanwood Text";
 	padding: 0;
 	margin: .05rem 0 0;
 	}
@@ -775,20 +778,20 @@ nav .post_title,
 	}
 
 .card .article_image img {
-	height:100%;
+	height: 100%;
 	object-fit: contain;
 	}
 
 .card .extract {
 	grid-area: art_extract;
 	overflow: hidden;
-	align-self:center;
+	align-self: center;
 	}
 
 .card .article_tags {
 	grid-area: art_tags;
 	text-align: right;
-	align-self:end;
+	align-self: end;
 	font-size: 0.75rem;
 	margin-bottom: 2px;
 	}
@@ -842,7 +845,6 @@ body {
 	}
 
 body, nav, .feature, .standard, .index {
-/*grid-template-columns: 0 repeat(7, minmax(4rem /* define min size properly *//*, 14rem)) minmax(1.5rem, 1fr); */
 	grid-template-columns: 0 repeat(7, 14rem) 1fr;
 	}
 
@@ -893,7 +895,7 @@ h1 {
 	}
 
 .full_bleed { /* Full bleed images */
-	grid-column: 1 / 10;
+	grid-column: 1 / -1;
 	}
 
 .gr, .index_card { grid-template-columns: repeat(2, 382fr) repeat(2, 236fr) repeat(2, 382fr); }
@@ -930,7 +932,7 @@ blockquote.page_ref p:last-child {
 
 .quoted_work {
 	grid-column: 6 / 7;
-	grid-row-start:2;
+	grid-row-start: 2;
 	position: absolute;
 	}
 
@@ -1168,7 +1170,7 @@ nav form {
 
 	.c67 { grid-column: 5 / 6; }
 
-	.drawer, .search .drawer {
+	.drawer, .search .drawer { /* Does this need to be so specific */
 		grid-column: 2 / 6;
 		}
 
