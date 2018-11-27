@@ -334,7 +334,7 @@ hr,
 .search .index_card h1,
 .search .index_card .extract,
 .card,
-.head_nav nav > ul,
+ nav.head_nav > ul,
 .head_nav .nav_older,
 .head_nav .nav_newer,
 .head_nav form,
@@ -343,7 +343,7 @@ hr,
 	border-color: hsla(206, 18%, 70%, 1);
 	}
 
-.foot_nav nav > ul,
+ nav.foot_nav > ul,
 .foot_nav .nav_older,
 .foot_nav .nav_newer,
 .foot_nav form,
