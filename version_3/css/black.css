@@ -1,0 +1,17 @@
+body { color: #fff; background-color: #000; }
+
+[role="navigation"] { background-color: rgba(0,0,0,0); }
+
+#logo { background: transparent url(../images/c_io_000_round.png) no-repeat; }
+
+[role="navigation"] a,
+[role="navigation"] a:link,
+[role="navigation"] a:visited, 
+label { color: #BBB; }
+
+[role="navigation"] a:hover, 
+[role="navigation"] a:active { color: #C03; }
+	
+#menu_section, #nav_older { border-right: 1px solid #333; }
+
+.active_section a:link, .active_section a:visited { color: #BBB; }
