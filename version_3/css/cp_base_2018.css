@@ -328,12 +328,18 @@ input[type="search"] {
 	}
 
 hr,
-nav,
-.drawer,
+.morgue-file .drawer,
 .index_card,
+.search .index_card h1,
+.search .index_card .extract,
+nav > ul,
+.nav_older,
+.nav_newer,
+form,
+input[type="search"],
 .card {
 	border-color: hsla(206, 18%, 70%, 1);
-}
+	}
 
 /* -------------------------------------------- */
 /*    COLOURS                            END    */
