@@ -304,7 +304,8 @@ a:visited,
 nav a:hover,
 .index_card a:hover,
 h1 a:hover,
-.card .article_tags a:hover /* check this one needs to be so specific */
+.card .article_tags a:hover, /* check this one needs to be so specific */
+.card h1 a:hover
   {
 	color: hsla(345, 100%, 40%, 1);
 	}
@@ -390,11 +391,6 @@ img {
 
 /*    LINKS                                     */
 
-a:hover,
-a:active {
-	text-decoration: underline;
-	}
-
 a,
 a:link,
 a:visited,
@@ -407,6 +403,11 @@ nav a:hover,
 nav a:visited
 	{
 	text-decoration: none;
+	}
+
+a:hover,
+a:active {
+	text-decoration: underline;
 	}
 
 /*    ARTICLE - GENERAL                         */
@@ -791,7 +792,7 @@ nav .post_title,
 	line-height: 1.25;
 	text-align: justify;
 	font-style: italic;
-	margin:-1px;
+	margin: -1px;
 	}
 
 .card h1 {
@@ -799,7 +800,7 @@ nav .post_title,
 	font-size: 1.5rem;
 	text-align: left;
 	hyphens: none;
-	margin:0;
+	margin: 0;
 	}
 
 .card .article_image {
