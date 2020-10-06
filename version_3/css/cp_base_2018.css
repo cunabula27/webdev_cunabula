@@ -777,7 +777,7 @@ nav .post_title,
 .card {
 	display: grid;
 	width: 14rem;
-	grid-gap: 1rem;
+	gap: 1rem;
 	grid-template:
 		". . . ." 0
 		". art_title art_title ." 6rem
@@ -867,7 +867,7 @@ ONLY GRID-SPECIFIC CODE SHOULD GO HERE + STYLES ONLY RELEVANT WHEN GRID IS SUPPO
 
 body, nav, [role="main"], article, .drawer, .index, .gr, .grout, .grin, .g4, .g3, .g2, blockquote.page_ref, .cv {
 	display: grid;
-	grid-gap: 1.5rem;
+	gap: 1.5rem;
 	position:relative;
 	grid-auto-rows: min-content;
 	}
@@ -1397,7 +1397,7 @@ nav form {
 
 	.card {
 		width:100%;
-		grid-gap: 1rem;
+		gap: 1rem;
 		grid-template:
 			"art_title" min-content
 			"art_extract" 10rem
