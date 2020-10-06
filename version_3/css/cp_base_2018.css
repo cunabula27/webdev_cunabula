@@ -546,13 +546,13 @@ iframe {
 
 /*    MULTICOLUMN                               */
 
-.c4, .c3, .c2 { column-gap: 1.5rem; }
+.c2, .c3, .c4 { column-gap: 1.5rem; }
 
-.c4 { column-count: 4; }
+.c2 { column-count: 2; }
 
 .c3 { column-count: 3; }
 
-.c2 { column-count: 2; }
+.c4 { column-count: 4; }
 
 /*    ROLLOVER HIDE / REVEAL                    */
 
@@ -852,7 +852,7 @@ ONLY GRID-SPECIFIC CODE SHOULD GO HERE + STYLES ONLY RELEVANT WHEN GRID IS SUPPO
 
 */
 
-body, nav, [role="main"], article, .drawer, .index, .gr, .grout, .grin, .g4, .g3, .g2, blockquote.page_ref, .cv {
+body, nav, [role="main"], article, .drawer, .index, .gr, .grout, .grin, .g2, .g3, .g4, blockquote.page_ref, .cv {
 	display: grid;
 	gap: 1.5rem;
 	position:relative;
@@ -923,21 +923,21 @@ h1 {
 
 .grout { grid-template-columns: 1fr .618fr; }
 
-.g4 {	grid-template-columns: repeat(4, 1fr); }
+.g2 { grid-template-columns: repeat(2, 1fr); }
 
 .g3 { grid-template-columns: repeat(3, 1fr); }
 
-.g2 { grid-template-columns: repeat(2, 1fr); }
+.g4 { grid-template-columns: repeat(4, 1fr); }
 
-.c35 { grid-column: 3 / 5; } /* Main Column groupings */
+.gc35, .c35 { grid-column: 3 / 5; } /* Main Column groupings */
 
-.c37 { grid-column: 3 / 7; }
+.gc37, .c37 { grid-column: 3 / 7; }
 
-.c46 { grid-column: 4 / 6; }
+.gc46, .c46 { grid-column: 4 / 6; }
 
-.c57 { grid-column: 5 / 7; }
+.gc57, .c57 { grid-column: 5 / 7; }
 
-.c67 { grid-column: 6 / 7; }
+.gc67, .c67 { grid-column: 6 / 7; }
 
 blockquote.page_ref {
 	grid-template-columns: repeat(2, 1fr);
@@ -1180,15 +1180,15 @@ nav form {
 		grid-column-end: 7;
 		}
 
-	.c35 { grid-column: 2 / 4; } /* Main Column groupings */
+	.gc35, .c35 { grid-column: 2 / 4; } /* Main Column groupings */
 
-	.c37, blockquote.page_ref  { grid-column: 2 / 6; }
+	.gc37, .c37, blockquote.page_ref  { grid-column: 2 / 6; }
 
-	.c46 { grid-column: 3 / 5; }
+	.gc46, .c46 { grid-column: 3 / 5; }
 
-	.c57 { grid-column: 4 / 6; }
+	.gc57, .c57 { grid-column: 4 / 6; }
 
-	.c67 { grid-column: 5 / 6; }
+	.gc67, .c67 { grid-column: 5 / 6; }
 
 	.drawer, .search .drawer { /* Does this need to be so specific */
 		grid-column: 2 / 6;
@@ -1297,7 +1297,7 @@ nav form {
 
 @media screen and (max-width: 40rem) {
 
-	.c3, .c2 { column-count: auto; }
+	.c2, .c3 { column-count: auto; }
 
 	.head_nav form { display: none; }
 
@@ -1343,7 +1343,7 @@ nav form {
 		grid-area: 3 / 1 / 4 / 7;
 		}
 
-	.c35, .c46, .c57, .c67 { grid-column: 2 / 6; }
+	.gc35, .gc46, .gc57, .gc67, .c35, .c46, .c57, .c67 { grid-column: 2 / 6; }
 
 	.quoted_work {
 		grid-column: 2 / 6;
@@ -1353,7 +1353,7 @@ nav form {
 
 	blockquote.page_ref { grid-template-columns: 5fr 1fr; }
 
-	.grin, .grout, .g4, .g3, .g2 { grid-template-columns: 1fr; }
+	.grin, .grout, .g2, .g3, .g4 { grid-template-columns: 1fr; }
 
 	.output .index_card h1 { grid-area: 1 / 1 / 2 / 7; }
 
