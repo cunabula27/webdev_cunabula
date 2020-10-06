@@ -377,7 +377,7 @@ body {
 /*text-align:justify; */
 	}
 
-.no_css, nav h6, /* Fix until Firefox recognises column-span >>> */ section > h2 {
+.no_css, nav h6 {
 	display: none;
 	}
 
@@ -420,19 +420,6 @@ h1 { /*            Use only for article titles  */
 	margin-bottom: 3.45rem;
 	hyphens: none;
 	}
-
-/*    Fix until Firefox recognises column-span  */
-
-p + h2,
-div + h2,
-section + h2,
-img + h2 {
-	grid-column: 3 / 7;
-	margin-top: 1.25rem;
-	margin-bottom: .75rem;
-	}
-
-/* ^^ Fix until Firefox recognises column-span  */
 
 h2,
 .livelist dt { /*               Section Titles  */
