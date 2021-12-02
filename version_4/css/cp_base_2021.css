@@ -1,0 +1,65 @@
+html {
+	font-size: 100%;
+	}
+
+* {
+	box-sizing: border-box;
+	}
+
+em, i, cite { font-style: italic; }
+
+b, strong { font-weight: bold; }
+
+img {
+	width: 100%;
+	}
+
+/*    LINKS                                     */
+
+a,
+a:link,
+a:visited,
+h1 a:hover,
+h1 a:active,
+nav a:hover,
+nav a:visited
+	{
+	text-decoration: none;
+	}
+
+a:hover,
+a:active {
+	text-decoration: underline;
+	}
+
+
+
+
+
+
+
+
+
+
+body {
+	font: normal normal normal 1.25rem/1.5 "Libertinus Serif", serif;
+	text-rendering: optimizeLegibility;
+	hyphens: auto;
+background-image: url("http://cunabula.io/images/24.png");
+/*background-image: url("http://cunabula.io/images/12.png"); */
+/*background-image: url("http://cunabula.io/images/08.png"); */
+/*background-image: url("http://cunabula.io/images/06.png"); */
+/*background-position-y: 9px; */
+/*text-align:justify; */
+	}
+
+
+h1 { /*            Use only for article titles  */
+	font-size: 4rem /*"Fanwood Text"*/;
+	font-variant-ligatures: historical-ligatures /*discretionary-ligatures*/;
+	font-weight: normal;
+	z-index: 1;
+	margin-top: 9.3625rem;
+	margin-bottom: 3.45rem;
+	hyphens: none;
+	}

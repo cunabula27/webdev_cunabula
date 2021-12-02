@@ -1,0 +1,137 @@
+/*
+
+Hello.
+
+If you're wondering about the design of the site you're in the right place, read on...
+
+If it's all a bit opaque, or you're me and it's years later and you're a bit lost, have a look at:
+
+https://github.com/cunabula27/webdev_cunabula which I used to document the development.
+
+I work really iteratively and CSS Grid is/was new to me so I found it really helpful
+
+to use Github to wrangle the process into some form of order. I also couldn't have done any of
+
+it without Jen Simmons' videos https://youtube.com/layoutland and https://labs.jensimmons.com/
+
+Also https://developer.mozilla.org/en-US/docs/Web
+
+All the best,
+
+Adrian
+
+*/
+
+/* -------------------------------------------- */
+/*    RESET                            START    */
+/* -------------------------------------------- */
+
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+https://github.com/richclark/HTML5resetCSS
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+	}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+	}
+
+nav ul, .cv li {
+	list-style: none;
+	}
+
+blockquote, q {
+	quotes: none;
+	}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+	}
+
+a {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+	}
+
+/*    Change colours to suit your needs         */
+
+ins {
+	background-color: hsla(84, 100%, 81%, 1);
+	color: hsla(0, 0%, 0%, 1);
+	text-decoration: none;
+	}
+
+/*    Change colours to suit your needs         */
+
+mark {
+	background-color: hsla(84, 100%, 81%, 1);
+	color: hsla(0, 0%, 0%, 1);
+	font-style: italic;
+	font-weight: bold;
+	}
+
+del {
+	text-decoration: line-through;
+	}
+
+abbr[title], dfn[title] {
+	font-variant: none;
+	font-style:italic;
+	text-decoration: underline dotted hsla(345, 100%, 40%, 1);
+	cursor: help;
+	}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	}
+
+/*    Change border colour to suit your needs   */
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top-width: 1px;
+	border-top-style: solid;
+	margin: 1em 0;
+	padding: 0;
+	}
+
+input, select {
+	vertical-align: middle;
+	}
+
+/* -------------------------------------------- */
+/*    RESET                              END    */
+/* -------------------------------------------- */

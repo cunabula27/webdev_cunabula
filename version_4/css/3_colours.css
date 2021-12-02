@@ -1,0 +1,31 @@
+/* -------------------------------------------- */
+/*    COLOURS                          START    */
+/*                                              */
+/*    This section can be copied to a separate  */
+/*    stylesheet to create different colour     */
+/*    schemes.                                  */
+/*                                              */
+/* -------------------------------------------- */
+
+/* NB:
+
+CP Payne's Grey:	hsla(206, 18%, 16%, 1);		(Main text colour, use variation in luminance for other text and borders)
+CP Red:				hsla(345, 100%, 40%, 1);	(Highlights, Links)
+
+*/
+
+body,
+nav a,
+nav a:link,
+nav a:visited,
+h1 a,
+h1 a:link,
+h1 a:visited,
+input[type="search"]
+	{
+	color: hsla(206, 18%, 16%, 1);
+	}
+
+/* -------------------------------------------- */
+/*    COLOURS                            END    */
+/* -------------------------------------------- */
