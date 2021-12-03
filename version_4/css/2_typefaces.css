@@ -86,18 +86,58 @@
 
 @font-face {
 	font-family: 'Libertinus Serif';
-	src: local('Libertinus Serif'),
-         url('../typefaces/LibertinusSerif-Regular.woff2') format('woff2');
-	font-weight: normal;
-	font-style: normal;
+	font-style:  normal;
+	font-weight: 400;
+	src: local(Libertinus Serif), local(Libertinus Serif Regular), local(Libertinus),
+		url("../typefaces/LibertinusSerif-Regular.woff2") format("woff2");
 	}
 
 @font-face {
 	font-family: 'Libertinus Serif';
-	src: local('Libertinus Serif Italic'),
-         url('../typefaces/LibertinusSerif-Italic.woff2') format('woff2');
-	font-weight: normal;
-	font-style: italic;
+	font-style:  italic;
+	font-weight: 400;
+	src: local(Libertinus Serif Italic),
+		url("../typefaces/LibertinusSerif-Italic.woff2") format("woff2");
+	}
+
+@font-face {
+	font-family: 'Libertinus Serif';
+	font-style:  normal;
+	font-weight: 600;
+	src: local(Libertinus Serif), local(Libertinus Serif Semibold),
+		url("../typefaces/LibertinusSerif-Semibold.woff2") format("woff2");
+	}
+
+@font-face {
+	font-family: 'Libertinus Serif';
+	font-style:  italic;
+	font-weight: 600;
+	src: local(Libertinus Serif Semibold Italic),
+		url("../typefaces/LibertinusSerif-SemiboldItalic.woff2") format("woff2");
+	}
+
+@font-face {
+	font-family: 'Libertinus Serif';
+	font-style:  normal;
+	font-weight: 700;
+	src: local(Libertinus Serif Bold),
+		url("../typefaces/LibertinusSerif-Bold.woff2") format("woff2");
+	}
+
+@font-face {
+	font-family: 'Libertinus Serif';
+	font-style:  italic;
+	font-weight: 700;
+	src: local(Libertinus Serif Bold Italic),
+		url("../typefaces/LibertinusSerif-BoldItalic.woff2") format("woff2");
+	}
+
+@font-face {
+		font-family: 'Libertinus Display';
+		font-style:  normal;
+		font-weight: 400;
+		src: local(Libertinus Serif Display),
+			url("../typefaces/LibertinusSerifDisplay-Regular.woff2") format("woff2");
 	}
 
 /* ------------------------------ LEAGUE GOTHIC */
