@@ -32,7 +32,7 @@ Most of this won't be coming back but easier to copypasta as a template for now.
 
 * **date_posted**
 
-### Navigation
+## Navigation
 
 * **head_nav**
 
@@ -74,10 +74,13 @@ Most of this won't be coming back but easier to copypasta as a template for now.
 
 * **no_css**
 
-* **solo** Use on para. Adds 1.5rem top and bottom margin and removes text indent on self and following para.
 
 * **page_ref** Use on blockquote, which will spam columns 3-7 with two columns. Everything before the last para will be in column one and the final para which should include the page number will be in column 2.
 
 * **full_bleed**
 
 * **hide** Used for rollover effect on **head_nav**, footers and anywhere else it's needed.
+
+## Classes
+
+* **threestar** Adds three stars to hr space 
