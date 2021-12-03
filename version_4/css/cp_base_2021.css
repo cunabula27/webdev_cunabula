@@ -8,7 +8,7 @@ html {
 
 em, i, cite { font-style: italic; }
 
-b, strong { font-weight: bold; }
+b, strong { font-weight: 600; /*using semi-bold as standard */ }
 
 img {
 	width: 100%;
@@ -32,7 +32,13 @@ a:active {
 	text-decoration: underline;
 	}
 
-
+hr { /* Semantic one line space with no visual style */
+	display: block;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	height: 1.5em;
+}
 
 
 
@@ -42,24 +48,90 @@ a:active {
 
 
 body {
-	font: normal normal normal 1.25rem/1.5 "Libertinus Serif", serif;
+	font: normal normal normal 1.25rem "Libertinus Serif", serif;
+	line-height: 1.5;
 	text-rendering: optimizeLegibility;
+	font-variant-numeric: oldstyle-nums;
 	hyphens: auto;
-background-image: url("http://cunabula.io/images/24.png");
-/*background-image: url("http://cunabula.io/images/12.png"); */
-/*background-image: url("http://cunabula.io/images/08.png"); */
-/*background-image: url("http://cunabula.io/images/06.png"); */
-/*background-position-y: 9px; */
-/*text-align:justify; */
+	background-image: url('../images/6-30.png');
 	}
-
 
 h1 { /*            Use only for article titles  */
-	font-size: 4rem /*"Fanwood Text"*/;
-	font-variant-ligatures: historical-ligatures /*discretionary-ligatures*/;
+	font-size: 3.75rem;
+	font-family: "Libertinus Display";
+	font-variant-ligatures: historical-ligatures discretionary-ligatures;
 	font-weight: normal;
 	z-index: 1;
-	margin-top: 9.3625rem;
-	margin-bottom: 3.45rem;
 	hyphens: none;
+	margin: 24px 0 13px;
 	}
+
+[role="main"], nav {
+	margin: 30px;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-column-gap: 30px;
+	}
+
+p + p {
+	text-indent: 1em;
+	}
+
+/* standard font sises to use
+
+element { Captions
+	font-size: 1rem;    (16px/24px)
+	}
+
+element { Body
+	font-size: 1.25rem; (20px/30px)
+	}
+
+element { Standfirsts
+	font-size: 2rem;    (32px/48px)
+	}
+
+element { Pull Quotes
+	font-size: 2.5rem;  (40px/60px)
+	}
+
+element { Some Big Test
+	font-size: 3rem;    (48px/72px)
+	}
+
+element { Headers
+	font-size: 3.75rem; (60px/90px)
+	}
+
+element { Some Bigger Text
+	font-size: 4rem;    (64px/96px)
+	}
+
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.threestar::after {
+	display: inherit;
+	text-align: center;
+	/* leaving in for later use also because cute
+	content: '☙❧•'; or
+	content: '• • •';
+	*/
+	content: "∗ ∗ ∗";
+	width: 50%;
+	margin: 0 auto;
+	color: hsl(204, 18.5%, 15.9%);
+}
